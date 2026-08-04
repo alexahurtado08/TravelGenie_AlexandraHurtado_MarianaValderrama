@@ -16,7 +16,7 @@
 
 ## 2. Dataset de dominio
 
-tenemos **384 pares** entrada→salida (307 train / 77 validation), generados por plantilla a partir de datos reales de clima, vuelos y lugares turísticos de 16 destinos colombianos. Para infromación más detallada Ver **[DATASET.md](./DATASET.md)**
+tenemos **384 pares** entrada→salida (307 train / 77 validation), generados por plantilla a partir de datos reales de clima, vuelos y lugares turísticos de 16 destinos colombianos. Para infromación más detallada Ver **[DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET)**
 
 ## 3. Baseline y comparación
 
@@ -65,4 +65,4 @@ Sigue fallando en dos formas puntuales, ninguna relacionada con "inventar" infor
 
 ## 8. Atribución de fuentes de datos
 
-Este proyecto usa datos de terceros bajo sus respectivas licencias — ver [DATASET.md](./DATASET.md) para el detalle completo. En particular, incluye datos de © OpenStreetMap contributors, disponibles bajo la Open Database License (ODbL) — más información en [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright).
+Este proyecto usa datos de terceros bajo sus respectivas licencias — ver [DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET) para el detalle completo. En particular, incluye datos de © OpenStreetMap contributors, disponibles bajo la Open Database License (ODbL) — más información en [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright).
