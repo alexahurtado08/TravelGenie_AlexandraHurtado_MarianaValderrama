@@ -1,0 +1,1817 @@
+{
+  "ANTIOQUIA": {
+    "municipio_referencia": "MEDELLÍN",
+    "lat": 6.246631,
+    "lon": -75.581775,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 20.0,
+        "precipitacion_prom_mm": 3.8
+      },
+      "2": {
+        "temp_prom_c": 20.1,
+        "precipitacion_prom_mm": 5.3
+      },
+      "3": {
+        "temp_prom_c": 20.2,
+        "precipitacion_prom_mm": 6.7
+      },
+      "4": {
+        "temp_prom_c": 20.4,
+        "precipitacion_prom_mm": 8.2
+      },
+      "5": {
+        "temp_prom_c": 20.8,
+        "precipitacion_prom_mm": 7.5
+      },
+      "6": {
+        "temp_prom_c": 20.4,
+        "precipitacion_prom_mm": 7.1
+      },
+      "7": {
+        "temp_prom_c": 21.0,
+        "precipitacion_prom_mm": 3.5
+      },
+      "8": {
+        "temp_prom_c": 20.5,
+        "precipitacion_prom_mm": 5.6
+      },
+      "9": {
+        "temp_prom_c": 20.6,
+        "precipitacion_prom_mm": 6.0
+      },
+      "10": {
+        "temp_prom_c": 20.0,
+        "precipitacion_prom_mm": 8.3
+      },
+      "11": {
+        "temp_prom_c": 19.8,
+        "precipitacion_prom_mm": 7.3
+      },
+      "12": {
+        "temp_prom_c": 20.1,
+        "precipitacion_prom_mm": 3.7
+      }
+    }
+  },
+  "ATLÁNTICO": {
+    "municipio_referencia": "BARRANQUILLA",
+    "lat": 10.977961,
+    "lon": -74.815546,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 27.2,
+        "precipitacion_prom_mm": 0.2
+      },
+      "2": {
+        "temp_prom_c": 27.1,
+        "precipitacion_prom_mm": 0.6
+      },
+      "3": {
+        "temp_prom_c": 27.5,
+        "precipitacion_prom_mm": 0.4
+      },
+      "4": {
+        "temp_prom_c": 27.7,
+        "precipitacion_prom_mm": 2.0
+      },
+      "5": {
+        "temp_prom_c": 28.2,
+        "precipitacion_prom_mm": 3.7
+      },
+      "6": {
+        "temp_prom_c": 27.7,
+        "precipitacion_prom_mm": 5.8
+      },
+      "7": {
+        "temp_prom_c": 28.2,
+        "precipitacion_prom_mm": 3.2
+      },
+      "8": {
+        "temp_prom_c": 27.9,
+        "precipitacion_prom_mm": 6.1
+      },
+      "9": {
+        "temp_prom_c": 27.7,
+        "precipitacion_prom_mm": 5.9
+      },
+      "10": {
+        "temp_prom_c": 27.1,
+        "precipitacion_prom_mm": 7.6
+      },
+      "11": {
+        "temp_prom_c": 26.9,
+        "precipitacion_prom_mm": 6.8
+      },
+      "12": {
+        "temp_prom_c": 27.5,
+        "precipitacion_prom_mm": 0.8
+      }
+    }
+  },
+  "BOGOTÁ, D.C.": {
+    "municipio_referencia": "BOGOTÁ, D.C.",
+    "lat": 4.649251,
+    "lon": -74.106992,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 13.3,
+        "precipitacion_prom_mm": 1.8
+      },
+      "2": {
+        "temp_prom_c": 13.7,
+        "precipitacion_prom_mm": 2.8
+      },
+      "3": {
+        "temp_prom_c": 13.5,
+        "precipitacion_prom_mm": 4.5
+      },
+      "4": {
+        "temp_prom_c": 13.6,
+        "precipitacion_prom_mm": 3.7
+      },
+      "5": {
+        "temp_prom_c": 13.7,
+        "precipitacion_prom_mm": 2.3
+      },
+      "6": {
+        "temp_prom_c": 13.3,
+        "precipitacion_prom_mm": 2.0
+      },
+      "7": {
+        "temp_prom_c": 13.1,
+        "precipitacion_prom_mm": 1.1
+      },
+      "8": {
+        "temp_prom_c": 13.1,
+        "precipitacion_prom_mm": 0.9
+      },
+      "9": {
+        "temp_prom_c": 13.4,
+        "precipitacion_prom_mm": 1.2
+      },
+      "10": {
+        "temp_prom_c": 13.4,
+        "precipitacion_prom_mm": 2.8
+      },
+      "11": {
+        "temp_prom_c": 13.3,
+        "precipitacion_prom_mm": 4.3
+      },
+      "12": {
+        "temp_prom_c": 13.5,
+        "precipitacion_prom_mm": 1.9
+      }
+    }
+  },
+  "BOLÍVAR": {
+    "municipio_referencia": "CARTAGENA DE INDIAS",
+    "lat": 10.385126,
+    "lon": -75.496269,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 27.5,
+        "precipitacion_prom_mm": 0.7
+      },
+      "2": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 0.8
+      },
+      "3": {
+        "temp_prom_c": 27.9,
+        "precipitacion_prom_mm": 0.7
+      },
+      "4": {
+        "temp_prom_c": 28.0,
+        "precipitacion_prom_mm": 2.4
+      },
+      "5": {
+        "temp_prom_c": 28.1,
+        "precipitacion_prom_mm": 4.7
+      },
+      "6": {
+        "temp_prom_c": 27.7,
+        "precipitacion_prom_mm": 6.1
+      },
+      "7": {
+        "temp_prom_c": 28.3,
+        "precipitacion_prom_mm": 4.4
+      },
+      "8": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 5.4
+      },
+      "9": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 5.0
+      },
+      "10": {
+        "temp_prom_c": 27.2,
+        "precipitacion_prom_mm": 6.7
+      },
+      "11": {
+        "temp_prom_c": 26.9,
+        "precipitacion_prom_mm": 6.4
+      },
+      "12": {
+        "temp_prom_c": 27.4,
+        "precipitacion_prom_mm": 1.1
+      }
+    }
+  },
+  "BOYACÁ": {
+    "municipio_referencia": "TUNJA",
+    "lat": 5.53988,
+    "lon": -73.355539,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 11.9,
+        "precipitacion_prom_mm": 1.8
+      },
+      "2": {
+        "temp_prom_c": 12.4,
+        "precipitacion_prom_mm": 3.4
+      },
+      "3": {
+        "temp_prom_c": 12.7,
+        "precipitacion_prom_mm": 4.6
+      },
+      "4": {
+        "temp_prom_c": 12.7,
+        "precipitacion_prom_mm": 5.0
+      },
+      "5": {
+        "temp_prom_c": 12.7,
+        "precipitacion_prom_mm": 3.8
+      },
+      "6": {
+        "temp_prom_c": 12.1,
+        "precipitacion_prom_mm": 3.4
+      },
+      "7": {
+        "temp_prom_c": 11.8,
+        "precipitacion_prom_mm": 2.7
+      },
+      "8": {
+        "temp_prom_c": 11.7,
+        "precipitacion_prom_mm": 2.6
+      },
+      "9": {
+        "temp_prom_c": 11.9,
+        "precipitacion_prom_mm": 2.0
+      },
+      "10": {
+        "temp_prom_c": 12.3,
+        "precipitacion_prom_mm": 3.6
+      },
+      "11": {
+        "temp_prom_c": 12.4,
+        "precipitacion_prom_mm": 4.7
+      },
+      "12": {
+        "temp_prom_c": 12.4,
+        "precipitacion_prom_mm": 2.2
+      }
+    }
+  },
+  "CALDAS": {
+    "municipio_referencia": "MANIZALES",
+    "lat": 5.057657,
+    "lon": -75.491025,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 15.4,
+        "precipitacion_prom_mm": 11.1
+      },
+      "2": {
+        "temp_prom_c": 15.7,
+        "precipitacion_prom_mm": 14.3
+      },
+      "3": {
+        "temp_prom_c": 15.9,
+        "precipitacion_prom_mm": 14.9
+      },
+      "4": {
+        "temp_prom_c": 16.1,
+        "precipitacion_prom_mm": 21.0
+      },
+      "5": {
+        "temp_prom_c": 16.4,
+        "precipitacion_prom_mm": 27.6
+      },
+      "6": {
+        "temp_prom_c": 15.9,
+        "precipitacion_prom_mm": 28.9
+      },
+      "7": {
+        "temp_prom_c": 16.1,
+        "precipitacion_prom_mm": 25.1
+      },
+      "8": {
+        "temp_prom_c": 15.7,
+        "precipitacion_prom_mm": 27.6
+      },
+      "9": {
+        "temp_prom_c": 15.9,
+        "precipitacion_prom_mm": 24.1
+      },
+      "10": {
+        "temp_prom_c": 15.8,
+        "precipitacion_prom_mm": 22.5
+      },
+      "11": {
+        "temp_prom_c": 15.6,
+        "precipitacion_prom_mm": 17.2
+      },
+      "12": {
+        "temp_prom_c": 15.5,
+        "precipitacion_prom_mm": 10.4
+      }
+    }
+  },
+  "CAQUETÁ": {
+    "municipio_referencia": "FLORENCIA",
+    "lat": 1.618196,
+    "lon": -75.609831,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 25.7,
+        "precipitacion_prom_mm": 4.6
+      },
+      "2": {
+        "temp_prom_c": 25.8,
+        "precipitacion_prom_mm": 6.0
+      },
+      "3": {
+        "temp_prom_c": 25.3,
+        "precipitacion_prom_mm": 7.1
+      },
+      "4": {
+        "temp_prom_c": 25.0,
+        "precipitacion_prom_mm": 11.0
+      },
+      "5": {
+        "temp_prom_c": 24.4,
+        "precipitacion_prom_mm": 17.1
+      },
+      "6": {
+        "temp_prom_c": 24.1,
+        "precipitacion_prom_mm": 13.9
+      },
+      "7": {
+        "temp_prom_c": 23.7,
+        "precipitacion_prom_mm": 12.8
+      },
+      "8": {
+        "temp_prom_c": 24.5,
+        "precipitacion_prom_mm": 7.8
+      },
+      "9": {
+        "temp_prom_c": 25.4,
+        "precipitacion_prom_mm": 5.6
+      },
+      "10": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 5.1
+      },
+      "11": {
+        "temp_prom_c": 25.3,
+        "precipitacion_prom_mm": 6.2
+      },
+      "12": {
+        "temp_prom_c": 25.8,
+        "precipitacion_prom_mm": 4.0
+      }
+    }
+  },
+  "CAUCA": {
+    "municipio_referencia": "POPAYÁN",
+    "lat": 2.459641,
+    "lon": -76.599377,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 17.1,
+        "precipitacion_prom_mm": 6.0
+      },
+      "2": {
+        "temp_prom_c": 17.2,
+        "precipitacion_prom_mm": 6.9
+      },
+      "3": {
+        "temp_prom_c": 17.4,
+        "precipitacion_prom_mm": 8.8
+      },
+      "4": {
+        "temp_prom_c": 17.4,
+        "precipitacion_prom_mm": 6.9
+      },
+      "5": {
+        "temp_prom_c": 17.6,
+        "precipitacion_prom_mm": 4.7
+      },
+      "6": {
+        "temp_prom_c": 17.3,
+        "precipitacion_prom_mm": 3.9
+      },
+      "7": {
+        "temp_prom_c": 18.3,
+        "precipitacion_prom_mm": 2.1
+      },
+      "8": {
+        "temp_prom_c": 17.8,
+        "precipitacion_prom_mm": 3.0
+      },
+      "9": {
+        "temp_prom_c": 18.1,
+        "precipitacion_prom_mm": 3.1
+      },
+      "10": {
+        "temp_prom_c": 17.3,
+        "precipitacion_prom_mm": 6.9
+      },
+      "11": {
+        "temp_prom_c": 17.3,
+        "precipitacion_prom_mm": 9.9
+      },
+      "12": {
+        "temp_prom_c": 17.4,
+        "precipitacion_prom_mm": 8.0
+      }
+    }
+  },
+  "CESAR": {
+    "municipio_referencia": "VALLEDUPAR",
+    "lat": 10.460472,
+    "lon": -73.259398,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 29.3,
+        "precipitacion_prom_mm": 0.5
+      },
+      "2": {
+        "temp_prom_c": 29.7,
+        "precipitacion_prom_mm": 0.6
+      },
+      "3": {
+        "temp_prom_c": 30.0,
+        "precipitacion_prom_mm": 0.8
+      },
+      "4": {
+        "temp_prom_c": 29.3,
+        "precipitacion_prom_mm": 2.1
+      },
+      "5": {
+        "temp_prom_c": 28.7,
+        "precipitacion_prom_mm": 4.2
+      },
+      "6": {
+        "temp_prom_c": 27.9,
+        "precipitacion_prom_mm": 4.9
+      },
+      "7": {
+        "temp_prom_c": 29.5,
+        "precipitacion_prom_mm": 2.1
+      },
+      "8": {
+        "temp_prom_c": 28.6,
+        "precipitacion_prom_mm": 4.2
+      },
+      "9": {
+        "temp_prom_c": 27.8,
+        "precipitacion_prom_mm": 4.6
+      },
+      "10": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 5.9
+      },
+      "11": {
+        "temp_prom_c": 27.2,
+        "precipitacion_prom_mm": 4.5
+      },
+      "12": {
+        "temp_prom_c": 29.0,
+        "precipitacion_prom_mm": 0.4
+      }
+    }
+  },
+  "CÓRDOBA": {
+    "municipio_referencia": "MONTERÍA",
+    "lat": 8.759789,
+    "lon": -75.873096,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 2.0
+      },
+      "2": {
+        "temp_prom_c": 28.1,
+        "precipitacion_prom_mm": 2.7
+      },
+      "3": {
+        "temp_prom_c": 28.1,
+        "precipitacion_prom_mm": 3.4
+      },
+      "4": {
+        "temp_prom_c": 27.5,
+        "precipitacion_prom_mm": 8.4
+      },
+      "5": {
+        "temp_prom_c": 27.5,
+        "precipitacion_prom_mm": 10.8
+      },
+      "6": {
+        "temp_prom_c": 26.8,
+        "precipitacion_prom_mm": 11.1
+      },
+      "7": {
+        "temp_prom_c": 27.3,
+        "precipitacion_prom_mm": 10.1
+      },
+      "8": {
+        "temp_prom_c": 26.8,
+        "precipitacion_prom_mm": 10.6
+      },
+      "9": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 10.1
+      },
+      "10": {
+        "temp_prom_c": 26.5,
+        "precipitacion_prom_mm": 11.4
+      },
+      "11": {
+        "temp_prom_c": 26.4,
+        "precipitacion_prom_mm": 9.4
+      },
+      "12": {
+        "temp_prom_c": 27.1,
+        "precipitacion_prom_mm": 3.3
+      }
+    }
+  },
+  "CUNDINAMARCA": {
+    "municipio_referencia": "AGUA DE DIOS",
+    "lat": 4.375309,
+    "lon": -74.669221,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 25.1,
+        "precipitacion_prom_mm": 7.5
+      },
+      "2": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 11.2
+      },
+      "3": {
+        "temp_prom_c": 24.9,
+        "precipitacion_prom_mm": 11.8
+      },
+      "4": {
+        "temp_prom_c": 25.3,
+        "precipitacion_prom_mm": 10.7
+      },
+      "5": {
+        "temp_prom_c": 25.4,
+        "precipitacion_prom_mm": 7.2
+      },
+      "6": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 7.1
+      },
+      "7": {
+        "temp_prom_c": 26.2,
+        "precipitacion_prom_mm": 2.2
+      },
+      "8": {
+        "temp_prom_c": 26.6,
+        "precipitacion_prom_mm": 3.5
+      },
+      "9": {
+        "temp_prom_c": 26.8,
+        "precipitacion_prom_mm": 4.5
+      },
+      "10": {
+        "temp_prom_c": 25.3,
+        "precipitacion_prom_mm": 12.6
+      },
+      "11": {
+        "temp_prom_c": 24.7,
+        "precipitacion_prom_mm": 14.2
+      },
+      "12": {
+        "temp_prom_c": 25.0,
+        "precipitacion_prom_mm": 9.6
+      }
+    }
+  },
+  "CHOCÓ": {
+    "municipio_referencia": "QUIBDÓ",
+    "lat": 5.682166,
+    "lon": -76.638144,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 17.1
+      },
+      "2": {
+        "temp_prom_c": 25.4,
+        "precipitacion_prom_mm": 18.0
+      },
+      "3": {
+        "temp_prom_c": 25.7,
+        "precipitacion_prom_mm": 19.2
+      },
+      "4": {
+        "temp_prom_c": 25.7,
+        "precipitacion_prom_mm": 24.5
+      },
+      "5": {
+        "temp_prom_c": 25.8,
+        "precipitacion_prom_mm": 28.7
+      },
+      "6": {
+        "temp_prom_c": 25.4,
+        "precipitacion_prom_mm": 28.3
+      },
+      "7": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 28.9
+      },
+      "8": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 33.4
+      },
+      "9": {
+        "temp_prom_c": 25.3,
+        "precipitacion_prom_mm": 29.6
+      },
+      "10": {
+        "temp_prom_c": 25.0,
+        "precipitacion_prom_mm": 33.2
+      },
+      "11": {
+        "temp_prom_c": 24.7,
+        "precipitacion_prom_mm": 34.1
+      },
+      "12": {
+        "temp_prom_c": 24.9,
+        "precipitacion_prom_mm": 22.0
+      }
+    }
+  },
+  "HUILA": {
+    "municipio_referencia": "NEIVA",
+    "lat": 2.935432,
+    "lon": -75.277327,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 26.4,
+        "precipitacion_prom_mm": 4.4
+      },
+      "2": {
+        "temp_prom_c": 26.6,
+        "precipitacion_prom_mm": 6.2
+      },
+      "3": {
+        "temp_prom_c": 26.1,
+        "precipitacion_prom_mm": 7.4
+      },
+      "4": {
+        "temp_prom_c": 26.4,
+        "precipitacion_prom_mm": 5.9
+      },
+      "5": {
+        "temp_prom_c": 26.5,
+        "precipitacion_prom_mm": 2.5
+      },
+      "6": {
+        "temp_prom_c": 26.6,
+        "precipitacion_prom_mm": 2.1
+      },
+      "7": {
+        "temp_prom_c": 28.3,
+        "precipitacion_prom_mm": 0.5
+      },
+      "8": {
+        "temp_prom_c": 29.3,
+        "precipitacion_prom_mm": 0.5
+      },
+      "9": {
+        "temp_prom_c": 29.8,
+        "precipitacion_prom_mm": 1.1
+      },
+      "10": {
+        "temp_prom_c": 27.5,
+        "precipitacion_prom_mm": 5.4
+      },
+      "11": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 9.7
+      },
+      "12": {
+        "temp_prom_c": 25.8,
+        "precipitacion_prom_mm": 7.7
+      }
+    }
+  },
+  "LA GUAJIRA": {
+    "municipio_referencia": "RIOHACHA",
+    "lat": 11.528588,
+    "lon": -72.911795,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 27.5,
+        "precipitacion_prom_mm": 1.0
+      },
+      "2": {
+        "temp_prom_c": 27.5,
+        "precipitacion_prom_mm": 1.2
+      },
+      "3": {
+        "temp_prom_c": 28.1,
+        "precipitacion_prom_mm": 0.8
+      },
+      "4": {
+        "temp_prom_c": 28.2,
+        "precipitacion_prom_mm": 2.8
+      },
+      "5": {
+        "temp_prom_c": 29.0,
+        "precipitacion_prom_mm": 3.4
+      },
+      "6": {
+        "temp_prom_c": 29.2,
+        "precipitacion_prom_mm": 3.3
+      },
+      "7": {
+        "temp_prom_c": 30.3,
+        "precipitacion_prom_mm": 1.4
+      },
+      "8": {
+        "temp_prom_c": 29.3,
+        "precipitacion_prom_mm": 3.5
+      },
+      "9": {
+        "temp_prom_c": 28.2,
+        "precipitacion_prom_mm": 5.6
+      },
+      "10": {
+        "temp_prom_c": 27.3,
+        "precipitacion_prom_mm": 6.7
+      },
+      "11": {
+        "temp_prom_c": 27.3,
+        "precipitacion_prom_mm": 3.9
+      },
+      "12": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 0.8
+      }
+    }
+  },
+  "MAGDALENA": {
+    "municipio_referencia": "SANTA MARTA",
+    "lat": 11.204679,
+    "lon": -74.199829,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 27.4,
+        "precipitacion_prom_mm": 0.3
+      },
+      "2": {
+        "temp_prom_c": 27.3,
+        "precipitacion_prom_mm": 1.9
+      },
+      "3": {
+        "temp_prom_c": 27.7,
+        "precipitacion_prom_mm": 0.2
+      },
+      "4": {
+        "temp_prom_c": 28.0,
+        "precipitacion_prom_mm": 0.8
+      },
+      "5": {
+        "temp_prom_c": 28.6,
+        "precipitacion_prom_mm": 1.8
+      },
+      "6": {
+        "temp_prom_c": 27.9,
+        "precipitacion_prom_mm": 5.4
+      },
+      "7": {
+        "temp_prom_c": 28.8,
+        "precipitacion_prom_mm": 2.3
+      },
+      "8": {
+        "temp_prom_c": 28.4,
+        "precipitacion_prom_mm": 5.1
+      },
+      "9": {
+        "temp_prom_c": 28.1,
+        "precipitacion_prom_mm": 3.9
+      },
+      "10": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 3.8
+      },
+      "11": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 3.0
+      },
+      "12": {
+        "temp_prom_c": 27.9,
+        "precipitacion_prom_mm": 0.4
+      }
+    }
+  },
+  "META": {
+    "municipio_referencia": "VILLAVICENCIO",
+    "lat": 4.126369,
+    "lon": -73.622601,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 25.5,
+        "precipitacion_prom_mm": 3.5
+      },
+      "2": {
+        "temp_prom_c": 26.2,
+        "precipitacion_prom_mm": 5.0
+      },
+      "3": {
+        "temp_prom_c": 25.7,
+        "precipitacion_prom_mm": 8.0
+      },
+      "4": {
+        "temp_prom_c": 24.9,
+        "precipitacion_prom_mm": 13.0
+      },
+      "5": {
+        "temp_prom_c": 24.3,
+        "precipitacion_prom_mm": 21.8
+      },
+      "6": {
+        "temp_prom_c": 23.9,
+        "precipitacion_prom_mm": 17.3
+      },
+      "7": {
+        "temp_prom_c": 23.8,
+        "precipitacion_prom_mm": 16.9
+      },
+      "8": {
+        "temp_prom_c": 24.4,
+        "precipitacion_prom_mm": 12.3
+      },
+      "9": {
+        "temp_prom_c": 25.1,
+        "precipitacion_prom_mm": 9.6
+      },
+      "10": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 8.8
+      },
+      "11": {
+        "temp_prom_c": 25.0,
+        "precipitacion_prom_mm": 8.0
+      },
+      "12": {
+        "temp_prom_c": 25.3,
+        "precipitacion_prom_mm": 3.8
+      }
+    }
+  },
+  "NARIÑO": {
+    "municipio_referencia": "PASTO",
+    "lat": 1.212352,
+    "lon": -77.278795,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 13.2,
+        "precipitacion_prom_mm": 12.5
+      },
+      "2": {
+        "temp_prom_c": 13.3,
+        "precipitacion_prom_mm": 14.8
+      },
+      "3": {
+        "temp_prom_c": 13.4,
+        "precipitacion_prom_mm": 14.1
+      },
+      "4": {
+        "temp_prom_c": 13.6,
+        "precipitacion_prom_mm": 14.8
+      },
+      "5": {
+        "temp_prom_c": 14.1,
+        "precipitacion_prom_mm": 11.4
+      },
+      "6": {
+        "temp_prom_c": 13.6,
+        "precipitacion_prom_mm": 8.2
+      },
+      "7": {
+        "temp_prom_c": 14.1,
+        "precipitacion_prom_mm": 3.9
+      },
+      "8": {
+        "temp_prom_c": 13.6,
+        "precipitacion_prom_mm": 4.6
+      },
+      "9": {
+        "temp_prom_c": 13.8,
+        "precipitacion_prom_mm": 4.2
+      },
+      "10": {
+        "temp_prom_c": 13.4,
+        "precipitacion_prom_mm": 13.1
+      },
+      "11": {
+        "temp_prom_c": 13.3,
+        "precipitacion_prom_mm": 15.3
+      },
+      "12": {
+        "temp_prom_c": 13.3,
+        "precipitacion_prom_mm": 14.0
+      }
+    }
+  },
+  "NORTE DE SANTANDER": {
+    "municipio_referencia": "SAN JOSÉ DE CÚCUTA",
+    "lat": 7.905725,
+    "lon": -72.508178,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 24.5,
+        "precipitacion_prom_mm": 3.8
+      },
+      "2": {
+        "temp_prom_c": 24.6,
+        "precipitacion_prom_mm": 7.0
+      },
+      "3": {
+        "temp_prom_c": 24.7,
+        "precipitacion_prom_mm": 7.3
+      },
+      "4": {
+        "temp_prom_c": 25.4,
+        "precipitacion_prom_mm": 7.0
+      },
+      "5": {
+        "temp_prom_c": 26.8,
+        "precipitacion_prom_mm": 3.3
+      },
+      "6": {
+        "temp_prom_c": 27.0,
+        "precipitacion_prom_mm": 1.9
+      },
+      "7": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 0.8
+      },
+      "8": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 2.1
+      },
+      "9": {
+        "temp_prom_c": 28.1,
+        "precipitacion_prom_mm": 2.1
+      },
+      "10": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 5.3
+      },
+      "11": {
+        "temp_prom_c": 25.3,
+        "precipitacion_prom_mm": 6.6
+      },
+      "12": {
+        "temp_prom_c": 24.6,
+        "precipitacion_prom_mm": 5.2
+      }
+    }
+  },
+  "QUINDÍO": {
+    "municipio_referencia": "ARMENIA",
+    "lat": 4.53598,
+    "lon": -75.680786,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 18.3,
+        "precipitacion_prom_mm": 13.7
+      },
+      "2": {
+        "temp_prom_c": 18.4,
+        "precipitacion_prom_mm": 17.9
+      },
+      "3": {
+        "temp_prom_c": 18.5,
+        "precipitacion_prom_mm": 19.2
+      },
+      "4": {
+        "temp_prom_c": 18.6,
+        "precipitacion_prom_mm": 19.4
+      },
+      "5": {
+        "temp_prom_c": 18.7,
+        "precipitacion_prom_mm": 24.5
+      },
+      "6": {
+        "temp_prom_c": 18.4,
+        "precipitacion_prom_mm": 23.9
+      },
+      "7": {
+        "temp_prom_c": 18.8,
+        "precipitacion_prom_mm": 21.3
+      },
+      "8": {
+        "temp_prom_c": 18.3,
+        "precipitacion_prom_mm": 22.8
+      },
+      "9": {
+        "temp_prom_c": 18.5,
+        "precipitacion_prom_mm": 19.9
+      },
+      "10": {
+        "temp_prom_c": 18.3,
+        "precipitacion_prom_mm": 22.0
+      },
+      "11": {
+        "temp_prom_c": 18.2,
+        "precipitacion_prom_mm": 20.3
+      },
+      "12": {
+        "temp_prom_c": 18.3,
+        "precipitacion_prom_mm": 15.3
+      }
+    }
+  },
+  "RISARALDA": {
+    "municipio_referencia": "PEREIRA",
+    "lat": 4.804985,
+    "lon": -75.719711,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 19.9,
+        "precipitacion_prom_mm": 7.7
+      },
+      "2": {
+        "temp_prom_c": 20.0,
+        "precipitacion_prom_mm": 9.8
+      },
+      "3": {
+        "temp_prom_c": 20.1,
+        "precipitacion_prom_mm": 12.5
+      },
+      "4": {
+        "temp_prom_c": 20.2,
+        "precipitacion_prom_mm": 10.8
+      },
+      "5": {
+        "temp_prom_c": 20.4,
+        "precipitacion_prom_mm": 9.7
+      },
+      "6": {
+        "temp_prom_c": 20.0,
+        "precipitacion_prom_mm": 8.5
+      },
+      "7": {
+        "temp_prom_c": 20.5,
+        "precipitacion_prom_mm": 4.9
+      },
+      "8": {
+        "temp_prom_c": 20.1,
+        "precipitacion_prom_mm": 7.9
+      },
+      "9": {
+        "temp_prom_c": 20.2,
+        "precipitacion_prom_mm": 7.5
+      },
+      "10": {
+        "temp_prom_c": 19.7,
+        "precipitacion_prom_mm": 12.5
+      },
+      "11": {
+        "temp_prom_c": 19.5,
+        "precipitacion_prom_mm": 13.4
+      },
+      "12": {
+        "temp_prom_c": 19.8,
+        "precipitacion_prom_mm": 9.1
+      }
+    }
+  },
+  "SANTANDER": {
+    "municipio_referencia": "BUCARAMANGA",
+    "lat": 7.11647,
+    "lon": -73.132562,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 21.4,
+        "precipitacion_prom_mm": 3.8
+      },
+      "2": {
+        "temp_prom_c": 21.7,
+        "precipitacion_prom_mm": 7.7
+      },
+      "3": {
+        "temp_prom_c": 21.7,
+        "precipitacion_prom_mm": 8.5
+      },
+      "4": {
+        "temp_prom_c": 22.0,
+        "precipitacion_prom_mm": 8.2
+      },
+      "5": {
+        "temp_prom_c": 22.2,
+        "precipitacion_prom_mm": 6.7
+      },
+      "6": {
+        "temp_prom_c": 21.8,
+        "precipitacion_prom_mm": 6.6
+      },
+      "7": {
+        "temp_prom_c": 22.1,
+        "precipitacion_prom_mm": 4.2
+      },
+      "8": {
+        "temp_prom_c": 22.0,
+        "precipitacion_prom_mm": 5.8
+      },
+      "9": {
+        "temp_prom_c": 22.1,
+        "precipitacion_prom_mm": 5.0
+      },
+      "10": {
+        "temp_prom_c": 21.7,
+        "precipitacion_prom_mm": 8.1
+      },
+      "11": {
+        "temp_prom_c": 21.4,
+        "precipitacion_prom_mm": 8.6
+      },
+      "12": {
+        "temp_prom_c": 21.5,
+        "precipitacion_prom_mm": 4.4
+      }
+    }
+  },
+  "SUCRE": {
+    "municipio_referencia": "SINCELEJO",
+    "lat": 9.302322,
+    "lon": -75.395445,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 27.0,
+        "precipitacion_prom_mm": 1.3
+      },
+      "2": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 1.8
+      },
+      "3": {
+        "temp_prom_c": 27.5,
+        "precipitacion_prom_mm": 2.1
+      },
+      "4": {
+        "temp_prom_c": 27.0,
+        "precipitacion_prom_mm": 5.8
+      },
+      "5": {
+        "temp_prom_c": 26.9,
+        "precipitacion_prom_mm": 7.9
+      },
+      "6": {
+        "temp_prom_c": 26.3,
+        "precipitacion_prom_mm": 8.2
+      },
+      "7": {
+        "temp_prom_c": 26.9,
+        "precipitacion_prom_mm": 6.6
+      },
+      "8": {
+        "temp_prom_c": 26.2,
+        "precipitacion_prom_mm": 7.6
+      },
+      "9": {
+        "temp_prom_c": 26.0,
+        "precipitacion_prom_mm": 7.6
+      },
+      "10": {
+        "temp_prom_c": 25.7,
+        "precipitacion_prom_mm": 8.6
+      },
+      "11": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 7.5
+      },
+      "12": {
+        "temp_prom_c": 26.4,
+        "precipitacion_prom_mm": 2.1
+      }
+    }
+  },
+  "TOLIMA": {
+    "municipio_referencia": "IBAGUÉ",
+    "lat": 4.432248,
+    "lon": -75.19425,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 21.1,
+        "precipitacion_prom_mm": 9.0
+      },
+      "2": {
+        "temp_prom_c": 21.2,
+        "precipitacion_prom_mm": 10.9
+      },
+      "3": {
+        "temp_prom_c": 21.1,
+        "precipitacion_prom_mm": 14.8
+      },
+      "4": {
+        "temp_prom_c": 21.4,
+        "precipitacion_prom_mm": 16.1
+      },
+      "5": {
+        "temp_prom_c": 21.7,
+        "precipitacion_prom_mm": 20.3
+      },
+      "6": {
+        "temp_prom_c": 21.4,
+        "precipitacion_prom_mm": 19.0
+      },
+      "7": {
+        "temp_prom_c": 22.2,
+        "precipitacion_prom_mm": 10.0
+      },
+      "8": {
+        "temp_prom_c": 22.2,
+        "precipitacion_prom_mm": 9.4
+      },
+      "9": {
+        "temp_prom_c": 22.5,
+        "precipitacion_prom_mm": 7.5
+      },
+      "10": {
+        "temp_prom_c": 21.4,
+        "precipitacion_prom_mm": 15.7
+      },
+      "11": {
+        "temp_prom_c": 20.8,
+        "precipitacion_prom_mm": 14.8
+      },
+      "12": {
+        "temp_prom_c": 21.0,
+        "precipitacion_prom_mm": 10.5
+      }
+    }
+  },
+  "VALLE DEL CAUCA": {
+    "municipio_referencia": "SANTIAGO DE CALI",
+    "lat": 3.413686,
+    "lon": -76.52133,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 21.8,
+        "precipitacion_prom_mm": 5.9
+      },
+      "2": {
+        "temp_prom_c": 21.9,
+        "precipitacion_prom_mm": 8.0
+      },
+      "3": {
+        "temp_prom_c": 22.0,
+        "precipitacion_prom_mm": 9.2
+      },
+      "4": {
+        "temp_prom_c": 22.1,
+        "precipitacion_prom_mm": 10.4
+      },
+      "5": {
+        "temp_prom_c": 22.1,
+        "precipitacion_prom_mm": 8.2
+      },
+      "6": {
+        "temp_prom_c": 21.7,
+        "precipitacion_prom_mm": 7.4
+      },
+      "7": {
+        "temp_prom_c": 22.3,
+        "precipitacion_prom_mm": 4.3
+      },
+      "8": {
+        "temp_prom_c": 22.1,
+        "precipitacion_prom_mm": 6.3
+      },
+      "9": {
+        "temp_prom_c": 22.6,
+        "precipitacion_prom_mm": 6.0
+      },
+      "10": {
+        "temp_prom_c": 21.8,
+        "precipitacion_prom_mm": 9.9
+      },
+      "11": {
+        "temp_prom_c": 21.5,
+        "precipitacion_prom_mm": 13.6
+      },
+      "12": {
+        "temp_prom_c": 21.7,
+        "precipitacion_prom_mm": 7.4
+      }
+    }
+  },
+  "ARAUCA": {
+    "municipio_referencia": "ARAUCA",
+    "lat": 7.072726,
+    "lon": -70.747408,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 27.1,
+        "precipitacion_prom_mm": 1.6
+      },
+      "2": {
+        "temp_prom_c": 28.2,
+        "precipitacion_prom_mm": 1.5
+      },
+      "3": {
+        "temp_prom_c": 28.9,
+        "precipitacion_prom_mm": 2.4
+      },
+      "4": {
+        "temp_prom_c": 27.2,
+        "precipitacion_prom_mm": 7.2
+      },
+      "5": {
+        "temp_prom_c": 26.2,
+        "precipitacion_prom_mm": 10.3
+      },
+      "6": {
+        "temp_prom_c": 25.5,
+        "precipitacion_prom_mm": 11.9
+      },
+      "7": {
+        "temp_prom_c": 25.4,
+        "precipitacion_prom_mm": 10.3
+      },
+      "8": {
+        "temp_prom_c": 26.1,
+        "precipitacion_prom_mm": 7.6
+      },
+      "9": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 5.7
+      },
+      "10": {
+        "temp_prom_c": 26.9,
+        "precipitacion_prom_mm": 5.6
+      },
+      "11": {
+        "temp_prom_c": 26.6,
+        "precipitacion_prom_mm": 4.1
+      },
+      "12": {
+        "temp_prom_c": 27.0,
+        "precipitacion_prom_mm": 1.6
+      }
+    }
+  },
+  "CASANARE": {
+    "municipio_referencia": "YOPAL",
+    "lat": 5.327102,
+    "lon": -72.396132,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 1.1
+      },
+      "2": {
+        "temp_prom_c": 27.3,
+        "precipitacion_prom_mm": 1.7
+      },
+      "3": {
+        "temp_prom_c": 27.1,
+        "precipitacion_prom_mm": 3.7
+      },
+      "4": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 8.2
+      },
+      "5": {
+        "temp_prom_c": 24.8,
+        "precipitacion_prom_mm": 11.8
+      },
+      "6": {
+        "temp_prom_c": 24.3,
+        "precipitacion_prom_mm": 10.8
+      },
+      "7": {
+        "temp_prom_c": 24.2,
+        "precipitacion_prom_mm": 10.2
+      },
+      "8": {
+        "temp_prom_c": 24.8,
+        "precipitacion_prom_mm": 6.4
+      },
+      "9": {
+        "temp_prom_c": 25.4,
+        "precipitacion_prom_mm": 6.3
+      },
+      "10": {
+        "temp_prom_c": 25.5,
+        "precipitacion_prom_mm": 5.3
+      },
+      "11": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 3.7
+      },
+      "12": {
+        "temp_prom_c": 26.3,
+        "precipitacion_prom_mm": 1.5
+      }
+    }
+  },
+  "PUTUMAYO": {
+    "municipio_referencia": "MOCOA",
+    "lat": 1.151172,
+    "lon": -76.654238,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 22.6,
+        "precipitacion_prom_mm": 12.5
+      },
+      "2": {
+        "temp_prom_c": 22.8,
+        "precipitacion_prom_mm": 13.7
+      },
+      "3": {
+        "temp_prom_c": 22.7,
+        "precipitacion_prom_mm": 14.6
+      },
+      "4": {
+        "temp_prom_c": 22.7,
+        "precipitacion_prom_mm": 14.0
+      },
+      "5": {
+        "temp_prom_c": 22.1,
+        "precipitacion_prom_mm": 20.0
+      },
+      "6": {
+        "temp_prom_c": 21.8,
+        "precipitacion_prom_mm": 19.8
+      },
+      "7": {
+        "temp_prom_c": 21.4,
+        "precipitacion_prom_mm": 18.1
+      },
+      "8": {
+        "temp_prom_c": 22.0,
+        "precipitacion_prom_mm": 10.6
+      },
+      "9": {
+        "temp_prom_c": 22.7,
+        "precipitacion_prom_mm": 8.6
+      },
+      "10": {
+        "temp_prom_c": 23.0,
+        "precipitacion_prom_mm": 10.4
+      },
+      "11": {
+        "temp_prom_c": 22.8,
+        "precipitacion_prom_mm": 13.6
+      },
+      "12": {
+        "temp_prom_c": 22.8,
+        "precipitacion_prom_mm": 13.0
+      }
+    }
+  },
+  "ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA": {
+    "municipio_referencia": "SAN ANDRÉS",
+    "lat": 12.578108,
+    "lon": -81.707181,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 2.2
+      },
+      "2": {
+        "temp_prom_c": 26.3,
+        "precipitacion_prom_mm": 1.4
+      },
+      "3": {
+        "temp_prom_c": 26.6,
+        "precipitacion_prom_mm": 0.7
+      },
+      "4": {
+        "temp_prom_c": 27.0,
+        "precipitacion_prom_mm": 1.1
+      },
+      "5": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 3.2
+      },
+      "6": {
+        "temp_prom_c": 27.4,
+        "precipitacion_prom_mm": 9.1
+      },
+      "7": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 7.6
+      },
+      "8": {
+        "temp_prom_c": 27.7,
+        "precipitacion_prom_mm": 6.8
+      },
+      "9": {
+        "temp_prom_c": 27.9,
+        "precipitacion_prom_mm": 7.0
+      },
+      "10": {
+        "temp_prom_c": 27.7,
+        "precipitacion_prom_mm": 9.1
+      },
+      "11": {
+        "temp_prom_c": 27.3,
+        "precipitacion_prom_mm": 9.7
+      },
+      "12": {
+        "temp_prom_c": 27.2,
+        "precipitacion_prom_mm": 3.9
+      }
+    }
+  },
+  "AMAZONAS": {
+    "municipio_referencia": "LETICIA",
+    "lat": -4.19895,
+    "lon": -69.941721,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 25.8,
+        "precipitacion_prom_mm": 12.1
+      },
+      "2": {
+        "temp_prom_c": 25.7,
+        "precipitacion_prom_mm": 13.7
+      },
+      "3": {
+        "temp_prom_c": 26.0,
+        "precipitacion_prom_mm": 11.3
+      },
+      "4": {
+        "temp_prom_c": 25.8,
+        "precipitacion_prom_mm": 11.5
+      },
+      "5": {
+        "temp_prom_c": 25.4,
+        "precipitacion_prom_mm": 9.0
+      },
+      "6": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 7.4
+      },
+      "7": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 4.8
+      },
+      "8": {
+        "temp_prom_c": 26.1,
+        "precipitacion_prom_mm": 4.6
+      },
+      "9": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 4.9
+      },
+      "10": {
+        "temp_prom_c": 26.8,
+        "precipitacion_prom_mm": 7.2
+      },
+      "11": {
+        "temp_prom_c": 26.4,
+        "precipitacion_prom_mm": 9.2
+      },
+      "12": {
+        "temp_prom_c": 26.0,
+        "precipitacion_prom_mm": 12.3
+      }
+    }
+  },
+  "GUAINÍA": {
+    "municipio_referencia": "INÍRIDA",
+    "lat": 3.866764,
+    "lon": -67.918613,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 26.4,
+        "precipitacion_prom_mm": 4.9
+      },
+      "2": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 4.6
+      },
+      "3": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 7.0
+      },
+      "4": {
+        "temp_prom_c": 26.2,
+        "precipitacion_prom_mm": 10.6
+      },
+      "5": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 15.7
+      },
+      "6": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 14.1
+      },
+      "7": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 13.7
+      },
+      "8": {
+        "temp_prom_c": 25.8,
+        "precipitacion_prom_mm": 8.8
+      },
+      "9": {
+        "temp_prom_c": 26.5,
+        "precipitacion_prom_mm": 7.0
+      },
+      "10": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 7.2
+      },
+      "11": {
+        "temp_prom_c": 26.4,
+        "precipitacion_prom_mm": 7.7
+      },
+      "12": {
+        "temp_prom_c": 26.5,
+        "precipitacion_prom_mm": 5.7
+      }
+    }
+  },
+  "GUAVIARE": {
+    "municipio_referencia": "SAN JOSÉ DEL GUAVIARE",
+    "lat": 2.565932,
+    "lon": -72.639254,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 26.4,
+        "precipitacion_prom_mm": 3.0
+      },
+      "2": {
+        "temp_prom_c": 26.8,
+        "precipitacion_prom_mm": 4.1
+      },
+      "3": {
+        "temp_prom_c": 26.3,
+        "precipitacion_prom_mm": 6.6
+      },
+      "4": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 9.9
+      },
+      "5": {
+        "temp_prom_c": 25.1,
+        "precipitacion_prom_mm": 11.4
+      },
+      "6": {
+        "temp_prom_c": 24.7,
+        "precipitacion_prom_mm": 9.2
+      },
+      "7": {
+        "temp_prom_c": 24.5,
+        "precipitacion_prom_mm": 9.2
+      },
+      "8": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 5.4
+      },
+      "9": {
+        "temp_prom_c": 25.9,
+        "precipitacion_prom_mm": 5.1
+      },
+      "10": {
+        "temp_prom_c": 26.2,
+        "precipitacion_prom_mm": 5.7
+      },
+      "11": {
+        "temp_prom_c": 25.9,
+        "precipitacion_prom_mm": 5.7
+      },
+      "12": {
+        "temp_prom_c": 26.4,
+        "precipitacion_prom_mm": 3.2
+      }
+    }
+  },
+  "VAUPÉS": {
+    "municipio_referencia": "MITÚ",
+    "lat": 1.253151,
+    "lon": -70.232641,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 25.3,
+        "precipitacion_prom_mm": 6.4
+      },
+      "2": {
+        "temp_prom_c": 25.4,
+        "precipitacion_prom_mm": 7.4
+      },
+      "3": {
+        "temp_prom_c": 25.5,
+        "precipitacion_prom_mm": 8.7
+      },
+      "4": {
+        "temp_prom_c": 25.2,
+        "precipitacion_prom_mm": 11.2
+      },
+      "5": {
+        "temp_prom_c": 24.7,
+        "precipitacion_prom_mm": 14.0
+      },
+      "6": {
+        "temp_prom_c": 24.4,
+        "precipitacion_prom_mm": 11.4
+      },
+      "7": {
+        "temp_prom_c": 24.2,
+        "precipitacion_prom_mm": 11.7
+      },
+      "8": {
+        "temp_prom_c": 24.9,
+        "precipitacion_prom_mm": 7.5
+      },
+      "9": {
+        "temp_prom_c": 25.6,
+        "precipitacion_prom_mm": 6.0
+      },
+      "10": {
+        "temp_prom_c": 25.9,
+        "precipitacion_prom_mm": 6.0
+      },
+      "11": {
+        "temp_prom_c": 25.5,
+        "precipitacion_prom_mm": 7.2
+      },
+      "12": {
+        "temp_prom_c": 25.5,
+        "precipitacion_prom_mm": 6.4
+      }
+    }
+  },
+  "VICHADA": {
+    "municipio_referencia": "PUERTO CARREÑO",
+    "lat": 6.186636,
+    "lon": -67.487095,
+    "clima_mensual": {
+      "1": {
+        "temp_prom_c": 28.7,
+        "precipitacion_prom_mm": 1.3
+      },
+      "2": {
+        "temp_prom_c": 29.9,
+        "precipitacion_prom_mm": 1.0
+      },
+      "3": {
+        "temp_prom_c": 30.2,
+        "precipitacion_prom_mm": 1.7
+      },
+      "4": {
+        "temp_prom_c": 28.5,
+        "precipitacion_prom_mm": 7.9
+      },
+      "5": {
+        "temp_prom_c": 27.0,
+        "precipitacion_prom_mm": 12.0
+      },
+      "6": {
+        "temp_prom_c": 26.3,
+        "precipitacion_prom_mm": 13.1
+      },
+      "7": {
+        "temp_prom_c": 26.2,
+        "precipitacion_prom_mm": 11.9
+      },
+      "8": {
+        "temp_prom_c": 26.7,
+        "precipitacion_prom_mm": 8.5
+      },
+      "9": {
+        "temp_prom_c": 27.3,
+        "precipitacion_prom_mm": 6.9
+      },
+      "10": {
+        "temp_prom_c": 27.6,
+        "precipitacion_prom_mm": 6.1
+      },
+      "11": {
+        "temp_prom_c": 27.7,
+        "precipitacion_prom_mm": 4.9
+      },
+      "12": {
+        "temp_prom_c": 28.6,
+        "precipitacion_prom_mm": 0.9
+      }
+    }
+  }
+}

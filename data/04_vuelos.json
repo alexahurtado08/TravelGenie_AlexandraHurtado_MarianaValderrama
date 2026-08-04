@@ -1,0 +1,846 @@
+[
+  {
+    "origen": "BOG",
+    "destino": "CTG",
+    "destino_municipio": "CARTAGENA DE INDIAS",
+    "destino_departamento": "BOLIVAR",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 48443
+      },
+      {
+        "mes": "2026-09",
+        "precio": 56255
+      },
+      {
+        "mes": "2027-02",
+        "precio": 231540
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 48443
+  },
+  {
+    "origen": "BOG",
+    "destino": "SMR",
+    "destino_municipio": "SANTA MARTA",
+    "destino_departamento": "MAGDALENA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 117106
+      },
+      {
+        "mes": "2026-09",
+        "precio": 110113
+      },
+      {
+        "mes": "2026-10",
+        "precio": 212605
+      },
+      {
+        "mes": "2026-12",
+        "precio": 495764
+      }
+    ],
+    "mes_mas_barato": "2026-09",
+    "precio_mas_barato": 110113
+  },
+  {
+    "origen": "BOG",
+    "destino": "ADZ",
+    "destino_municipio": "SAN ANDRES",
+    "destino_departamento": "SAN ANDRES, PROVIDENCIA Y SANTA CATALINA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 207792
+      },
+      {
+        "mes": "2026-11",
+        "precio": 154158
+      },
+      {
+        "mes": "2027-04",
+        "precio": 271839
+      }
+    ],
+    "mes_mas_barato": "2026-11",
+    "precio_mas_barato": 154158
+  },
+  {
+    "origen": "BOG",
+    "destino": "MDE",
+    "destino_municipio": "MEDELLIN",
+    "destino_departamento": "ANTIOQUIA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 68191
+      },
+      {
+        "mes": "2026-09",
+        "precio": 73076
+      },
+      {
+        "mes": "2026-10",
+        "precio": 66095
+      },
+      {
+        "mes": "2026-11",
+        "precio": 76293
+      }
+    ],
+    "mes_mas_barato": "2026-10",
+    "precio_mas_barato": 66095
+  },
+  {
+    "origen": "BOG",
+    "destino": "CLO",
+    "destino_municipio": "SANTIAGO DE CALI",
+    "destino_departamento": "VALLE DEL CAUCA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 93598
+      },
+      {
+        "mes": "2026-12",
+        "precio": 150629
+      },
+      {
+        "mes": "2027-01",
+        "precio": 130380
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 93598
+  },
+  {
+    "origen": "BOG",
+    "destino": "BAQ",
+    "destino_municipio": "BARRANQUILLA",
+    "destino_departamento": "ATLANTICO",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 93039
+      },
+      {
+        "mes": "2026-09",
+        "precio": 74250
+      },
+      {
+        "mes": "2026-10",
+        "precio": 86806
+      },
+      {
+        "mes": "2026-11",
+        "precio": 90378
+      },
+      {
+        "mes": "2026-12",
+        "precio": 294649
+      },
+      {
+        "mes": "2027-01",
+        "precio": 201610
+      }
+    ],
+    "mes_mas_barato": "2026-09",
+    "precio_mas_barato": 74250
+  },
+  {
+    "origen": "BOG",
+    "destino": "PEI",
+    "destino_municipio": "PEREIRA",
+    "destino_departamento": "RISARALDA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 70175
+      },
+      {
+        "mes": "2026-09",
+        "precio": 86859
+      },
+      {
+        "mes": "2027-02",
+        "precio": 163229
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 70175
+  },
+  {
+    "origen": "BOG",
+    "destino": "MZL",
+    "destino_municipio": "MANIZALES",
+    "destino_departamento": "CALDAS",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 285162
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 285162
+  },
+  {
+    "origen": "BOG",
+    "destino": "RCH",
+    "destino_municipio": "RIOHACHA",
+    "destino_departamento": "LA GUAJIRA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 223222
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 223222
+  },
+  {
+    "origen": "BOG",
+    "destino": "CUC",
+    "destino_municipio": "SAN JOSE DE CUCUTA",
+    "destino_departamento": "NORTE DE SANTANDER",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 121082
+      },
+      {
+        "mes": "2026-10",
+        "precio": 92491
+      },
+      {
+        "mes": "2026-11",
+        "precio": 62115
+      }
+    ],
+    "mes_mas_barato": "2026-11",
+    "precio_mas_barato": 62115
+  },
+  {
+    "origen": "BOG",
+    "destino": "IBE",
+    "destino_municipio": "IBAGUE",
+    "destino_departamento": "TOLIMA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 173058
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 173058
+  },
+  {
+    "origen": "BOG",
+    "destino": "PSO",
+    "destino_municipio": "PASTO",
+    "destino_departamento": "NARIÑO",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 264263
+      },
+      {
+        "mes": "2027-01",
+        "precio": 486392
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 264263
+  },
+  {
+    "origen": "BOG",
+    "destino": "MTR",
+    "destino_municipio": "MONTERIA",
+    "destino_departamento": "CORDOBA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 122867
+      },
+      {
+        "mes": "2026-09",
+        "precio": 161977
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 122867
+  },
+  {
+    "origen": "BOG",
+    "destino": "PPN",
+    "destino_municipio": "POPAYAN",
+    "destino_departamento": "CAUCA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 306592
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 306592
+  },
+  {
+    "origen": "BOG",
+    "destino": "TCO",
+    "destino_municipio": "TUNJA",
+    "destino_departamento": "BOYACA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 443259
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 443259
+  },
+  {
+    "origen": "MDE",
+    "destino": "BOG",
+    "destino_municipio": "BOGOTA D.C.",
+    "destino_departamento": "BOGOTA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 79065
+      },
+      {
+        "mes": "2026-09",
+        "precio": 71315
+      },
+      {
+        "mes": "2026-10",
+        "precio": 68392
+      },
+      {
+        "mes": "2026-12",
+        "precio": 74455
+      }
+    ],
+    "mes_mas_barato": "2026-10",
+    "precio_mas_barato": 68392
+  },
+  {
+    "origen": "MDE",
+    "destino": "CTG",
+    "destino_municipio": "CARTAGENA DE INDIAS",
+    "destino_departamento": "BOLIVAR",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 124104
+      },
+      {
+        "mes": "2026-09",
+        "precio": 44205
+      },
+      {
+        "mes": "2026-10",
+        "precio": 120974
+      },
+      {
+        "mes": "2026-11",
+        "precio": 124104
+      },
+      {
+        "mes": "2027-01",
+        "precio": 131946
+      },
+      {
+        "mes": "2027-02",
+        "precio": 161005
+      }
+    ],
+    "mes_mas_barato": "2026-09",
+    "precio_mas_barato": 44205
+  },
+  {
+    "origen": "MDE",
+    "destino": "SMR",
+    "destino_municipio": "SANTA MARTA",
+    "destino_departamento": "MAGDALENA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 57425
+      },
+      {
+        "mes": "2026-09",
+        "precio": 165308
+      },
+      {
+        "mes": "2026-10",
+        "precio": 193003
+      },
+      {
+        "mes": "2026-11",
+        "precio": 41704
+      },
+      {
+        "mes": "2026-12",
+        "precio": 335881
+      },
+      {
+        "mes": "2027-01",
+        "precio": 172044
+      }
+    ],
+    "mes_mas_barato": "2026-11",
+    "precio_mas_barato": 41704
+  },
+  {
+    "origen": "MDE",
+    "destino": "ADZ",
+    "destino_municipio": "SAN ANDRES",
+    "destino_departamento": "SAN ANDRES, PROVIDENCIA Y SANTA CATALINA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 186117
+      },
+      {
+        "mes": "2026-09",
+        "precio": 182157
+      }
+    ],
+    "mes_mas_barato": "2026-09",
+    "precio_mas_barato": 182157
+  },
+  {
+    "origen": "MDE",
+    "destino": "CLO",
+    "destino_municipio": "SANTIAGO DE CALI",
+    "destino_departamento": "VALLE DEL CAUCA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 111662
+      },
+      {
+        "mes": "2026-09",
+        "precio": 66812
+      }
+    ],
+    "mes_mas_barato": "2026-09",
+    "precio_mas_barato": 66812
+  },
+  {
+    "origen": "MDE",
+    "destino": "BAQ",
+    "destino_municipio": "BARRANQUILLA",
+    "destino_departamento": "ATLANTICO",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 161273
+      },
+      {
+        "mes": "2026-11",
+        "precio": 145215
+      }
+    ],
+    "mes_mas_barato": "2026-11",
+    "precio_mas_barato": 145215
+  },
+  {
+    "origen": "MDE",
+    "destino": "PEI",
+    "destino_municipio": "PEREIRA",
+    "destino_departamento": "RISARALDA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 118478
+      },
+      {
+        "mes": "2026-10",
+        "precio": 132544
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 118478
+  },
+  {
+    "origen": "MDE",
+    "destino": "LET",
+    "destino_municipio": "LETICIA",
+    "destino_departamento": "AMAZONAS",
+    "precios_por_mes": [
+      {
+        "mes": "2026-11",
+        "precio": 239601
+      }
+    ],
+    "mes_mas_barato": "2026-11",
+    "precio_mas_barato": 239601
+  },
+  {
+    "origen": "MDE",
+    "destino": "CUC",
+    "destino_municipio": "SAN JOSE DE CUCUTA",
+    "destino_departamento": "NORTE DE SANTANDER",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 111741
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 111741
+  },
+  {
+    "origen": "MDE",
+    "destino": "PSO",
+    "destino_municipio": "PASTO",
+    "destino_departamento": "NARIÑO",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 273363
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 273363
+  },
+  {
+    "origen": "MDE",
+    "destino": "MTR",
+    "destino_municipio": "MONTERIA",
+    "destino_departamento": "CORDOBA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 126039
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 126039
+  },
+  {
+    "origen": "CLO",
+    "destino": "BOG",
+    "destino_municipio": "BOGOTA D.C.",
+    "destino_departamento": "BOGOTA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 134303
+      },
+      {
+        "mes": "2026-09",
+        "precio": 70551
+      },
+      {
+        "mes": "2026-10",
+        "precio": 80677
+      },
+      {
+        "mes": "2026-12",
+        "precio": 161193
+      }
+    ],
+    "mes_mas_barato": "2026-09",
+    "precio_mas_barato": 70551
+  },
+  {
+    "origen": "CLO",
+    "destino": "CTG",
+    "destino_municipio": "CARTAGENA DE INDIAS",
+    "destino_departamento": "BOLIVAR",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 186078
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 186078
+  },
+  {
+    "origen": "CLO",
+    "destino": "SMR",
+    "destino_municipio": "SANTA MARTA",
+    "destino_departamento": "MAGDALENA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 372342
+      },
+      {
+        "mes": "2026-09",
+        "precio": 161414
+      }
+    ],
+    "mes_mas_barato": "2026-09",
+    "precio_mas_barato": 161414
+  },
+  {
+    "origen": "CLO",
+    "destino": "ADZ",
+    "destino_municipio": "SAN ANDRES",
+    "destino_departamento": "SAN ANDRES, PROVIDENCIA Y SANTA CATALINA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 223169
+      },
+      {
+        "mes": "2026-10",
+        "precio": 181732
+      }
+    ],
+    "mes_mas_barato": "2026-10",
+    "precio_mas_barato": 181732
+  },
+  {
+    "origen": "CLO",
+    "destino": "MDE",
+    "destino_municipio": "MEDELLIN",
+    "destino_departamento": "ANTIOQUIA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 128996
+      },
+      {
+        "mes": "2027-07",
+        "precio": 240363
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 128996
+  },
+  {
+    "origen": "CLO",
+    "destino": "BAQ",
+    "destino_municipio": "BARRANQUILLA",
+    "destino_departamento": "ATLANTICO",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 210883
+      },
+      {
+        "mes": "2026-09",
+        "precio": 139558
+      }
+    ],
+    "mes_mas_barato": "2026-09",
+    "precio_mas_barato": 139558
+  },
+  {
+    "origen": "CLO",
+    "destino": "PEI",
+    "destino_municipio": "PEREIRA",
+    "destino_departamento": "RISARALDA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 294899
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 294899
+  },
+  {
+    "origen": "CLO",
+    "destino": "MZL",
+    "destino_municipio": "MANIZALES",
+    "destino_departamento": "CALDAS",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 499748
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 499748
+  },
+  {
+    "origen": "CLO",
+    "destino": "LET",
+    "destino_municipio": "LETICIA",
+    "destino_departamento": "AMAZONAS",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 521025
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 521025
+  },
+  {
+    "origen": "CLO",
+    "destino": "PSO",
+    "destino_municipio": "PASTO",
+    "destino_departamento": "NARIÑO",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 230969
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 230969
+  },
+  {
+    "origen": "CLO",
+    "destino": "MTR",
+    "destino_municipio": "MONTERIA",
+    "destino_departamento": "CORDOBA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 204701
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 204701
+  },
+  {
+    "origen": "CLO",
+    "destino": "NVA",
+    "destino_municipio": "NEIVA",
+    "destino_departamento": "HUILA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 233402
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 233402
+  },
+  {
+    "origen": "CLO",
+    "destino": "VVC",
+    "destino_municipio": "VILLAVICENCIO",
+    "destino_departamento": "META",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 264690
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 264690
+  },
+  {
+    "origen": "CLO",
+    "destino": "TCO",
+    "destino_municipio": "TUNJA",
+    "destino_departamento": "BOYACA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 363164
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 363164
+  },
+  {
+    "origen": "BAQ",
+    "destino": "BOG",
+    "destino_municipio": "BOGOTA D.C.",
+    "destino_departamento": "BOGOTA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 162633
+      },
+      {
+        "mes": "2026-09",
+        "precio": 75991
+      },
+      {
+        "mes": "2026-10",
+        "precio": 198389
+      }
+    ],
+    "mes_mas_barato": "2026-09",
+    "precio_mas_barato": 75991
+  },
+  {
+    "origen": "BAQ",
+    "destino": "MDE",
+    "destino_municipio": "MEDELLIN",
+    "destino_departamento": "ANTIOQUIA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 131233
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 131233
+  },
+  {
+    "origen": "BAQ",
+    "destino": "CLO",
+    "destino_municipio": "SANTIAGO DE CALI",
+    "destino_departamento": "VALLE DEL CAUCA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 210491
+      },
+      {
+        "mes": "2026-12",
+        "precio": 253831
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 210491
+  },
+  {
+    "origen": "BAQ",
+    "destino": "RCH",
+    "destino_municipio": "RIOHACHA",
+    "destino_departamento": "LA GUAJIRA",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 331883
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 331883
+  },
+  {
+    "origen": "BAQ",
+    "destino": "LET",
+    "destino_municipio": "LETICIA",
+    "destino_departamento": "AMAZONAS",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 440049
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 440049
+  },
+  {
+    "origen": "BAQ",
+    "destino": "PSO",
+    "destino_municipio": "PASTO",
+    "destino_departamento": "NARIÑO",
+    "precios_por_mes": [
+      {
+        "mes": "2026-08",
+        "precio": 283980
+      }
+    ],
+    "mes_mas_barato": "2026-08",
+    "precio_mas_barato": 283980
+  }
+]
