@@ -1,68 +1,62 @@
 # TravelGenie
 
-> **TravelGenie recomienda a dónde viajar en Colombia y en qué mes conviene más, combinando clima real, precios de vuelos y lugares turísticos — para que cualquier persona pueda planear un viaje sin tener que investigar todo por su cuenta.**
+> **TravelGenie recommends where to travel in Colombia and which month works best, combining real climate data, flight prices, and tourist attractions — so anyone can plan a trip without having to research everything on their own.**
 
-*integrantes*: Alexandra Hurtado, Mariana Valderrama
+*team members*: Alexandra Hurtado, Mariana Valderrama
 
 ---
 
-## 1. Modelo base y familia elegida
+## 1. Base model and chosen family
 
-**Modelo:** flan-t5-small (encoder-decoder)
+**Model:** flan-t5-small (encoder-decoder)
 
-**Por qué esta familia:** la tarea central del proyecto es *data-to-text* — convertir datos estructurados (clima, precio de vuelo, hoteles/restaurantes/atractivos) en una recomendación en lenguaje natural. Esto es exactamente lo que el objetivo de preentrenamiento de T5  lo que hace es mapear una secuencia de entrada a una secuencia de salida de longitud arbitraria. Un modelo *encoder-only* (como BERT) no puede generar texto libre; un modelo *decoder-only* (como GPT) también podría, pero el encoder-decoder separa mejor la comprensión de la consulta (encoder) de la generación de la respuesta (decoder), lo cual es más natural para una tarea con un input corto y estructurado y un output largo.
+**Why this family:** the project's core task is *data-to-text* — converting structured data (climate, flight price, hotels/restaurants/attractions) into a natural-language recommendation. This is exactly what T5's pretraining objective does: it maps an input sequence to an output sequence of arbitrary length. An *encoder-only* model (like BERT) cannot generate free-form text; a *decoder-only* model (like GPT) could also do it, but the encoder-decoder architecture better separates understanding the query (encoder) from generating the response (decoder), which is more natural for a task with a short, structured input and a long output.
 
+## 2. Domain dataset
 
+We have **384** input→output pairs (307 train / 77 validation), template-generated from real climate, flight, and tourist attraction data across 16 Colombian destinations. For more detailed information, see **[DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET)**.
 
-## 2. Dataset de dominio
+## 3. Baseline and comparison
 
-tenemos **384 pares** entrada→salida (307 train / 77 validation), generados por plantilla a partir de datos reales de clima, vuelos y lugares turísticos de 16 destinos colombianos. Para infromación más detallada Ver **[DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET)**
+**Baseline:** the same `flan-t5-small`, **without fine-tuning**, using the same prompt and the same validation set.
 
-## 3. Baseline y comparación
+**Why this baseline:** it isolates the effect of fine-tuning — since it's the same model, any difference in the metrics is explained by LoRA, not by differences in architecture or size. This is the option the assignment guide flags as "most recommended."
 
-**Baseline:** el mismo `flan-t5-small`, **sin fine-tuning**, con el mismo prompt y el mismo conjunto de validación.
+## 4. LoRA configuration
 
-**Por qué este baseline:** aísla el efecto del fine-tuning — como es el mismo modelo, cualquier diferencia en las métricas se explica por el LoRA, no por diferencias de arquitectura o tamaño. Es la opción que la guía de la asignación señala como "lo más recomendable".
-
-## 4. Configuración de LoRA
-
-| Hiperparámetro | Valor | Por qué |
+| Hyperparameter | Value | Why |
 |---|---|---|
-| `r` (rank) | 8 | Rank bajo, apropiado para un dataset de entrenamiento pequeño (307 ejemplos) — un rank alto arriesga sobreajuste. |
-| `lora_alpha` | 16 | Heurística estándar (2× el rank). |
-| `target_modules` | `["q", "v"]` | Proyecciones de atención query/value del T5 — recomendado por el paper original de LoRA para mantener pocos parámetros entrenables sin perder capacidad de adaptación. |
-| `learning_rate` | 5e-4 | Encontrado empíricamente: 1e-3 causaba colapso en loops de repetición; 3e-4 subaprendía (salidas demasiado cortas/genéricas). 5e-4 es el punto medio. |
-| `num_train_epochs` | 12 | Mismo motivo — 15 sobreajustaba, 8 subaprendía. |
-| Parámetros entrenables | 344,064 (0.45% del total) | Confirmado con `print_trainable_parameters()`. |
+| `r` (rank) | 8 | Low rank, appropriate for a small training dataset (307 examples) — a high rank risks overfitting. |
+| `lora_alpha` | 16 | Standard heuristic (2× the rank). |
+| `target_modules` | `["q", "v"]` | T5's attention query/value projections — recommended by the original LoRA paper to keep few trainable parameters without losing adaptation capacity. |
+| `learning_rate` | 5e-4 | Found empirically: 1e-3 caused collapse into repetition loops; 3e-4 underfit (outputs too short/generic). 5e-4 is the middle ground. |
+| `num_train_epochs` | 12 | Same reasoning — 15 overfit, 8 underfit. |
+| Trainable parameters | 344,064 (0.45% of total) | Confirmed with `print_trainable_parameters()`. |
 
-## 5. Resultados
+## 5. Results
 
-| Métrica | Baseline (zero-shot) | Con fine-tuning LoRA | Delta |
+| Metric | Baseline (zero-shot) | With LoRA fine-tuning | Delta |
 |---|---|---|---|
 | ROUGE-1 | 0.3526 | 0.6041 | **+0.2515** |
 | ROUGE-2 | 0.1992 | 0.4579 | **+0.2587** |
 | ROUGE-L | 0.2863 | 0.5156 | **+0.2293** |
 | ROUGE-Lsum | 0.2863 | 0.5153 | **+0.2290** |
 
+### Conclusions
 
+LoRA fine-tuning substantially improved every ROUGE variant (+0.23 to +0.26). More important than the number itself: the improvement also shows up qualitatively. After reformulating the task, the fine-tuned model **correctly copies** the facts given in the input (hotel, restaurant, and attraction names, months, prices) in the large majority of validation examples — something the zero-shot baseline does not do reliably.
 
-### Conclusiones
+It still fails in two specific ways, neither related to "inventing" information:
+- **Category mixing in some destinations** (e.g., it lists hotels under the "for food" label in 1 of 3 qualitative examples) — a text-organization error, not fabricated content.
+- **Drops the accent on the character "í"** (e.g., "Medellín" → "Medelln"). This also happens **in the baseline without fine-tuning**, so it's a characteristic of the `flan-t5-small` tokenizer with that specific character, not something introduced by training.
 
-El fine-tuning con LoRA mejoró sustancialmente todas las variantes de ROUGE (+0.23 a +0.26). Más importante que el número: la mejora se ve también cualitativamente. Después de reformular la tarea, el modelo afinado **copia correctamente** los hechos que se le dan en el input (nombres de hoteles, restaurantes, atractivos, meses, precios) en la gran mayoría de los ejemplos de validación, algo que el baseline zero-shot no hace de forma confiable.
+## 7. How to run this
 
-Sigue fallando en dos formas puntuales, ninguna relacionada con "inventar" información:
-- **Mezcla de categorías en algunos destinos** (ej. reporta hoteles bajo la etiqueta "para comer" en 1 de 3 ejemplos cualitativos) — error de organización del texto, no de contenido falso.
-- **Pierde la tilde en el carácter "í"** (ej. "Medellín" → "Medelln"). Esto ocurre **también en el baseline sin fine-tuning**, así que es una característica del tokenizer de flan-t5-small con ese carácter específico, no algo introducido por el entrenamiento.
+1. Open `notebook_finetuning_lora.py` in Google Colab (or copy it cell by cell into a new notebook).
+2. Enable GPU: `Runtime → Change runtime type → GPU (T4)`.
+3. Run cells 1 through 5 in order. Seed fixed at `SEED = 42` for reproducibility.
+4. The data collection/preparation pipeline (scraping/APIs, pair generation) lives in the `data_pipeline/` folder — see its own README if you need to regenerate the dataset from scratch.
 
+## 8. Data source attribution
 
-
-## 7. Cómo correr esto
-
-1. Abre `notebook_finetuning_lora.py` en Google Colab (o cópialo celda por celda a un notebook nuevo).
-2. Activa GPU: `Entorno de ejecución → Cambiar tipo de entorno → GPU (T4)`.
-3. Corre las celdas 1 a 5 en orden. Semilla fijada en `SEED = 42` para reproducibilidad.
-4. El pipeline de recolección/preparación de datos (scraping/APIs, generación de pares) está en la carpeta `data_pipeline/` — ver su propio README si necesitas regenerar el dataset desde cero.
-
-## 8. Atribución de fuentes de datos
-
-Este proyecto usa datos de terceros bajo sus respectivas licencias — ver [DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET) para el detalle completo. En particular, incluye datos de © OpenStreetMap contributors, disponibles bajo la Open Database License (ODbL) — más información en [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright).
+This project uses third-party data under their respective licenses — see [DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET) for full detail. In particular, it includes © OpenStreetMap contributors data, available under the Open Database License (ODbL) — more information at [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright).
