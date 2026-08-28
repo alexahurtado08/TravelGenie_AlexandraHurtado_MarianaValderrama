@@ -14,7 +14,7 @@
 
 ## 2. Domain dataset
 
-We have **384** input→output pairs (307 train / 77 validation), template-generated from real climate, flight, and tourist attraction data across 16 Colombian destinations. For more detailed information, see **[DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET)**.
+We have 346 pairs total (input→output) Split: 276 train / 70 validation (80/20), reproducible split with a fixed seed)., template-generated from real climate, flight, and tourist attraction data across 16 Colombian destinations. For more detailed information, see **[DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET)**.
 
 ## 3. Baseline and comparison
 
@@ -60,3 +60,49 @@ It still fails in two specific ways, neither related to "inventing" information:
 ## 8. Data source attribution
 
 This project uses third-party data under their respective licenses — see [DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET) for full detail. In particular, it includes © OpenStreetMap contributors data, available under the Open Database License (ODbL) — more information at [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright).
+
+
+
+## Evaluation Harness (M2)
+
+> **What this harness measures and what counts as a good answer:** TravelGenie's harness scores how well the system answers a travel question **using only the facts it was actually given** — a good answer uses the provided data correctly (no invented hotels, prices, or dates), specifically addresses what was asked, and, for edge cases (false premises, out-of-domain or unsafe requests), **acknowledges the issue instead of answering as if nothing were wrong**.
+
+### The three dimensions
+
+1. **Automatic metric — embedding similarity.** Cosine similarity (multilingual MiniLM) between the generated response and the reference answer.
+2. **LLM-as-a-judge.** `Qwen/Qwen2.5-1.5B-Instruct`, scoring 1-5 against an explicit, anchored rubric — see [`rubrica_juez.md`](./rubrica_juez.md) (versioned in this repo).
+3. **Domain criterion.** % of eval-set examples with judge score ≥ 4.
+
+### Baseline scorecard (M1 model, no RAG)
+
+| Dimension | Score |
+|---|---|
+| 1 — Embedding similarity (avg.) | 0.396 |
+| 2 — Judge score (avg., 1-5) | 2.4 |
+| 3 — % meets domain criterion (judge ≥ 4) | 20% |
+
+*(full per-example results in `scorecard_resultados_detallados.json`; raw scorecard in `scorecard_baseline.csv`)*
+
+### Honest reading
+
+The baseline scores low across all three dimensions, **and this is the expected, correct finding, not a bug.** The M1 model was fine-tuned to *write up* facts already given in its input (see the M1 "design note"), not to recall facts about a city from its name alone. This eval set intentionally passes it raw questions with no facts supplied — exactly the situation it will face **without RAG**. A 20% pass rate confirms the system genuinely needs retrieval before it's useful; that gap is precisely what M3 needs to close.
+
+**Where it fails, concretely:** the 3 worst-scoring examples (judge = 1) are the false-premise case (San Andrés "without beaches" — the model just echoes the question, no correction), the safety case (fake ticket request — no refusal at all, question echoed back), and a generic recommendation request that produced no destination whatsoever. These are the clearest, most severe failures, and the judge caught all three correctly.
+
+**Adversarial cases specifically:** 4 of our 5 adversarial examples scored ≤ 3 — the system does not yet detect false premises, does not refuse unsafe requests, and does not flag out-of-domain questions. This is the single most important gap for M3: RAG alone (grounding on real destination facts) will **not** fix the safety/false-premise/out-of-domain failures — those need explicit handling in the prompt or a guardrail step, separate from retrieval.
+
+**A caveat on the "passing" 20%:** even the 2 examples that cleared the judge ≥ 4 threshold aren't fully clean. One of them (hotels in Medellín) includes fabricated, domain-irrelevant content ("a partir de Estados Unidos, en Buenos Aires") that the judge missed — meaning the true failure rate is likely higher than 80%. We're reporting this rather than rounding it away, since an honest scorecard is worth more than a flattering one.
+
+### Judge bias: detected and mitigated
+
+**Bias found — leniency (small-judge over-scoring).** Our first judge, `Qwen2.5-0.5B-Instruct`, scored 9 of 10 examples at 5/5 — including responses that were just the question echoed back verbatim, with no correction, no refusal, no recommendation. It essentially wasn't discriminating between good and bad answers, a known failure mode of very small LLM judges.
+
+**Mitigation — upgrade judge size, verified empirically, not just asserted.** Switching to `Qwen2.5-1.5B-Instruct` (same rubric, same prompt) produced a dramatic, measurable change:
+
+| | 0.5B judge | 1.5B judge |
+|---|---|---|
+| Avg. judge score | 4.6 | 2.4 |
+| % meets criterion | 90% | 20% |
+| Correctly scores echoed-question / no-refusal cases as 1 | No (scored 5) | **Yes** |
+
+**A second bias we tested but did NOT successfully mitigate — verbosity.** We also anchored the rubric with an explicit instruction not to reward length ("LENGTH-BIAS GUARD"), and measured the length↔score correlation with and without that instruction present in the prompt. It made almost no difference (Pearson r = 0.78 without the instruction vs. 0.75 with it) — the textual instruction alone did not neutralize this bias. We're reporting this as an open issue rather than claiming a fix that didn't actually work; a more robust mitigation for M3 would need length-controlled response pairs or a separate length-normalization step, not just a rubric note.
