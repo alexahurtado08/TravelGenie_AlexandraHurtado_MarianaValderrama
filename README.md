@@ -14,7 +14,7 @@
 
 ## 2. Domain dataset
 
-We have 346 pairs total (input→output) Split: 276 train / 70 validation (80/20), reproducible split with a fixed seed)., template-generated from real climate, flight, and tourist attraction data across 16 Colombian destinations. For more detailed information, see **[DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET)**.
+We have **346** input→output pairs (276 train / 70 validation), template-generated from real climate, flight, and tourist attraction data across 14 Colombian destinations. For more detailed information, see **[DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET)**.
 
 ## 3. Baseline and comparison
 
@@ -26,7 +26,7 @@ We have 346 pairs total (input→output) Split: 276 train / 70 validation (80/20
 
 | Hyperparameter | Value | Why |
 |---|---|---|
-| `r` (rank) | 8 | Low rank, appropriate for a small training dataset (307 examples) — a high rank risks overfitting. |
+| `r` (rank) | 8 | Low rank, appropriate for a small training dataset (276 examples) — a high rank risks overfitting. |
 | `lora_alpha` | 16 | Standard heuristic (2× the rank). |
 | `target_modules` | `["q", "v"]` | T5's attention query/value projections — recommended by the original LoRA paper to keep few trainable parameters without losing adaptation capacity. |
 | `learning_rate` | 5e-4 | Found empirically: 1e-3 caused collapse into repetition loops; 3e-4 underfit (outputs too short/generic). 5e-4 is the middle ground. |
@@ -50,20 +50,7 @@ It still fails in two specific ways, neither related to "inventing" information:
 - **Category mixing in some destinations** (e.g., it lists hotels under the "for food" label in 1 of 3 qualitative examples) — a text-organization error, not fabricated content.
 - **Drops the accent on the character "í"** (e.g., "Medellín" → "Medelln"). This also happens **in the baseline without fine-tuning**, so it's a characteristic of the `flan-t5-small` tokenizer with that specific character, not something introduced by training.
 
-## 7. How to run this
-
-1. Open `notebook_finetuning_lora.py` in Google Colab (or copy it cell by cell into a new notebook).
-2. Enable GPU: `Runtime → Change runtime type → GPU (T4)`.
-3. Run cells 1 through 5 in order. Seed fixed at `SEED = 42` for reproducibility.
-4. The data collection/preparation pipeline (scraping/APIs, pair generation) lives in the `data_pipeline/` folder — see its own README if you need to regenerate the dataset from scratch.
-
-## 8. Data source attribution
-
-This project uses third-party data under their respective licenses — see [DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET) for full detail. In particular, it includes © OpenStreetMap contributors data, available under the Open Database License (ODbL) — more information at [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright).
-
-
-
-## Evaluation Harness (M2)
+## 6. Evaluation Harness (M2)
 
 > **What this harness measures and what counts as a good answer:** TravelGenie's harness scores how well the system answers a travel question **using only the facts it was actually given** — a good answer uses the provided data correctly (no invented hotels, prices, or dates), specifically addresses what was asked, and, for edge cases (false premises, out-of-domain or unsafe requests), **acknowledges the issue instead of answering as if nothing were wrong**.
 
@@ -85,7 +72,7 @@ This project uses third-party data under their respective licenses — see [DATA
 
 ### Honest reading
 
-The baseline scores low across all three dimensions, **and this is the expected, correct finding, not a bug.** The M1 model was fine-tuned to *write up* facts already given in its input (see the M1 "design note"), not to recall facts about a city from its name alone. This eval set intentionally passes it raw questions with no facts supplied — exactly the situation it will face **without RAG**. A 20% pass rate confirms the system genuinely needs retrieval before it's useful; that gap is precisely what M3 needs to close.
+The baseline scores low across all three dimensions, **and this is the expected, correct finding, not a bug.** The M1 model was fine-tuned to *write up* facts already given in its input (see the M1 design note above), not to recall facts about a city from its name alone. This eval set intentionally passes it raw questions with no facts supplied — exactly the situation it will face **without RAG**. A 20% pass rate confirms the system genuinely needs retrieval before it's useful; that gap is precisely what M3 needs to close.
 
 **Where it fails, concretely:** the 3 worst-scoring examples (judge = 1) are the false-premise case (San Andrés "without beaches" — the model just echoes the question, no correction), the safety case (fake ticket request — no refusal at all, question echoed back), and a generic recommendation request that produced no destination whatsoever. These are the clearest, most severe failures, and the judge caught all three correctly.
 
@@ -106,3 +93,20 @@ The baseline scores low across all three dimensions, **and this is the expected,
 | Correctly scores echoed-question / no-refusal cases as 1 | No (scored 5) | **Yes** |
 
 **A second bias we tested but did NOT successfully mitigate — verbosity.** We also anchored the rubric with an explicit instruction not to reward length ("LENGTH-BIAS GUARD"), and measured the length↔score correlation with and without that instruction present in the prompt. It made almost no difference (Pearson r = 0.78 without the instruction vs. 0.75 with it) — the textual instruction alone did not neutralize this bias. We're reporting this as an open issue rather than claiming a fix that didn't actually work; a more robust mitigation for M3 would need length-controlled response pairs or a separate length-normalization step, not just a rubric note.
+
+## 7. How to run this
+
+**Fine-tuning (M1):**
+1. Open `notebook_finetuning.ipynb` in Google Colab.
+2. Run the first cell to clone this repository (gives you access to `data/`).
+3. Enable GPU: `Runtime → Change runtime type → GPU (T4)`.
+4. Run the remaining cells in order, including the "save LoRA adapter" cell — this produces `travelgenie-lora-adapter/`, already included in this repo. Seed fixed at `SEED = 42` for reproducibility.
+5. The data collection/preparation pipeline (APIs, pair generation) lives in the `data_pipeline/` folder — see its own README if you need to regenerate the dataset from scratch.
+
+**Evaluation harness (M2):**
+1. In a Colab session with this repo cloned, install dependencies: `!pip install -q -U transformers peft sentence-transformers torchao`.
+2. Run `%run correr_harness.py` — loads the M1 model (base + `travelgenie-lora-adapter/`), runs it through `eval_set.py`, and produces `scorecard_baseline.csv` and `scorecard_resultados_detallados.json`.
+
+## 8. Data source attribution
+
+This project uses third-party data under their respective licenses — see [DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET) for full detail. In particular, it includes © OpenStreetMap contributors data, available under the Open Database License (ODbL) — more information at [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright).
