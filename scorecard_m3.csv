@@ -4,3 +4,4 @@ RAG básico (top-3 + válvula de escape),12,0.532,3.0,33.3,5.111,2
 RAG + solo búsqueda híbrida (ablación),12,0.511,2.83,50.0,5.109,2
 RAG + solo reranking (ablación),12,0.497,2.42,41.7,1.126,6
 RAG avanzado (híbrida + reranking),12,0.499,2.5,41.7,1.189,6
+Agente (herramienta de cobertura + RAG avanzado),12,0.436,2.25,33.3,2.729,7
