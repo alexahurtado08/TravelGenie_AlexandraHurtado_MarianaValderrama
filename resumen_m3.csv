@@ -1,0 +1,7 @@
+sistema,fuera_corpus_admite,santa_marta_completo,pereira_completo,falsos_rechazos,n_generadas,latencia_generadas_s,juez_premia_error,herramienta_cuando_necesaria,llamadas_innecesarias,pasos_json_ilegible,topes_de_pasos
+M2 baseline (sin RAG),0/4,no,no,0,12,1.22,1,,,,
+RAG básico,0/4,no,sí,0,10,5.12,1,,,,
++ solo híbrida,0/4,sí,sí,0,10,5.15,3,,,,
++ solo reranking,3/4,no,sí,1,6,4.71,1,,,,
+Avanzado (híbrida + rerank),3/4,sí,sí,1,6,4.86,1,,,,
+Agente (sistema final),4/4,sí,sí,1,5,7.47,0,8/9,2/3,0,0
