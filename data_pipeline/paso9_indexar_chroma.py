@@ -32,8 +32,8 @@ import os
 import random
 
 SEED = 42
-CHUNK_PALABRAS = 60   # palabras de contenido por chunk (sin contar encabezado)
-SOLAPE = 10           # palabras compartidas entre chunks consecutivos
+CHUNK_PALABRAS = 35   # palabras de contenido por chunk (sin contar encabezado); 60 truncaba 151/247 chunks
+SOLAPE = 7            # palabras compartidas entre chunks consecutivos
 MODELO_EMBEDDINGS = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 RUTA_CORPUS = "data/08_corpus.json"
 RUTA_CHUNKS = "data/09_chunks.json"
