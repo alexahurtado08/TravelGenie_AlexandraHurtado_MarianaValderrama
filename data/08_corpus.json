@@ -1,0 +1,422 @@
+[
+  {
+    "id": "medellín_clima",
+    "texto": "Clima en MEDELLÍN, ANTIOQUIA: los meses con mejor clima (temperatura agradable y poca lluvia) son enero, julio, diciembre.",
+    "destino": "MEDELLÍN",
+    "categoria": "clima"
+  },
+  {
+    "id": "medellín_vuelos",
+    "texto": "Vuelos a MEDELLÍN, ANTIOQUIA: el precio más económico encontrado fue en octubre, volando desde BOG, por $66,095 COP. Ese mes no coincide con los meses de mejor clima (diciembre, enero, julio).",
+    "destino": "MEDELLÍN",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "medellín_hoteles",
+    "texto": "Hoteles en MEDELLÍN, ANTIOQUIA: Hotel Nutibara, Hotel Best Western Sky Medellín, Casa Hotel Laureles, ArtHotel, Casa Kleper, Hostal Lleras, Hotel Sauces del Estadio, Hotel Alcaraván, Hotel Leblón, Hotel San Fernando Plaza, Holiday Inn, Florencia Plaza, Tryp, Hotel Boutique La Casa Medellin, Habitaestudios Tamaiti, Casa Hotel San Lúcar, Loyds, Hotel Poblado Boutique Express, Almaviva Casa Hotel, Hotel Portón de San Joaquín, Oasis de los Bernal, casa blanca de los Laureles, Hotel Platino, Hotel Casa Lleras, Hotel la Habana Vieja, Hotel Conquistadores, Park 10 Hotel, H piedras blancas comfenalco, Hotel Lobby Park, Alameda de la 10, Monte Vento, Monte Sole, Vip 70, Puente Piedra, Robledo Civiton, Conjunto Residencial santillana, La alpujarra, Hotel Extremadura, Finca los Abuelos, montañita, Hotel Casona La 70, Hostal Los Patios, Font Living, URBANIZACIÓN VILLA LOMA, San Esteban center, Casa Arapaima, Marthica, Airbnb, Andres gil, Terra Biohotel, Spa Hotel, U de antioquia Bed & Breakfast, Hotel Los Angeles, Alexandra, Hôtel Milan, Hotel kong, Rosaines, California, urb. edificios del futuro, Hotel El Colombiano, Hotel Luxury 33, Momentos Hotel, Monterrey Hotel, Cielo Azul, Urbanizacion Altos del Castillo 1, Urbanizacion Quintas de Los Alpes, Urbanizacion Tierralta 2, Urbanizacion Altos del Castillo 2, Urbanizacion Plaza Vicuña, Casa con grietas, Casa (riesdo de inundacion), Casa (acumulacion de basura), Casa, Casa (alcantarilla destapada), Casa de Ciclistas, Tania, Casa Eli, Portal Central, Hotel Punto Dos, Hostel Monet's poblado, Hotel Plaza Caracas, Hotel Casa Linda, Gran Hotel, Mi Casa, Casa Otrabanda, Hotel 47, 61Prado Guesthouse, Hostal Casa en el Cielo, Finca ROCIO DE STA ELENA, Guest House The Laureles, Hostel Cloud9, Casa, Belen Plaza, Casa, Hotel Salamanca Resort, Salamanca, Hotel Premium Real, Hola Estelar Square Superior, Hotel BH El Poblado, Sol y luna, Marriott, Nutibara Express, Hotel Egina Medellin, Hotel Vivre, First Class Hotel, Hotel Colored Boutique, Hotel Greenview Medellin, Hotel Plaza del Río, Hotel Romanza, Seven Inn, Sie7e, Florentina Hotel, Hotel Picasso, Hotel Medellín Gold HMG, Origen Local Suites, Diez Hotel Categoría Colombia, Cavalta, hotel el paraíso, Eutopiq, Subotanico, Marquee Hotel Medellin, Estadio 80, Hotel San Marino Real, Hotel Bomboná, Hotel La Mansión, Barcelo Coliving, Ayenda Villas de San Juan, Camelot apartahotel, Parcero Med Hostel, La Campana Hotel Boutique, Hotel Boutique Estadio, Centro Hotel Cordova, Hotel Poblado Alejandria, Novelty Suites, 1616 Hotel, Nomada Hotel Origen, Alma Hostal Glamping, Airbnb Medellin, Hospedaje cerca al estadio y la 70, El Oscar Hotel, Hostal-Restaurante El Nido, Hotel Boutique Laureles Medellin, Hotel Caribe, Nivel Place, Botanica Casa Hotel, Refugio del Jaguar, Hotel Laureles de Aburrá, Harbour Hotel, Masaya Medellín, Café Hotel, CoNomad House, Quadrato Studios, Hotel Living by Armoniko, Hotel Egina, Indie Universe, Hotel Guayacanes, Torre Primavera, Duo Boutique Hotel, Four Points by Sheraton Medellin, Hotel Dix, Hotel Estelar Blue, Park Caribe Hotel Medellín S.A.S, Hotel sanalejo, Hotel El Puente, Casas, Hotel Medellin, The Cut Medellín, Bruma Verde, Quinta Ladera, Casa Roberto Escobar Gaviria, Casa Roberto Escobar Gaviria, Casa donde se escondía Pablo Escobar, Casa almanik hostel, Intercontinental Medellín, Apartahotel Rodeo Plaza, Parqueadero Motos, Ibis Budget, Fairfield by Marriott, Hotel Ibis, Hotel Merlott, Hotel Dann Carlton, Suite Comfort, Inntu, Balcones de la 70, Hotel Mirador, Verony San Joaquín, Hotel, Park 6, Hotel Morgana el poblado Suites, Hotel Poma Rosa, hotel medellin, Hotel Sites, NH Collection Medellín Royal, Hotel Casa Laureles, Hotel Paris, Hotel D'Leoni, Hotel Panorama, San José Hotel, Hotel San Ignacio, Hotel Sol & Luna, 45 Golden Hotel, Copacabana Hotel, Gotel Golden, Hotel Merlott, Obo Hotel, Prada, Remanso del Rodeo, Hotel El Portal Casa Verde No. 2, Hotel El Portal Casa Verde No. 1, Hotel Mayor, Hotel Monarca, Sixtina Plaza Hotel, Hotel Central Plaza, El Playon, Hotel Dorado La 70, LQ Hotel La Quinta, City Express Plus, Zona Verde, Binn, Hotel Porton Medellin, Motel Invegas, Hotel Casa Malibu, Hotel Casa Malibu, Hotel Porton Sabaneta, The Click Clack Hotel Medellin, Viaggio Medellín Grand Select, Viaggio Medellín Grand Select, Ibis Budget Itagüi, Aura Hotel, Cabaña La Chakana, Hotel San Pedro del Fuerte, Santa Ana, Glampin Rústico, Glampin Rústico, casa, casa, casa, casa, casa, casa, casa.",
+    "destino": "MEDELLÍN",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "medellín_restaurantes",
+    "texto": "Restaurantes en MEDELLÍN, ANTIOQUIA: J&C Delicias, Crepes & Waffles, Crepes & Waffles, J&C Delicias, Balcones de la 80, Manyare, Claudio Express Pollos, Restaurante Antojitos, Pizzotas, Restaurante Piedras Blancas, Shell Advance, Pollo Broster, Balcón de Comidas, Il Forno, Paella & Parrilla, Herbario, Mondongo's, Zona de Comidas Homecenter, Asados Bartolo, Hard Rock Cafe, Isabella's Place, AP'Titos, Chinnese Food, Soft Touch, Rancho Chino, Chuscalito, Café Zorba, Angus Brangus, Restaurante Hatoviejo, San Carbón, Cafe Le Gris, Cubanitos, La Fogata, James Res, Pescao Mojado, El Puerto, Flor de Loto, Frisby, Govindas veg food, Verdeo, Piqueteadero, Pipe Sazón, Cubanitos Sadwich´s, krosquipollo, Restaurante Chino, Charcuteria y Panaderia el Bolivariano, El Rejo / Comida Mexicana, Aplastados de Pacho, Kokoriko Bolivariana, La Guadalupana, La Catrina, Veg Station, Medellin Beer Factory, La mesa del Barrio, Hooters, Bigote's, Frutti Jhon, Wichos, Helados Primavera, BonCamarón, Burdo, Cambria Cafe Resto, Mall La Mota, Presto La Mota, Chicken Chops, Mi sazón casero, Bogotá Beer Company, Royal Thai, Kokorico Colombia, Restaurante Blanquita, La Cabrera, Chef Burger, Mundo Verde, Chelita Chingona, Tropical BBQ, Restaurante y Panaderia San Benito, Hotsun Arroz Express, El tambo, SATA Parilla Moderna, Caseritos, La Causa, Mahalo park, Buñuelitos Ya!, La Tiendecita, Mi Pueblo, Chiclayo, La Pampa Argentina, Tabun, Amgels Parrilla, Bruno, La Quintana, Siroka, Full Arabe, La Provincia, Sport Wings, Cheo Parrilla, J y C Delicias, Monsieur Burger, Botánika Lounge, Versalles, Lenteja Express, Vegarden, Naan, Salud Pan, Pizzeria Olivia, Perú Fuzion Parrilla Bar, Jack & Roll, La tRESuno, Restaurante In China, Restaurante country club, Asados luz, Pollos Mario, Delipollo, pizza & lasagna, LA SONSONEÑA, Asados Criollos Induamerica, Arigato panadería artesanal, La Patrona, Kabuki, Helados hugos, Lo Exquisito del Mar, MATI, Centeno Vegetariano Restaurante, Los Asados, Soul, Parmessano, Restaurante la 89, Restaurante Las delicias de Caty, Lenteja express, Otro Cuento, El Taxista, Ciao Pizza & Mexico Comida, La Casa de Beto, Mi Pueblo, Hacienda Orígen, Mi Pueblo, La Reina, Mondongo's, Pizzería Olivia, Western Wings, Boricua, Del agua Pescados y Mariscos, Palo Santo, Jhohans, Madre Laura, La Jugosa, Punto G, Pikare Restaurant, Sushi World, Sicilia in Bocca, Mastello, Pikantos, Lucas burger, Miceviche, Mi Pico e' Gallo, Posdata, Pollos Mario La América, El Almendro, Olé olé, El Ranchito Parrilla, Sushi House, Lucia, Patria mia, Ammazza, Alambique, Crepes & Waffles, Bonhomia, La Cantine, Canela, asados el rincón llanero, Nino's pizza cafe, Restaurante y cafetería Palass, Oci, Restaurante La Matriarca, Medellín, Paraíso, Tallara Fusion Perú, Del Agua Pescados & Mariscos, Casero, Carmen, Victoria Regía, Nuquí, Itaca, Sabor Pacifico, La Luciola, La Chagra, Sushi Love, Sushi Love, Melón & Pimentón, El Colmado, Pizzeria Donato, Restaurante Doña Marta, Del Tren del Café, Pollo Broster, Kilele, El Café, Cable a Tierra, El Planchon Del Parque, Octavia Maravilla, Marietta, Crepes & Waffles, La Pampa Parilla Argentina, Hija Mia Coffeeroasters, Federal Ribs, Federal Ribs, Acanto Repositeria, Las Manas, Fruity Combos, Berracas de la 13, Barna, Bao Bei, Sumo Ramen, Sesave, Praná - Cocina Natural, Juan Fredo Café, Douraku ramen japones, Alma, La Taqueria Comida Mexicana, Frity Combos, Turban Doner Kebap, Prâná Cocina al natural, Orale comida Mexicana, El Compy Venezolana, El Cafe Tal 70, Bao Bei cocina asiatica contemporana, Restaurante La Reina, Frisby, Trigo y Laurel, El Patacón, El Portal Chino, Arroz Paisa, Barna, Asadero Y Restaurante, Restaurante Catalan, Campollo, Restaurant Bolivar, Pizza Loca El Mejor Sabor, Rico Ajiaco y Algo más, Kokoriko, Restaurante Delicias Del Mar Y Rio, Arrocitos de la U - Asadero, Rapidelicias, La Tienda, Restaurante, El rancherito, Zarzal, Abracadabra, La monita, Deli Lunch, La Grande Pizza, Korea House, Bendito Restaurante, Luzma Delicias, Mercado del Tranvía, Peace and Food, Basilica, Casa Comedor, Simple, Cabal Pupusas de El Salvador, Comida Sana, El árbol de la vida, Restaurante Justo, Shanti Cocina Vital, Betty's Bowls, Gato, Que Sazón la del Paisita, Cafetería Boyaca, Sushi Train, Rocoto, La Parrillita, El CASERITO, Mr Burger, Emilio, Piccolo, Empanadas la catedral, Mi Palenque, Ristorante del Bosque, Lavocaderia, La Pizza De Alejo, Deli Arepas, Sushi Gama, Las Delicias, Fire House, Naranjo en Flor, La Cleta, Domipollo Express, La Burger Bar, Caseros a su Gusto - C.C. Gran Plaza, Saludable, Toreto'ss Burger, Bolivar, El Caserito, Dharma Vegan resto $, Turban kabab house, Pezetarian (sushi) $, Casa flam, Betty's bowls, Melevo (steaks), Zaaika indian restaurant $, Kai restaurante $, Cafe dulcinea, Massi's grab and go (italian) $, Macanas, Meridiano, Barbaro Cocina Primitiva, Brutal, Movie time, Monarca, Ciao Pizza Gourmet, El Cielo, El Botánico, Bianchas, Due Amici, Don Carlos Restaurant, Verdeo, Estadero y asados la Y, Maru Rico!, Super Pizza, Achiote, Menu del dia 12000, Soul, El Sabor de San Juan, El Casero, Opera Pizzería & Restaurante, Pane e Pomodoro, Hatoviejo, Las trucheras, Achiote Bistro, El Güero Taquería, Hacienda Origen, Copoazú, Bj Pizza, Arepa Todo, Pane e Pomodoro, El Juego Social, Cafe Exlibris, El Boleo, Il carreto - trattoria pizzeria, Tal Cual, Amarelo Rodizio, Urban, El Graspo De Uva, La Tienda Del Vino, Piccolo, Pastas Con Amor, El Conejo Blanco, El Pilon Guareno, Arte Casero, Doblepizza, El Corral, Sabor Chino, Pizza a la Leña, Las Costillas De Pedro, Il Forno, Crepes & Waffles, Sarku Japan, Chilaquiles, De La Pitri Mitri!, Don Magolo, Arepona, En Santa, Lezzet Cocina Turca, Parche Arvi, La Bronca, El D, Pizzería Gatti, Pizzería Antica, Buena Vibra street food, avec, Restaurante Malevo, Smash, Voraz, Carpión, La Pesqueira, Rincon Santandereano, Santa Gracia, Ladrillo y Verde, La Buena Olla, Punto Sabroso, Donde Olguita, Pollos Mario, Dagram Restaurante, Restaurante Marlen Gourmet, Toppings bar, Toppings bar, Ricotta Food Fusion, Bollo Limpio, Paraiso Frutal Sabaneta, Empanadas La Troncudas, Piaceri, Brosty, Mawy Pollos, Ciento una Delica Hamburguesa, Porci Carnes, Restuarante Onde Pedro, La Major Comida Casera, Resturante Punto Verde, Office Chef, Brosty, Palo Santo, Chino Emir, Buñuelos Los Bernal, Cherokees Parrilla, Piecere, La gracia, Que Rico Parilla!, Parrilla Bar Nogales Barbecue, Los + quesudos, Pico y Chao, Petisco, PizzaExpress, Parrilla punta y solomo, Patria mia, colombia de lujo, patrick's irish pub, Il Forno San Lucas, Pokawa Poke Bar, Fonda La Frontera, Mirador El Cielo, El Alemán Pues, Puro Perú, Panaderia el Panzón, La PaRockia'r, El Vegano Andante, Altrada Gracias, Sazón del Mar, Café DM HOME, Crepes & Waffles, El Corral Gourmet, Truchera Los Muñóz, Mamasita Medallo, Comida típica colombiana, Restaurante granero monterrey, La Pampa Parrilla, Frisby, Zona Comidas, Zona Comidas, Zona Comidas, Cus Cus, Restaurante Palma Seca, Panaderia Reposteria, Coral Azul, Punta Del Este, Arepas Los  Abuelos, Restaurante Punto Chino, Zona Comidas, La Varaka, La Pollera Colora, Pan Dorado, Restaurante  Ambrossia, Salsaomentaria Portovelho, El Tejadito, Casa Blanca Laureles, Mi Buñuelo, Amars Reposteria, Dan Toro, Antojos Men, Sabor Santarosano, Donde El Talo, Salsamentaria  Portovelho, Restaurante El LLanerito, Salsamentaria Estadio, Punt Inic  Tostao, Ammazza Gin Garden, Podestá, OCCA, Itadaki Ramen, La Champagnería, Bagatelle, Veinte Platos, Son & Melona, Parmessano, Salón Ahumado, El Correo y Amada, Lugano Fondue, Corte Grueso, Casona, Tu Buñuelo, Santa Gema, Panaderia Los Mejores, Sky Hills, Estacionate, Bisontalas, 4 ESQUINAS, Restaurante catena, Sushi Light, Restaurante Barcal, Restaurante Los Muñetones, Moratta Restaurante, Vegan & Veggie, Govindas Veg Food Sede la Playa, SERE, La Taza y Helénico, La Pizza de Alejo, El sabor de San Joaquin, La Caldera, Aquí Paró Lucho, Balcón Silletero, Pizza Sapore, Jhon Perrada, Pizzas Roquefort, Rosteka Parrilla-Bar, Aspasia, Mandingas goofy, Pollos Mario, 360° Azotea, LA PALMA FOODS & DRINKS, Pizzas Piccolo Sabaneta, Restaurante Santa Gula, Garage 56, La Rufina, Templo del Chicharrón, Eat Express, Restaurante Makro Chino, Mondongos La Antioqueñita, Vegarden, Puro Carbón Parrilla, Sol y Luna Restaurante, Fausto Nefasto, Ichiraku Ramen, Restaurante Bau, La Hacienda, LicoExpress, Roll Up Sushi Burrito, Sushi Fun and Wok, Sr Wok, Olivia, Subula Greek Sandwich Shop, Sorbos Restaurante, Dos Notas, Más Finca, Bisonte 1774, Pizza a Leña, La Gran Esquina, Submarino Express, Pa' Todos, Naan Laureles, Lenteja Express Centro, L'Aula, Don Diablo, Abbiocco, Dim Sum Records, Soul Korean, salsazon, My Bowl, El Gran Budare, Aguafresca Taqueria, Ocio, Bonuar, In Situ, midas, Los Monitos, Palazzetto D' Italia, mauro’s, Azulejos - la casa de la abuela, Amelie, Delicias del Mar, Ruda, Ammazza Pizzeria & Gin Garden, Ragazzi, Il Forno, Caduff Pasta Fresca, Pomo d’oro, Reposteria Astor, Naturalia cafe, Bracos, Subula, Restaurante Caribeño, Bendición de Sara, Muralla China, Nuquí Centro, El Puto Tacos Laureles, Restaurante el Tio, Dulce Poison, Real vegetal, The Curry Lounge - Daawat e India, Simone Café Colombo, Gordos, Helecho Vegan Sushi, Bowls Tekunal, Tapiche, Lekkers, Restaurante Popular, La Causa, Tempura Sushi, La Fonda del Pueblo, Distrito, Azul Selva, La Frutera del Pueblito, Nezia, El Llanerito, Vesuvio Pizzeria, Sazon Paisa, Cozy Ensaladas, Donde La Abuela Pastora, Parrilla Otrabanda, Flores y Sabores, Pollos la delicia del Carbón, Carbón, Mi Palenque, Mozzarella gourmet, Comida peruana, Restaurante Cocina Peruana, Sopas El Rey, Mi Pueblo, El Patio, Arte y Crepes, Cuernavaca, Los Troncos, Rusto, Pizzería, Los troncos, Aguadulce, Pizzas Picolo, Tamagotchi, tempura, nacionsushi, Parmessano, Spago, Crepes & Waffles, Restaurante La Antioqueñita, La 49, Pedro, A Puro Fuego, Sushimoon, Bancon´s Burger, La Milpa, Alma Natura, Buñuelo express, Vegstation, El Colmado, Restaurante Buena Arepa, Bihao, Restaurante la Candelaria, Comida Criolla, Óleo, La Esquina de la Milanesa, Bici Pizza, Restaurante La Matriarca, Viva Envigado, Delimar, Mosquito Rooftop, Patatas Zone, Rellenitas, Atypical house gourmet, Artellano, La Celestina, PARRA’S BURGUER & MEX, Mandingas, Kawana Restaurante, Pizzeria All Natural Food, 0034 Urban food, KITCHEN Chips & Food, Saboripizza, Pataché, Patacones y Ceviches, hamburguesas, Boomerang Fast Food, Llanerito, Restaurante escolar I.E.J.V.A, Restaurante escolar, El Parque, Sur Parrilla, Brasas la Iguana, El sabor de doña miryam, Restaurante La Nacho, Restaurante y Salsamentaria RyM, Restaurante la negra, Comida peruana Chimbote, Las hamacas, J & C, La variante, Pollos Mario, El pollazo # 1, Campi asados, Asados El paisa, Campibroster, La Campiña, Restaurante El Pibe, Restaurante el faro, Dame Ramen, Moniketo, La Terraza del Estadio, El Mirador de la Vecinidad, Los Chamos, Master Club 70, Pollo Express, Maderos, Pan y Café, Restaurante La Yoli, Candilejas, El Altar Taquería Manila, Ganso & Castor, Criminal Taquería, Las Delicias De La Flaca, Cafe cliche, La Gloria de Gloria, LF Burger - Sede Manila, San Martino Pizzas y Pastas, Asados Bartolos, Tulsi, Rincón Argentino, Roll Up, Mikaela Oviedo, Mikaela Punto Planta, Mikaela Salud Sura Industriales, Mikaela San Lucas, Mikaela Piazza Bella, Ginger Cocina, Prana Cocina Al Natural, Exotic, El Poney Pisador, Natto, Restaurante Auténtico, Restaurante Bar Rumba y Carbón, Naan, Crepes & Waffles, Santa Brasa, Restaurante Manantiales, Rica Michelada, Restaurante Dragón de Oro, Mundo Verde, Mekong, Game Over Resto Bar, Bella Nonna, 123WOK, El Correo Carne y Vino, Pizzarino, El Altar Taquería, Leños & Carbón, Mistura, Las Veganas, Dolce Salato, J&C Delicias, Al Chile, La Romana Trattoria, Rocoto, Parmessano, La Rosa, Mundo Verde, Il Forno, El Alma, Compostela, Mi Arepa, Makena Sushi & Grill, Emiliano Taquería, Animal Cocina, Grill Persa, tavola., Zona Bistro, Migrate Panadería Restaurante, Capital Antioqueña, Abba Padre Parilla, La Dolores, Milagros, Hot Wings, Rocoto, Lima Sushi Wok, Trapani, Eden, Donde Darío, Artesano, Alicos Grill, Marmettina, Ecotruchas La Perla, Della Nonna Trattoria, Tosco Amigos y Comida, Caliza Cocina Mexicana, Señor Arepa, Angus House, Noche de Balero, Lucho Arepas, Animal, DM Parrilla, Animal, Flandes Waffles, Real Steak, Crepes & Waffles, Red House Envigado, Pollería, Megalitas, Megalitas, Megalitas, Megalitas, Cerro Verde, Micheladas y Empanadas Comuna 13, Zona Bistro, Pizza Iolo, Canalla, Restaurante Siennas Del Pacifco, Donde Juancho (Inferior), Calieche, La Braza, Rico Pollo Apanado Tipo, Carnelly da sabor, Pasta Y Pizza, La Fonda Del Tio Bar, Parepan, Punto Gourtmet, Lafocacceria, Arbóreo, Restaurante - Cafetería Deportes, Cabra Andaluz, encontremonos, Restaurante, Las Tinajas, Las delicias de Amparo, Las Delicias de Amparo Villatina, Al Anca, Instinto RestoBar, Restaurante Delicias del Mar, Restaurante Delicias Mami, Tienda & Cocina Vegetariana, Billar Chapi, Saberes y Sabores del Alma: Cocina, Restaurante El Fortin, Oh! Food, El Altar Taquería La 70, Guanajuato Balcon Mexicano, Las Delicias De Martha, Jack's Wings, 360 Rooftop Bar & Restaurante, 360 Rooftop Bar & Restaurante, La Sazon de Natalia, Sushi Light, Aldea Nikkei, Hood, Bigos, Restaurante la Posada de Posada, Tanqueo, Yireth, Carne a la Llanera, Olivia, Culturas bar y restaurante, Las delicias de Martha, Cote Gourmand, Sushi Service, Territorio Gastro Bar, Restaurante La terminal, Embajada China, Sabor Gourmet, Jalisco, Panchocha El Oríginal, Los Colores del mar, Restaurante la Suegra, Déjame que te cuente, Bocado de reina, Luna Moré, Gourmet Sabana, EL sabor de resortes, Ilforno, Chorizos, Sancho Paisa, Clap Burgers, Santa Lucia, Restaurante Chino, Capira Papitas, Guadalupe, Crisss Pollosss, Malanga del Trópico, La Pampa, Five Star Burger & Hot's, Kittys, Rincón Tamesino, Las Vegas, Pio Pollo #2, El Playon, Monachos, Melao, Frity Broos, Frechibar, RESTAURANTE LA GUADA, El Vergel, Asados Candela, Restaurante Okus, kasetas, The Grill Station Burger, Billar Alberio, Helados Violetta, La carbonera, Lucilda Alimentari, ru, Vista Al Vuelo, Waira, San Ateo, Mirador San Ateo, El Chuscal, La Carreta, Yony Perros, Sr Dog, Restaurante EL MEKATEADERO, Ambar Café Boutique, PAPOTAS, Don Sancho, La Salida, venezzia, Cafetería, caseritos, Ricas Mandingas Especiales, Wings and Beer, Jose Domingo parilla, Mordiscos, Patata station, Asados Company Belén, Restaurante vereda Manga Larga, Cocorolló Las Palmas, La Fragata, El Pony Pisador, Tierra Alta, Case de Nadie, Redman Nuestra House, Casa El Ramal y Bar Mandarino, comidas rápidas.",
+    "destino": "MEDELLÍN",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "medellín_atractivos",
+    "texto": "Atractivos turísticos en MEDELLÍN, ANTIOQUIA: Centro Cultural Facultad de Artes U de A, Casa Museo Otraparte, Museo Counitario GAV, Auditorio Diego Echavarría M., Casa Tres Patios, Las Cometas, Secretaría de Educación y Cultura, Mirador de la Paloma, Mirador (Bajo) - Pinares de Oriente, Mirador - Pinares de Oriente, Mirador El Cubo, Parque El Salado, Mirador de Loreto, Casa Abu, comfama parque arví, parque gaitan Manrique oriental, El Jordan, 1er.retorno Las Palmas, Edificio Solaris, Edificio Renaissance, Barrio la Virgen, Casa de la Lectura Infantil - Casa Barrientos, Escultura Esfera Pública, Mirador El Placer, Lucho Márquez, Mirador de la Comuna 13, Voladero san felix. Parapentes, Pineda veterinaria, Mirador Las Palmas, Museo Etnográfico Madre Laura, Museo Etnográfico Miguel Ángel Builes, Museo de Geociencias, Parque de las Esculturas, MIrador de la Asomadera, Bulebar de la parroquia san pio, Virgen de la Candelaria, Persona, Pueblo Paisa, Mini Cerro Quitasol, Avenida junin, Terraza Fabricato, Avenida la Playa, Museo de Bicicletas Clásicas y Antiguas, Mirador el Plan, Real City Tours Free Walking Tour, Buena Vista de Medellín, museum Pablo Escobar, Casa Gardeliana, Parque Santiago, Zona De Vuelo (Parapente), Xiloteca, La Casa de las Piedritas, Mirador el faro, Mirador El Faro, Mirador el faro, Mirador el faro, Mirador del faro, Mirador La Torre, Museo de la Vida, Casa Patrimonial Golondrinas, Mirador, Punto recreativo, Mirador el Morro, Herbario JAUM, Montaña de la PAZ, Bridge to view Medellin, mirador altos de oriente 2, Mirador las golondrinas, Mirador faro 1, Mirador faro 3, Mirador faro 4, Mirador Faro1/ acumulación de escombros, Mirador faro 1, Mirador plazoleta 13 de noviembre, Mirador el cristo, Cápsula del tiempo Aurora, mirador sector 4 Parte Alta La Honda, Cerro el Volador, Museo de Antioquia, Museo Interactivo EPM, Bloque 15 - Museo Universitario, Planetario de Medellín, Parque Explora, Museo de Arte Moderno de Medellín, Museo Casa de la Memoria, El Venteadero - La Cruz, Mirador - Pinares de Oriente, Mirador (Bajo) - Pinares de Oriente, Museo y Jardines El Castillo, Mirador De Granizal, Casa Museao Francisco Antonio Zea, Puerta Urbana, Quebrada La Chocha, Plazoleta de las Esculturas, Museo de Ciudad, Casa Museo Salsipuedes, Museo Pedro Nel Gómez, Museo entomológico Francisco Luis Gallego, Esculturas, Museo Pedro Nel Gómez, Museo Pedro Nel Gómez, Museo Casa Consistorial, Montaña de la PAZ, Casa Museo Marco Fidel Suarez, Mirador La Aurora.",
+    "destino": "MEDELLÍN",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "barranquilla_clima",
+    "texto": "Clima en BARRANQUILLA, ATLÁNTICO: los meses con mejor clima (temperatura agradable y poca lluvia) son enero, febrero, marzo.",
+    "destino": "BARRANQUILLA",
+    "categoria": "clima"
+  },
+  {
+    "id": "barranquilla_vuelos",
+    "texto": "Vuelos a BARRANQUILLA, ATLÁNTICO: el precio más económico encontrado fue en septiembre, volando desde BOG, por $74,250 COP. Ese mes no coincide con los meses de mejor clima (enero, febrero, marzo).",
+    "destino": "BARRANQUILLA",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "barranquilla_hoteles",
+    "texto": "Hoteles en BARRANQUILLA, ATLÁNTICO: Hogar San Camilo, Hotel Plaza Real, Hotel, Hotel Colonial Inn, Imperial, Hotel Mónaco Real, Hotel Canadiense, Yivinaca Hotel, Helen Home, Hotel Libertador VIP, Hotel/ restaurante El camionero, Hotel Estadero La Gran Embajada, Hotel San Diego, Vallclaire Suites, Faranda Collection Barranquilla, Hispano Americano, Hotel El Capi, Hotel Portal del Río, Aparta Hotel 44, Hotel San Nicolás Colonial, El Camino, AVANTY, Hotel Movich Buró 51, Hilton Garden Inn, Hotel Majestic, Hotel Dann Carlton Barranquilla, GHL Hotel Barranquilla, Holiday Inn Express, Barranquilla Plaza, Hotel Atrium Plaza, Tarento Hotel, Hotel Charthon, Hotel Candiac, Puerta Del Sol, Hotel Imperial, Villa Dilia Hotel, Hotel Dorado, Hotel 56 Avenue, Hotel Casa Boston, American Golf Hotel, GHL Collection Hotel Barranquilla, Hotel - Brisas Antioqueñas, Hotel Dubai Inn, Hotel Tinton's, Hotel Plaza Bolivar, Hotel Estelar Alto Prado, Atlantis Suites Travelers, Hotel Universos, Crowne Plaza Barranquilla, Hotel Ibis, NH Collection Barranquilla Smartsuites Royal, Park Inn by Radisson Diamond Barranquilla, Wyndham Garden, Marriott, Continental Plaza, Stanford Plaza, Hotel Windsor, Hotel Fourst Point, Hotel Via 40, Hostal, Hotel Samaritano, Hospedaje La Estrella, Hotel Gran Estación, Hotel Yalu, Hotel Costa Mar, Hotel Señora Bucaramanga, Coconuko Casa Hotel, Hotel Country Internacional, Hostal Quinta Bacana, Hotel El Prado.",
+    "destino": "BARRANQUILLA",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "barranquilla_restaurantes",
+    "texto": "Restaurantes en BARRANQUILLA, ATLÁNTICO: La Finca, Mi Bohio Puerto Rico, Playa Canoa, Restaurante 1966, Butifarras Monsa, DeliPizza - Pizzería, Restaurante Hong Kung Cheng, Rincón Marino, Nonna Rosa, Terraza Arabe, Casa Jarikanda, La Tiendecita, The meeting point pizzeria, La Traviata, Los Compadres, Las Rocas, El tunel, Butifarra las quince letras, Il Fascino Restaurante, La Patrona comida mexicana, La Facultad, Maio, El Rincon Del Proveedor, restaurante Donde Leo, La bonga del sabor, Cali Brasas, La Braza, el carbón de simón, La Parmesana, Don Pepe, Restaurante Xin - Wah, Restaurante Andrea, Restaurante, D' Ricura, Fritanga, Cipote pollote, El rincon del sabor, Arana´s, Restaurante La Dinastia China, Restaurante La Jade China, retaurante chino Ying Bin sucursal nº2, Restaurante Bolivar, Restaurante, Restaurante La 1, Restaurante Donde Sara, Victor's Casual Foods, Vegan Garden (202604), Salvator's Pizza, Fabio Café Restaurante, Benito Juarez, Buffalo Grill, Subarashi, Biblos, Wuxi Wok, Siracha Barranquilla, Skaff de Karaan, Nancy Cabrera Restaurante y Repostería, Fior Di, La Vecchia Signora Restaurante & Cava, Sushi Market, Subarashii, hot: Punto Múltiple del Sabor, Pietrini's, La Criollita, Cucharón de Palo, Famiglia per Nena Lela, Rodizio e Vinho, Restaurante y Estanco La Inmaculada, Noa Sushi & Robata, Pasteles doña sara, Restaurante gran maiz, Restaurante Bélgica, Restaurante la niña Amira, Restaurante Doña Alba, Restaurante kaimar, Tizon soledeño, Restaurante carbon killero, A comer deli, Invibe s.a.s, Subarashi Sushi Bar, Donde felix, Restaurante donde mirian, Sabor de mi tierra, La casa del pan, Paisarroz wok, Monica sabbagh, Restaurante morgan, La sazon de beto, Buffalos's white, Restaurante can ton, Du Nord Terrace, Restaurante Bocas de Ceniza, La Creperia Du Nord, Pescayé Barrio Abajo, Sabor Dennys, Marcelina, La Frida, Il Padrino Trattoria, sí hay sí hay, El Trapiche, Alegoría, La Bendición, La Estación Paisa, Sancochos & Asados 84, Brasas & Fuegos, Palenque, ZAHLE, El Corralito, El Arriero, La Preferida, Mira Mar, Riomar, Charles, Salvatore, Sazón de la Casa, El Churrasquito, El Carmen, Mi Refugio, Chula's, La Estación del Río, Helena, Árabe Gourmet, Pepe Anca Steakhouse, Lechona Serrano's, El Caracol, Playas del Caribe, Velas Donde Jhonny, La Cucharita, Los Almendros del Río, Son Carnivoros, TOMATINA, Rancho Bajero, Brisas Toludeñas, El Paye, Micheladas 2go, Llanera, Mirador del Rio, La  Monda, Bogavante, San Nicolás, Doña Rita, Hangar Del Río, Restaurante Bar El Patio de Lety, Restaurante La Plaza, El Manglar, The Hall of Fame Carne a la Llanera, La Finca de Rigo, La Matriarca, Restaurante Donde Erika, Estadero El Sabor de Las Flores, Wakita Terra Firme, Santa Sazón - Resto Bar, Restaurante Chino El Mana, Puerto Amor, Mi Tierra, Restaurante Casa Vieja, Curramba Campestre, Mi Niño Parrilla, La Paila Del Río, Yo Amo Bazurto, La Pizzeta, Asados Doña Rosa, Tiradito - Barra Cecichera, La Esquina de Freddy, altoque, SUUKALA, PERREO IN, La Cosecha, La Esquina De Carramba, Virgen del Carmen, Mr. Panda, Piko Riko, Pan Santana, Paradero Los Containers, Pollo asado, Restaurante La Mona, Restaurante Monstro, Arana, Plaza del Cabrito, Restaurante El primo, Dragon de Oro, Arroz con Tó, Sabor Paisa, Rodizio, hot, Mag Mondongo, Llanera & Carbón, Orale, Mediriente, Restaurante Las Rocas - 82, Restaurante Mr Yin, Restaurante Lala´s, Sushi2Home, La Cueva, Asadero Ciudad Bonita, Turco's Pizza, Restaurante Imperio Chino, Takeaway Sushi, Restaurante El Patio de la 21, Asados Piolin, Marinos Junior, Asados y Sancochos de la 74, La Negra del Sabor, Frutera del Gordo, Restaurante Jardines De Confucio, Esquina del Cerdo, Punto Múltiple del Sabor, Km7 asados y comida típica, La Cocina del Museo, Torre del Pescado, Teriyaky Komodo, Las Vegas Recreaciones Club, El Solar de Mao, Asados Carbon De Leña Arabe, Dame Ramen, RacaMandaKa, La Terraza Pizza & Lasaña, La Casa del Argentino.",
+    "destino": "BARRANQUILLA",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "barranquilla_atractivos",
+    "texto": "Atractivos turísticos en BARRANQUILLA, ATLÁNTICO: Bocas de Ceniza, Museo de Galapa MUGA, Árbol de Caucho de Villa Campestre, Ecoparque Marulandia, Museo Mapuka, Torre Mirador, Ecoparque Ciénaga de Mallorquín, Collapsed Cisterns, Luna del Río, MagdaTours, Árbol de Navidad (en temporada), Bosque Urbano de Miramar, Museo a cielo abierto, Museo a cielo abierto, Museo a cielo abierto, CARRUSEL (en construcción), Riobus, Puerto Mocho, Museo Bolivariano, Museo de Arte Moderno, Casa Emilianis, Museo del Atlantico, Villa Heraldo, Museo Cultural del Caribe, Ventana al Mundo, Ventana de Campeones, Plaza de las Luces, Museo del Carnaval, Museo Bolivariano, Riobus.",
+    "destino": "BARRANQUILLA",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "tunja_clima",
+    "texto": "Clima en TUNJA, BOYACÁ: los meses con mejor clima (temperatura agradable y poca lluvia) son mayo, marzo, abril.",
+    "destino": "TUNJA",
+    "categoria": "clima"
+  },
+  {
+    "id": "tunja_vuelos",
+    "texto": "Vuelos a TUNJA, BOYACÁ: el precio más económico encontrado fue en agosto, volando desde CLO, por $363,164 COP. Ese mes no coincide con los meses de mejor clima (abril, marzo, mayo).",
+    "destino": "TUNJA",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "tunja_hoteles",
+    "texto": "Hoteles en TUNJA, BOYACÁ: Hotel Real, Hotel Plaza Muisca, Hotel Alicante, Boyacá Plaza, San Ignacio, Hotel Bicentenario, Hotel Oceta, Hotel La Gran Casona, Hotel Santa Clara, Posada Real San Carlos, Finca Hostal La Tobita, La Cabaña, Posada Real La Esperanza, Pricipe, San Laureano, Hotel Villa de Vargas, Hotel, Hotel Cucaita Real, Hotel Girasol, Juzgado Promuisco, La Casona, leonardo, Jhon Garcia, Hacienda Santa Teresa, Hotel Mi Gloria, Hotel El Cid Plaza, El Paso, Casa Moreno, Hotel Boutique Casa Lili, Hotel Hunza, Los Jeroglificos, El Eden, Aristo Gold, Hotel Camino a la Villa, Cucaita Real, tio lindo.",
+    "destino": "TUNJA",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "tunja_restaurantes",
+    "texto": "Restaurantes en TUNJA, BOYACÁ: Pizza Nostra, San Nicolás Gourmet, El Laurel, Parador la Libertad, San Ricardo, Carnotaurus, Meson de la Pila, Pila del Mono, Piqueteadeoro La Novena, Doña Rosita, El PALACIO DE LA GALLINA, La Bouna Vita, Pizza y Lasagna, Pizza Nostra, Pizza Nostra, Restaurante el Comercio, Restaurante, Parrilla Sutamarchán, Tierra Buena, Los Helechos, El Saque, Mr King, Los Colorines, Semillas de Albahaca, Piquetes y piqueticos, Sabinos pizza, Restaurante Macedonia, Restaurante, Centro de eventos Quinta de san carlos, Restaurante La Doma, Resaurante Mi Rincon Mexicano, Brangus Burger, La Lonchera RestoBar, El Cimarrón - Carnes al Carbón, Restaurante El Palacio de la Gallina Real, Mi hornito, Pollo Asado, La Villita, Los Jeroglificos, La Casona, Rico Pollo, Restaurante club el llano de chalanería, El Gran Pollo, Comedor El Rey, Restaurante el Meson, El MonoBurger, elpollito, Restaurante Oicatá Real, Restaurante El Laurel, Restaurante Villa Real, Restaurante Estudiantil, Orlando Gourmet, Restaurante El Llano Club de Chalanería, Los Leños, Al antojo mañanero, Piqueteadero la gallina colonial, EL CARBON SORA, EL SANTUARIO, PICADAS Y PICADITAS, RESTAURANTE.",
+    "destino": "TUNJA",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "tunja_atractivos",
+    "texto": "Atractivos turísticos en TUNJA, BOYACÁ: Casa Cultural Gustavo Rojas Pinilla, Casa del Escribano Don Juan de Vargas, Casa del Fundador Gonzalo Suárez Rendón, Convento Santa Clara La Real, Panorámica Samacá, Iglesia Adventista del Séptimo Día, Mirador del Cacique Chivatá, Monasterio de San Agustín, Museo Municipal.",
+    "destino": "TUNJA",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "manizales_clima",
+    "texto": "Clima en MANIZALES, CALDAS: los meses con mejor clima (temperatura agradable y poca lluvia) son mayo, abril, marzo.",
+    "destino": "MANIZALES",
+    "categoria": "clima"
+  },
+  {
+    "id": "manizales_vuelos",
+    "texto": "Vuelos a MANIZALES, CALDAS: el precio más económico encontrado fue en agosto, volando desde BOG, por $285,162 COP. Ese mes no coincide con los meses de mejor clima (abril, marzo, mayo).",
+    "destino": "MANIZALES",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "manizales_hoteles",
+    "texto": "Hoteles en MANIZALES, CALDAS: Chalet del Encanto, Casa Estrella, El Pórtico, Casa Yaripá, Centenario, San Miguel de la Quinta, Hotel San Marcos, Hotel Estelar el Cable, Ecohotel La Juanita, Hotel Casa Loma, Eco Hotel Camino del Ruiz, Casa chipre, Samaria, Tamari, El Chalet, Hotel Camelot, Caldas Plaza, Nuevo Horizonte, Olaya Plaza, El Patio, Finca La Estrella Casa Rural, Finca San Luis, Inspiring House, El Nido del Condor, Hotel Orion, Hotel Maltería Plaza, Angie’s house, Finca El Jordan, Paraiso Verde, Bella montaña, Guadalupe, La 22, Dinastia plaza, Hotel Eskala, Portal del Cerro, Hotel Casabella, Pop Art Hotel Manizales, Hotel Carretero, Varuna, Recinto del Pensamiento Jaime Restrepo Mejía, La Camelia, Regine's Hotel, Termales El Otoño, Hotel Termales El Otoño, Termales Tierra Viva, Hotel Resort del Café.",
+    "destino": "MANIZALES",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "manizales_restaurantes",
+    "texto": "Restaurantes en MANIZALES, CALDAS: Restaurantre Potro Rojo, Las Migas, La Farfalla, Palogrande, Don Juaco, Donde Alberto, Tai-Wan, La Siria, Las 3 Pirámides, Tío Pepe, Sabinas, Restaurante La Selva, Estadero Margaritas, Giovanni, Restaurante Los Lagos, Parador La Manuela, Piqueteadero El Mirador, Restaurante Arepas de Chocolo El Rey, Las Cuatro Estaciones, El Palacio Oriental, Tierra Colombiana, El Pacífico, La Clave del Mar, El Cafetal, Alto Lisboa, La Parrilla, Delicias de Chipre, Restaurante San Marcos de León, MayDay, El Rey, Comida Joselu, Restaurante El Gorricho, Las Palmas, Tienda y Fonda El Establo, Hotel y Restaurante Los Cambulos, Dragón de Oro, Restaurante Alejandría, Mandarin, Ricuras Integrales, club Manizales, Asadero La Playita, Carne y Karbon, La Negra, Gratinados (menú 9k), Cedro Negro, Crepes & Waffles, Keizaki Sushi & Wok Manizales, Nueve, La Prole Burger Factory, Saudavel, Restaurante Chow - Fan, Il Forno, La Azotea Rooftop, Wingz-N-Beers Millan Manizales, La Cúpula Rooftop, Cuina Rosa, Restaurante El Balcón, Tasty - food & coffee, Factory Chipre, El Dauntaun, El Dauntaun, El Portalón, Nippon - Cocina Japonese, El Cafetero, El mejor punto, Vita Pizzería, SPICE, Salento con : trucha y patacón, Takashi, Manimez centro naturista integral, Govinda’s Muy Natural, Vivarium Yard, ÉL CLÁSICO BURGERS, Prana Orgánico y Natural, KOMO, IndoChina, La Oveja Arisca, Fonda La Antioqueña, Bretton, Mexicol, El Viejo del Barril, La Costilla de Adán, Donde Pily, Restaurante Café Donde Ma, Mirador de Alto Bonito, Deleite, El Sitio, Carbono, Asados Donde Tavo, Al Barril, Wo Taberna Asiatica, Brasaos Slice, Buffalo Republic, Nawfali, Las Redes, eñe, La Patateria, Sakura Teppanyaki & Sushi, L'AngeVin, IndoChina, Los Geranios, El Efecto, Calamar Azul, Santos Frijoles, Danta, Lobo, Calamar Azul, Restaurante El Portalon, Restaurante Fu Wah, Donde Rossy, Las Chuletas De Argenis, Pro Shawarma, Cuezzo, E, Cafetería, La Mazorca Paisa, El Peñón, Drive-in Cerritos, Patrimonio, Mágica Luna.",
+    "destino": "MANIZALES",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "manizales_atractivos",
+    "texto": "Atractivos turísticos en MANIZALES, CALDAS: Mirador de Chipre, Museo del Oro, Museo Interactivo de la Ciencia y el Juego, Torre de Herveo, Corredor Polaco, Parque de la Fruta, Hostal, Mirador de los colonizadores, Hacienda Venecia Coffee Farm Experience, Mirador Tambo La Manuela, Tio Conejo, Torre al Cielo, Museo de Arte de Caldas, Capilla San Pío X, Pabellón Zeri.",
+    "destino": "MANIZALES",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "popayán_clima",
+    "texto": "Clima en POPAYÁN, CAUCA: los meses con mejor clima (temperatura agradable y poca lluvia) son julio, septiembre, agosto.",
+    "destino": "POPAYÁN",
+    "categoria": "clima"
+  },
+  {
+    "id": "popayán_vuelos",
+    "texto": "Vuelos a POPAYÁN, CAUCA: el precio más económico encontrado fue en agosto, volando desde BOG, por $306,592 COP. Ese mes no coincide con los meses de mejor clima (agosto, julio, septiembre).",
+    "destino": "POPAYÁN",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "popayán_hoteles",
+    "texto": "Hoteles en POPAYÁN, CAUCA: Hotel Dann Monasterio, Pizzarra, Archivaldo, Palma Real, Ciudad Bonita, Hostal Modelo, Valle de pubenza, Hotel El Orquideal, Mi Bohio Hotel, El Farooj, Vereda clarete, Residencial, Las Alamos, Hotel Los Andes, Niyireth, Hotel Luna Nueva, El paso, Hotel Real, La Gaitana, Luxor, Hotel Royal, Purace, La Gran Posada, Parcelacion San Millan, Chalet Santa Lucia, La sultana, PERUGINO´S HOTEL GALERIA, Hotel Krone, Hotel Boreal Plaza, El Caracol, Home Travel Popayan, Hotel Lili 2, Komodo Alojamiento, Monarka, La plazuela, Hotel colonial, Hotel San Jeronimo, Hotel los portales, La casona del Virrey, La herreria colonial, Hotel la Colina, Hostal El Carretero, Casa Veg Deleite, Camino Real, Peñas Blancas, San Martín, Hostal Campestre, Toledo.",
+    "destino": "POPAYÁN",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "popayán_restaurantes",
+    "texto": "Restaurantes en POPAYÁN, CAUCA: Vegetariano Salud y vida, La Sorpresa, Lonchería Belalcázar, Lonchería Caldas No 1, Restaurante, Lonchería Caldas 2, Restaurante Vegetariano Maná, La Radio - Rock y Food, El Fríjol Verde, Pio Pio, Restaurante Italiano, Tienda regional de macizo, Tequila's, Cafila Restaurante, Jack & Jhonas Bar Food, Frutijugos Uno A, Cali y cali asadero, Restaurante Chino Nan Hua, Taller de cocina, Brostin, La sacristía, Palmettos, Arepatojos, La verdadera comida mexicana, Feng Huan, Delicias tumaqueñas, Krostty, King pollo broaster, Platos caseros, Gengibre, Wings, Restaurante Kaleb, Sabores del Mar, La estación del pollo, La Lomita, Costillas a la parrilla, Señor Arroz Paisa, Tizones Parrilla, Chung Wah, Picando, Carne llanera, Los guaduales, La pizarra, Sabores de mi tierra paisa, Arroz del Centro, Angeles, Rico Pollo de la Once, Chuleta de Pobre, Alma llanera, Anastasia, Sra Paisa, Alitas de pollo, Parrilla y mas, Pio pio, Pino limón, La orejona, Wiklok, San Nicolás, El fogón de la abuela, Comida economico, La Orejona, El punto del pollo, Jengibre, Restaurante Peter, Puerto del Chorizo el paisa, Fritos Doris, Restaurante Carmina, Pollo express, Restaurante la 27, Kikos, Paladares parrilla, Zhong Guo, La costilla de Adan, El hornito chileno, Quieta Margarita, Aki maki, El punto del sabor, Merende, Tu delirio, Mi leña, Maná, Curcuma, Desayuno bueno, Restaurante Chanchitos, Frisky pollo, Pecados, El viejo ferrocarril, Ricos, Cali Cali, Viejo Valen, El Brasero, Asadero Cali Cali, La Brasa Caliente, Sabor de hogar, Terra Inca, Las delicias del arroz, El buen sabir del pacifico, Super pollo, Las Delicias del Gordo, Beep beep, El Recuerdo, Natamia, Pio Pio, Pio Pio, Mi Bohio, Restaurante La Marqueza, Don Lucho, Sabores de Mi Tierra Gourmet, Mr. Arroz, Restaurante China, Mr. Pollo Dorado, Super Pollo Broaster, Frosty Pollo, Sazón Parrilla, Caserito Sabores de Hogar, Moliendo Maní, Cuy sabor, Vivero Parmos, La cosecha parrillada, Carne a la llanera, Donde el gordo, Las campanas, Superpollo, Pollo y pollo, Tradiciones, China Yuan Lin, Wipala - Tienda Organica, Restaurante Vegetariano La Pamba, Doña Edith, Wok paisa, Alabama, Big pollo, Restaurante Rico Sabor, Fusión Oriental, Más Presas, El fogon llanero, Restaurante Y asadero casa Mia, Los llaneros, Honk Kong, Asadero Munchiken, Al Carbón, La blanca, Carne a la Llanera, Pili Pau La Tolda, Sazón de Cris, El sendero de los Quingos, Santana, De pipían, México parrilla, Komodo, Bendito, El caserito, Sr Pol, Pristino, Arroz paisa, La estacion, Sázon y sabor, Parador Ovejas, Empanitas - Comidas tradicional, Pizza Di Casa, Sabor de Maria, La isla, Glamping Puracé, Parador el cofre, Las Chavitas, Rancho Grande, La Cosecha, Maderos Parrilla, Restaurante Carbon Steak House, Di Angelo, El Cafetal, Restaurante Ciudad Blanca, El Rancho de Lucho, Los Cuyes de Aldemar, La Lomita, Parador La Angostura, Estadero Don Luis, La Cosecha Parrillada, Swiss Chalet, RESTAURANTE Y ESTADERO  EL ESTRIBO, SASON TIMBIANO, El Compay, El Galio, Oveja Negra, Carabtanta, El Quijote, El Llanero.",
+    "destino": "POPAYÁN",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "popayán_atractivos",
+    "texto": "Atractivos turísticos en POPAYÁN, CAUCA: Museo Arquidiocesano de Arte Religioso, Cerro de las Tres Cruces, Mirador, El Morro, El Panteón de Los Proceres, Barrio santa lucia, Gruta de La Vírgen, Parcelación las Vegas, La Torre, Barrio el Trebol, VDA Santana, Tecnicafe, Finca La Ceiba, Hacienda San Jose, Amalaka, Casa Caldas, Museo Nacional Guillermo Valencia, Casa Museo Mosquera, Subestación Eléctrica Timbio, Casa Museo Negret e Iberoamerica De Arte Moderno, MIAMP, Urbanización aldea, Barrio Portal de las Américas, Salón comunal atardeceres de occidente, Condominio marsella, Parcelacion Alto de sotara, Barrio Monserrate, Guillermo Léon Valencia, Puente del Humilladero, El Morro, Museo de historia natural, Puente del Humilladero, Puente del Humilladero.",
+    "destino": "POPAYÁN",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "montería_clima",
+    "texto": "Clima en MONTERÍA, CÓRDOBA: los meses con mejor clima (temperatura agradable y poca lluvia) son enero, diciembre, febrero.",
+    "destino": "MONTERÍA",
+    "categoria": "clima"
+  },
+  {
+    "id": "montería_vuelos",
+    "texto": "Vuelos a MONTERÍA, CÓRDOBA: el precio más económico encontrado fue en agosto, volando desde BOG, por $122,867 COP. Ese mes no coincide con los meses de mejor clima (diciembre, enero, febrero).",
+    "destino": "MONTERÍA",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "montería_hoteles",
+    "texto": "Hoteles en MONTERÍA, CÓRDOBA: El grand Hotel la 39, Paimana, Hotel La casa, Santa Helena 4, Hotel La Cabaña, Altamira, GHL Hotel Monteria, Las Vegas, Hotel 41 Plaza, Hotel La 40, Hotel La 40, Alameda Real, Hostal Meridiano, La pradera Primera Etapa Tia Rosa, Plazoleta Real, Hotel Roberto M, Hotel Zenú, Hogar de Paso Isabela, Hotel Sama, Trinidad, Hotel Calarca, \"villa fer\" altos de california, Hotel Calarcá Club, HOTEL MONTERIA CITY, Hotel Cinco, Hotel Tariq, Hotel Calarcá.",
+    "destino": "MONTERÍA",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "montería_restaurantes",
+    "texto": "Restaurantes en MONTERÍA, CÓRDOBA: La Parrila del Gordo, Restaurante Brasa Caribe, La Bonga Del Sinú, Pizzería Piccola Italia, Machetico La 40, Tocarema, Asados Monteria, Pollo Arana, Villa Campestre, Restaurante La Mona, Mesa campano, Las Palmeras, Cócteles el campeón, El bocachico elegante, Mis pollo, Restaurante El Potro Campestre, Mi Casa, El mar de Arturo, ani´s pizzeria, Restaurante Comidas Rápidas el Lobo, Maguarí Terraza Bar, Restaurante Donde Aura, Casa blanca, Asados y arepas R8, Comidas rápidas, Tres miniplace, BRAHMAN ROJO, RUTA 29 PARRILLA RESTAURANTE.",
+    "destino": "MONTERÍA",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "montería_atractivos",
+    "texto": "Atractivos turísticos en MONTERÍA, CÓRDOBA: Pasaje del Sol, Piscinas Ecológicas Las Doncellas, Estadio de futbol jaraguay de monteria, Monumento al porro plaza cultural maria varilla., Tránsito Montería, Tránsito Montería, La Quinta.",
+    "destino": "MONTERÍA",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "neiva_clima",
+    "texto": "Clima en NEIVA, HUILA: los meses con mejor clima (temperatura agradable y poca lluvia) son mayo, junio, enero.",
+    "destino": "NEIVA",
+    "categoria": "clima"
+  },
+  {
+    "id": "neiva_vuelos",
+    "texto": "Vuelos a NEIVA, HUILA: el precio más económico encontrado fue en agosto, volando desde CLO, por $233,402 COP. Ese mes no coincide con los meses de mejor clima (enero, junio, mayo).",
+    "destino": "NEIVA",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "neiva_hoteles",
+    "texto": "Hoteles en NEIVA, HUILA: HOTEL Casablanca, Hotel Pacande, HOTEL LA CABAÑA, Hotel Matamundo, San juan de los vientos, Hotel Boutique El Poblado, Hotel La 26, La Nueva Estancia, El Barcino, Hostal el Papayo, Hotel Abadía Resort, Hotel Limaco, Mauro Jiménez, Hotel Casa Opia, Hotel San Pedro, GHL Style Neiva.",
+    "destino": "NEIVA",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "neiva_restaurantes",
+    "texto": "Restaurantes en NEIVA, HUILA: Chino Marcos, Mi Bohio, King Pollo, LOLO Coffee Salad & Food, Bien Provecho, La cava wine & food, Restaurante Marco's, Beer24, Macho Mex, Krol, BikeCity, Don Chiche, Restaurante El Asadero, Restaurante Asadero Brasas Huilenses, La Plaza, Cattleyas, La siciliana, Brasas Huilenses, Restaurante La Magdalena, Penelope Waffles Neiva Centro, Asadero Las Vegas (Sede Arboleda), Asadero Las Vegas Principal, Restaurante Universitario, Restaurante, Restaurante, Pere Tantico.",
+    "destino": "NEIVA",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "neiva_atractivos",
+    "texto": "Atractivos turísticos en NEIVA, HUILA: Mirador Noches de París, Plaza Cívica Los Libertadores.",
+    "destino": "NEIVA",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "riohacha_clima",
+    "texto": "Clima en RIOHACHA, LA GUAJIRA: los meses con mejor clima (temperatura agradable y poca lluvia) son enero, diciembre, febrero.",
+    "destino": "RIOHACHA",
+    "categoria": "clima"
+  },
+  {
+    "id": "riohacha_vuelos",
+    "texto": "Vuelos a RIOHACHA, LA GUAJIRA: el precio más económico encontrado fue en agosto, volando desde BOG, por $223,222 COP. Ese mes no coincide con los meses de mejor clima (diciembre, enero, febrero).",
+    "destino": "RIOHACHA",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "riohacha_hoteles",
+    "texto": "Hoteles en RIOHACHA, LA GUAJIRA: Brisas del Norte, Las Arenas, Majayura, Casa Lallemnad, Hotel Gimaura, Tunebo, Mi Casona, Casa ICBF, Hotel Barbacoa, RANCHERIA, EMANUEL, Conjunto residencial minero, Hostal El Alba, Casa Patio Bonito, Marlus Real Riohacha, Hotel Brisas Del Nare, Las Vegas, ALFHOR, Amanda Figeroa, RIOHACHA, TROPICAL, Casa de Mama, TAMAITI, Hote Ejecutivo, Mira Flores, TUNEBO, Real Camila, CAPRI, Guajira Premium, Avenida Riohacha, DAYNES, Angie Real, IMPERIAL, Juan Pablo Ii, Casa Grande, INTERNACIONAL, JIMMATA, GENO, KAYUUSI, ROMA, Lacasa del Viajero, NORDESTE, Almirante Padilla, Apartahotel Talapuiin, Marlus Real, ELYAMAR, JESSICA, Castillo del Mar, AREMASAIN, Sol y Luna, Hostal Santa Cecilia, COLONIAL, CONFORT, Sol y Luna, Oceano Boutique, Guajira Colonial, Hotel Macal Plaza, Hostal Liwa Kashi, Hotel ELYAMAV, Hotel Angie Real, RAQUEL, Guajira Hotel, Hotel Jepirachi, Dama Guajira, Hotel las dos palmas, Hotel Los Nogales, iglesia evangelica;Hotel Vivi, Marlus Real, Hotel Cañaguate, Hotel Casa Blanca, Hotel Baruj, Hotel Tropical, Hotel las Colonias, Hotel Castillo Plaza, El castillo del Mar, Balcones de la Quinta, HOTEL CASA LALLEMAND, Castillo del Mar, hotel mi guajira, calle 14A, taller De autos, brilla - gases De la guajira, Casa, casa, carrera 14a, calle 14 con 17, casa, casa, calle 13, edifice for De jacy, calle 14 con 17, casa, calle 13, c13a, casa, hotel Jepirachi, tunebo, LOS REMEDIOS, dimonex, tienda la gran esquina, tienda la gran esquina, taller De carros, local, K 12B, electronic, corpus center, calle 14, calle 14 con 17, Casa de familia, Garita vigilancia terraza de coquivacoa, Aparta Hotel, Hotel los Mangles, Hotel Ejecutivo, Mar, Hotel Arimaca, Taroa, Sol Guajiro.",
+    "destino": "RIOHACHA",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "riohacha_restaurantes",
+    "texto": "Restaurantes en RIOHACHA, LA GUAJIRA: La Cascada, Restaurante y Asdos La Ancha, Asadero el Dany, Restaurante. El. Sabor Guajiro, Organica Mercado y Cocina, AL Arz Delicias Arabes, Estadero Y Asados Son Y Sason, Lima, El Reposo Merendero, MONIK, Pollo Broasdter.com, Paraiso Gourmet, El Meson de Carmen, Pizzeria Esencia, SABOR COSTEÑO, El gran chef, Punto Sabroso, Wow Pizza, Delicias Al Carbon, Delicias Chinas, El Buen Sazon de la Negra, Rancho del Sol, Cuatro Vias Yajalu, Asadero Emir, Donde Juanita, Casa China, Italiana Pizzeria, Kiko Express, Pare y Coma, YOSÜSI, KNOA FOOD & DRINKS, Asadero Carbón Guajiro, Yotojoro, Troncal Caribe, PizzaExpress, Asadero Emir, Las Casacada, Marinos Junior, El buen sazon de la negra, La Chichi, El MESON DE CARMEN, Pizzeria Esencia, Kiko Express, El Buen Gusto, Max Pizza, Casa China, Sancho Panza Parrilla, La CHICHI, Sabor Colombia, Donde Juanita, Paraiso Gourmet, Puntos Sabrosos, LIMA, Cuatro Vias Yajalu, Las Delicias de Vero, La Mano de Dios, Pollo Broasdter, I Balconi, Almuerzos y Deayunos, Pollo árabe, Restaurante, El mondongazo, Mr Full, Mr. Parrilla, Taroa, Chimafe, La Tinaja, Arepa Vaquera, La Casa del Marisco, Comidas rápidas y cafetería Sol Guajiro, Restaurante Donde Geo, Asados Don Pepe, La Burguesada, El Comelon, american ' s pizza, Sazón Costeño, El KIOSKO RESTAURANTE Y PAINTBALL, El Kiosko Sport And Food, Restaurante de Yuli, Paola, Mantequilla Restaurante, Sazón Sabanero, Dónde el Morocho, Restaurante Aurora, Restaurante Donde Judy, Restaurante Popular, Pizzeria Berraca, Bololo, Pizza Amore, Locales Comerciales, Karibbean Bistro, CASA CHINA, Chivo contento, Restaurante Continental, RESTAURANTE Y ASADOS LA ANCHA, donde toño, Full Rico, Americans pizza, Restaurante Sazón Internacional, Restaurante MAIA -tipica Guajira, Shaday Reataurante de Comida Rapida, Comidas rapidas donde migue, Restaurante la Cordobes, Gasthaus Krone, SALCHIPAPA DONDE FREDY, Pura Carne, panaderia, Tatty Sabores, Cawi Delicias, Comidas Donde Nole, El meson Colombiano, El Sabor, Cafe internet, Asadero Carbon Piedra, Knoa, SALCHIPAPA EL MONO, Emmanuel, empanadas de la 7, Marisco, Brisa Mar, Glennpi, Los Montaditos, Comidas Rápidas, Sasón Internacional, CoCtelería Caribeño, IGUARAYA Bar, El Merendero, Maxi Apera Express, Car Service, Asadero Cali Broaster III, Donde Ever.",
+    "destino": "RIOHACHA",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "riohacha_atractivos",
+    "texto": "Atractivos turísticos en RIOHACHA, LA GUAJIRA: Muelle peatonal, Comunidad La Raya.",
+    "destino": "RIOHACHA",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "santa_marta_clima",
+    "texto": "Clima en SANTA MARTA, MAGDALENA: los meses con mejor clima (temperatura agradable y poca lluvia) son enero, marzo, abril.",
+    "destino": "SANTA MARTA",
+    "categoria": "clima"
+  },
+  {
+    "id": "santa_marta_vuelos",
+    "texto": "Vuelos a SANTA MARTA, MAGDALENA: el precio más económico encontrado fue en noviembre, volando desde MDE, por $41,704 COP. Ese mes no coincide con los meses de mejor clima (abril, enero, marzo).",
+    "destino": "SANTA MARTA",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "santa_marta_hoteles",
+    "texto": "Hoteles en SANTA MARTA, MAGDALENA: Tequendama Inn Santa Marta, Hotel Bahia Taganga, Park Hotel, Maria Villa Hostel, La Casa de Felipe Hostel, Casa Dmer Taganga, La Masia Summer Hostel, Divanga, Casa Holanda, Hotel Ki'Kuxtah, Eco Lodge La Bonita, Entre Rios, Hotel Santander, Club Vacacional Asmedas, Nautilius suit, Motel el Paraiso, Hostal Brisas de Curica, Hotel Portal del Caribe, Santorini Hotel Boutique, Hotel Tayromar, Hotel Olas Marinas, Cabañas Costa Azul, Casa Blanca, Oso Perezoso, Hostal Pelikan, Graffiti, Colonial, Casa Santa Sophia del mar, Andrea Dorian, La Fuente, Hostal Casa Blanca, Hotel Brisas de Minca, Taganga beach hotel, Fatima Beach, Casa Benjamin , Serankwa Alojamiento Rural, Pent hause ortega edificio el coral, Finca Hostal Bolivar - Casa Maracuya, Hugo's place, RokaDura Hostel, Hotel Santorini & Resort, Hotel Santorini villas, Casa Amani, Hotel Panamerican, Le Hembra Hostal Ecológico, Casalagarto, Cacao Hostal, San Marcos Taganga, Finca La Arca, Hotel Filadelphia, Reserva Biologica Caoba, Best Western Plus Santa Marta, Brisas Marina Aparthotel, Hotel Charmin, Tucericia, Hotel Gairaca Real, Casa Escollera Bed and Breakfast, Mundo Nuevo, Hotel Camping El Mirador, Casa Carolina, ecopoint, Hostel Boutique La Bella Samaria, La Casa del Farol, Finca la frecuencia, El Garaje Hostal, Santorini, Sansiraka, Suite house Taganga, Casa Baloo, Hotel Medellín, Costeño River Minca, Hotel Monterrey, Sweet Harmony, Finca de Gustavo, La Veranda Hotel & Restaurant, Casa El Recuerdo, Cocina de Campo, Casa del Pozo Azul, Montes De Beraka, Casa Santander, Casita del Río, El Descanso y Zamukia, Tierra Adentro, Charlie Hostel, Hotel Portabahía, Sanha Plus, The Chill out Hostel, Hostal Hábitat Coral, 7 Piedras (hospedaje mirador bebidas comida), Rodadero, Minca Glamping, Casa Maria, Hotel Boutique El Olimpo, Hotel Boutique Don Pepe, Hotel Cangrejalito, Hotel Marbella, Finca San Rafael, Brisas del mar, Casa EI Mox Muica, Hotel Tayromar, Turispanish Hostel, El Refugio Minca, Paradise, Hotel Shaloom Inn, Cabaña Villa Carmen, Hotel Santa Marta Real, Hotel Bocano, Hotel Tayrona, Hotel Perla, Imagine Hostel, Hotel Coco Beach, Hotel Glorien, Hotel 1525, Luna Azul, Hotel Mar Caribe, Hotel on the rock, The Orange House Santa Marta, Hotel Las Vegas, Hotel Villa Mar, Hotel Zamay, Hotel Intermar, Hotel Cactus, Hostal beach house, Taganga Dice inn, Hotel Coral, Hotel El Imperio, Hotel Guara Mar, Hotel Gixael, Hotel Zamay, Habitaciones Tropicana, Habitaciones San Fernando, Hotel Perla House, Casa Mita, Hostal Los Wichos, Sierra Sound, La Mochila, Blanco Mar Hotel, Dunarinka, Hostal Asturias, Sol de Minca Ecolodge, Casa Thalasea, Villa Epicura, Cabaña Minca Sintropia, Distrito Hostel, Tanoa Cabañas, Hilton Garden Inn Santa Marta, Hotel casa blanca, Placita Vieja Hotel Boutique Spa, Hotel Zafiro, Valladolid Hotel, Emvacamo, Villa Canopy Minca, Hotel Minca Express Relax, La Quinta INN, Rodadero Dorado, Akuamarina, Destino Santa Marta  Hostal Restaurante, Hostal Shalom, Hotel San Miguel Imperial, Hilton, Casa Loma Beach Loft, Comunidad Calle 13 Hotel Boutique, Hotel Arenamar, Rancho de la luna, Hotel Arhuaco, Sol Taganguero, Hotel Irotama Bungalows & Bohíos, Hotel Tamacá, Tamacá Torre Norte, Los Cerezos Campestre, Tienda y Hostal Sierra Nevada, Rancho Ayala, Finca Carpe Diem, Hotel Minca La Casona, Hotel El Rodadero, Hotel Costa Azul Beach, Hotel Catedral Plaza, Hotel Minca Ecohabs, Sorrento (Hotel+Suites), Hotel Medellín Rodadero, Apartahotel Tukasa Rodadero, Hotel Los Trupillos, Zuana Beach Resort, Mercure Hotel, Hotel Irotama del Mar, Hotel Granate, Marias House, Hotel Hawaimar, Hotel Balcones De Andalucia, Hotel Palmarena, Hotel San Francisco, Hotel Playa Mar, Hotel Nueva Granada, La Guajira, Hotel Irotama del Lago, Hotel Irotama del Sol, Hotel Irotama XXI, Hotel Irotama Reservado, Marriott Resort Playa Dormida, Villa Layla, Blue Glass House, Hotel Decameron - Galeón.",
+    "destino": "SANTA MARTA",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "santa_marta_restaurantes",
+    "texto": "Restaurantes en SANTA MARTA, MAGDALENA: Kokoriko, Punta Aguja, American Broasted chicken, Pizza Hut, Corrientazo, Estadero VIVIANA, Salvator's Pizza & Pasta, Chez Dominique, Sawarma y mezze Yassert, La Muezzeria, Govindas, Yukiyu, Ktorse, Finca la Bonita, Pescaito Carnes y Mariscos, Ouzo, Panadería Zapatoca, La Magia del sabor, Pollos Garagoa, La Baguettes de Maria, Bitácora, sony's fresh bar, Ballena crepes, Cactus, Pomodoro, Las Velas, La Baviera, Garibaldi, Republika Tagangueira, Santisabel, Black and White, Las Mil y Una Noche, Bahia Concha, Pizza Vomito, Créole Mar y Café, La paila caliente, Café Restaurante La Canoa, Le Gourmet de Perú, Pollos Charlie, La Bahia Tropical, Lazy Cat, Arabesca, Carambolo, Oficina  Restaurante - Bar, Lulo, Rapitoco, Karey, Rico Pollo, Chillies Don de Sam, Nuncio's pizza, Hemingway, Frutoss Restaurante Vegetariano, Estrella del Mar, Ikaro, Tangaga, Restaurante Medellin, Yiya, Donde Nashy, Estadero Dalia, Estadero Sol y Sombra, Estadero Yaki, Estadero Delicias del Mar, Estadero Magaly, Estadero Laudith, Estadero El Delfin, Estadero Yilimar, Estadero Piscis, Estadero Alcira, Estadero Pez Dorado, Estadero Belimar, Estadero El Profe, Estadero Yuya, La Mona, Estadero Mami, Estadero Caribe, Rufimar, Estadero Doña Martha, La Niña, Estadero Carola, Yireth, La Pikua, Casa Linda, El Rego, Jimmy en tu Fiesta, Pomodori, Nader Delicias Árabes, LamArt, SMR Burger House, Hot Restaurante, Restaurante la sierra, Isquandé, Pepe Cangrejo, El Bonita, Tropical Chicken, El sabor Cienaguero, Mr. Bono, La Perla, Casa Cristi, La Ju Gueria, RistoPizza Garibaldi, Donde Amalia, Comedor Riquisimo, Marc de Sabores, Hot, Juan Parilla, Restaurante Sazón Criollo, Pollos El Liberador, El Ocañero, Eli's, Comidas Pozo Azul, Posh burger place, Ramen 18, Hostal-restaurante La Guacamaya, Restaurante Donde Orfi, Smoothie Cafe, Tropico Café & Brunch, La casa de la pasta, El Chiringuito, Restaurante Milagros, Restaurante La Mona, La olla de Yerlis, Salvator's Pizza, Merkabar / Welcome restaurant, La sarten dorada, Radio Burger, El Sombrón, Restaurante y Refresqueria Playa Alta, Mango Beach, ALFAIX su media naranja, Restaurante Emmanúel, Isola Sarda, Pizza & Pasta, Vineria, Casa d‘Antonio, Bururake, Pana, Donde Chucho, Gokatta, La Casona, Del paisa, Como en mi tierra, Dulcinea, Restaurante Lucky, Donde Luchy, Salami Limon, Restaurante Khitajo, Pizzas My Friend, El Bistro, Salami Limon, Smoothies restaurante, Sailor Will, Arcadia Restaurante, Café y Bar, Donde Chiqui, Donde Raul, Marhaba, El Rincón de Toño, Balneario y Restaurante Doña Ana, Meraky, Sound, Asadero Montelino & Hospedaje, Gotea Sueño, El Nuevo Sabor, King of Kings, Tagua, Natural Food Santa Marta, Porthos Steakhouse & Pub, Markus cafe, El Mamo Parrilla Gaucha, La Morena, Pizzería el shaddai, Restaurante almuerzos, Dragon chino, Restaurante el Paraiso, Asadero donde Octavio, casa del ritmo LIQUIDADO, Villa Verde, El Punto Marino, La Perla Azul, Restaurante La Unica, Restaurante Agua E Panela Ice, Sabor International, Shagu Restaurant, Holguer Pizza, Divanga Bar Restaurant, Estación Central, Restaurante y mini mercado, Soul Food, Crepes & Waffles, El Humo, Luigi's Pizza, Marmi Ristorante, Chory-lan, Punto clave, La terraza Caribeña, Desayunos Buenos, Arrieta, Mañe Cayón, Josefina La Co, Padma, Sonata, Pachamama, Casa Aney, Yummy Yummy, “Mucho Gusto”, Evelio, andrés carne de res, Los Pollitos, El mexican, Long hang, Playa Alata Burger, Chiki Pizza, Uhma, Ijka Pizzería, Cascada Escondida, Taco y Chela, Cinto Cocina de Playa, Via Roma, Pizzería Venecia, Pescao Santa Marta, 13 Reses Parrilla Restarante, Caribbean Team Santa Marta, Siete Mares, Juancho Cevicheria, Cucharita, Restaurantes al aire libre, El Muelle del sabor, Diana, Donde Viky, Restaurante Fogón del Sol, La esquina del Sazón, Bembe del parque, Layali, Buffalo Grill, Love, Fatto in Casa, Ali, Nonni, La Popular Restaurante, Mirador Aires de la Sierra, Artesanal, Ikaro, ??? Fast Food To Go???, Tutto delizioso, ELTIO Restaurante -Bar, La Morena, Parrilla Árabe, El Oasis Santadereano, Pizzeria, Beer Garden Rodadero, Comedor de playa, Harry's Steakhouse, Little Italy, Restaurante Las Mellas, Sabor Casero, Aborigen, Restaurante Punta Brava, El tsunami de alan, Nuncio Pizza, Mil Carnes, Postres Y Ponques Don Jacobo, La Chatica, La Newyorkina, Majita Ali - Cocina Libanesa y Vegetariana (202604), La Gran Muralla.",
+    "destino": "SANTA MARTA",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "santa_marta_atractivos",
+    "texto": "Atractivos turísticos en SANTA MARTA, MAGDALENA: Centro Internacional del Rodadero, Bahia Concha, Natural Jacuzzi, Los Pinos, Ziruma, Reserva natural de iguanas, Museo del Cacao y la Fábrica Artesanal de Chocolate de Minca, Casa Elemento Viewpoint, 360 Mirador, Candelaria - Coffee y caco Plantation, Parque público, Parque público, Mirador, Cartel a la izquierda para llegar al Mirador 360, Caribe colombiano diving, Pozo azul, Oido del mundo, Mirador de Taganga, Campamento adventista la floresta, Vista a Santa Marta y mar, Sunset spot, Playa Grande, Museo del Oro, Quinta de San Pedro Alejandrino, Playa Salguero, El Rodadero, La Candelaria, Museo Bolivariano de Arte Contemporáneo, Mundo Marino, Cascadas de Marinka, Templete de Santander.",
+    "destino": "SANTA MARTA",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "villavicencio_clima",
+    "texto": "Clima en VILLAVICENCIO, META: los meses con mejor clima (temperatura agradable y poca lluvia) son enero, diciembre, febrero.",
+    "destino": "VILLAVICENCIO",
+    "categoria": "clima"
+  },
+  {
+    "id": "villavicencio_vuelos",
+    "texto": "Vuelos a VILLAVICENCIO, META: el precio más económico encontrado fue en agosto, volando desde CLO, por $264,690 COP. Ese mes no coincide con los meses de mejor clima (diciembre, enero, febrero).",
+    "destino": "VILLAVICENCIO",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "villavicencio_hoteles",
+    "texto": "Hoteles en VILLAVICENCIO, META: Splendor, Fuente del Llano, Hotel Rosado, Hotel del Llano, Don Lolo, Hotel María Gloria, Rosa Blanca, Alférez, Alaska, Hotel Central, Edificio Felipe, Villas de San Sebastian, Pofa, Hotel Esmeralda Real, San Jerónimo, Santa Barbara, Montecarlo, Hostal Las Palmeras, Hotel Eclipse, Estampa Llanera JC, Hotel Palo Verde, Hotel baquiano, Iguazu, Camito, El Campanario, Hacaritama, Saloma, Hotel Villamelida, Cabañas Fantasia La Montaña, Posada Restaurante la nube, casa azul, Hotel campestre (la Toscana), Hotel campestre (San Mateo), Hotel San Andre, Mi Casa, Villa Camila, Hotel Gavan, Hotel flor de luna, Hotel Campestre La Potra, Finca Turistica Villa Sofia, Hotel la Madrid, Hotel San Jorge, Corocora, Hotel Centauros del Llano, Hotel Villas de San Sebastian, Hotel Ariari Azul, Hotel Rubiales, Hotel El Mastranto, Hotel Portal Campestre, Hotel TURISTA, Hotel Estelar.",
+    "destino": "VILLAVICENCIO",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "villavicencio_restaurantes",
+    "texto": "Restaurantes en VILLAVICENCIO, META: Asadero Amarradero de los Micos, Doña Ángela, Pio Pollo, Doña Elcy, Restaurante Casa Blanca, Mi Casita, Donde Jenny, Rafa Parrilla, Kokollano, Doña Bucaramanga, El Pailón, Hato Grande, Restaurante Pescadero del Llano, La Mona, Asadero de pollo, llano lácteos, Coco's, Flautas Chippy Chippy, Estadero y Restaurante CLUB RANCHO ALEGRE, Amara, Krokypollo, Restaurante de Comida Llanera, El patio, Bistronomy, crepes & waffles, Cholaos, El Ranchon del Maporal, Frutos del rio - restaurante, ceviche, Restaurante, Restaurante Neruda, Poesia en la Cocina, El viejo Mango, Pa ´Llevar, Asaderos Los Capachos Ojeada, Montecarlo Sector 3, Asados La Vara, La parrilla delGordo Julian, Chuzos de Pereira, La comelona de Luisa, Restaurante, BalanceCocinaFit, Rio grande, Asadero de pollo, Asadero La Chispa Boyacense, Restaurante El Arenal, Frutos Del Mar - Restaurante, PlanetaArmonia, La Topochera, Los Rojitas, Sri Gopal, Restaurante Malecón Argentino, Rincón Santandereano, Asadero Las Avenidas, Asadero Talan Ueras, Los Arrayanes Pescadería y Restaurante, AVEMARÍA, El Cabrestero, Restaurante Comida Llanera, Cafeteria, Dalan Parrilla, La Piedra Del Amor, Empanadas Lucy, Restaurante arroz con leche, Perritos de 6000, Sombrero de Jabali.",
+    "destino": "VILLAVICENCIO",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "villavicencio_atractivos",
+    "texto": "Atractivos turísticos en VILLAVICENCIO, META: Cascadas, Catedral de Villavicencio, Mirador El Malecón, Museo de historia natural unillanos, Mirador La Piedra Del Amor, Cerro El Redentor, Mirador de Cristo Rey, Parque del Hacha, Plaza de Banderas, Instituto Roberto Franco - Universidad Nacional, Museo de historia natural unillanos.",
+    "destino": "VILLAVICENCIO",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "pasto_clima",
+    "texto": "Clima en PASTO, NARIÑO: los meses con mejor clima (temperatura agradable y poca lluvia) son julio, mayo, septiembre.",
+    "destino": "PASTO",
+    "categoria": "clima"
+  },
+  {
+    "id": "pasto_vuelos",
+    "texto": "Vuelos a PASTO, NARIÑO: el precio más económico encontrado fue en agosto, volando desde CLO, por $230,969 COP. Ese mes no coincide con los meses de mejor clima (julio, mayo, septiembre).",
+    "destino": "PASTO",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "pasto_hoteles",
+    "texto": "Hoteles en PASTO, NARIÑO: Koala Inn, Hotel Don Saúl, Hotel Morasurco, Casa Madrigal, Hotel Galerías, Hotel Sello Dorado, Concorde, Juan Sebastián, hoteldoralplaza, Hotel Bolívar Plaza, Hotel Premier (MC/car parking), Hotel Cristal, Hotel Chambú Plaza, Palermo Suites , Confort, Hotel San Antonio, Ariston, Hotel Terranova, Hotel Canchalá, Hotel Aura Maria, Posada León, Hotel Atenas, Jardín Suites, Casona Hotel, Hotel juanambu, Hostal Cali, Hotel Paola, San Miguel, Galeras, Balcon de Luna, Hotel Villas del Río, Hôtel los Andes, Hotel las Vegas, Royal center, Hotel Recuerdo Real, Hotel Dorado, Hotel Terminal, Roma, Hospedaje Los Duendes, Hostal Las Orquideas, Hospedaje Tierra Encantada, Hospedaje Caballo Corral, Hotel Santa Clara, Urbano, Parque reservado, Santori, Hierbabuena, Versalles, Hotel Senegal, Hotel Manhattan Plaza, Hotel Metropol, Hotel Star, Hotel Confort Suite, Hotel Exito, Hotel MC, Hotel Continental del Sur, Hotel Vymar Loto Azul, Hotel Plaza Carnaval, Hotel AR, Hotel V1501.",
+    "destino": "PASTO",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "pasto_restaurantes",
+    "texto": "Restaurantes en PASTO, NARIÑO: Míster Pollo, La Cocina De La Abuela, La Merced, Plazoleta de comidas Unicentro, Caüra, Casona Tierra Colombia, Delight Express, La Ipialeña, Picanteria, Las Tablas, Napoli, Restaurante Casero La 30, Pizza Rola, Piazzetta, Picantería Ipiales, Portón 20, Pizzeria Venecia Express, Figo, Donde Rosa, Coba Negra, La Merced, Estadero San Luis, Sopitas y... Algo mas, Sulerna, Restaurante Tayrona, Pollo Sorpresa, Mi Kachiri, Zitas Pizza Bar, El Panca (sanguchería peruana), La sazón de mamá, La cocina de mamá, Super burger, Restaurante Su Casa China, Mister Pollo salida al sur, Pollo Al Día, Restaurante y heladería La esquina del sabor, El sabor casero, Restaurante y cafetería Mi Nariño, Tijuana comida mexicana, El Establo, CuyQuer, Gira El Sol, La Huerta Del Chef, La Huerta Del Chef, Cuyquer Catambuco, La Eterna, Gira el sol - new location, La Casa de la Empanada, Mister Pollo Av Idema, Pollos Caicedo, Allullas, Comida, La valluna, La tradición de las Ortiz, Restaurante La Española, Star Books, Asadero la Curva, Frida, Amor a la Mexicana, Restaurante María Bonita, Casapamba Restaurante, Restaurante Zarcillejo, Tierra Azteca, Los Containers, Mondongo, Fogón y Sazón, Sabor Llanero y barril, Coba Negra, Bocana Restobar, Cheers Pasto, Guadalquivir, Maruja limón, Zoi, Don Rico, Riko y RiKo Pollo, Sulerna, El Palacio del Pescado 2 , El colibri y el mango, Shirakaba, Míster Pollo norte, La Merced, La Pamba Restaurante-Café-Pub, Sausalito, Casa Colores, San Alejo.",
+    "destino": "PASTO",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "pasto_atractivos",
+    "texto": "Atractivos turísticos en PASTO, NARIÑO: Museo del Oro, Museo del Carnaval, Las Piedras, maragato, Mirador, Sendero Interverdal Casapamba, Museo Taminango, Pinacoteca Departamental, Museo del Carnaval, Casa de la Ciencia.",
+    "destino": "PASTO",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "pereira_clima",
+    "texto": "Clima en PEREIRA, RISARALDA: los meses con mejor clima (temperatura agradable y poca lluvia) son julio, enero, septiembre.",
+    "destino": "PEREIRA",
+    "categoria": "clima"
+  },
+  {
+    "id": "pereira_vuelos",
+    "texto": "Vuelos a PEREIRA, RISARALDA: el precio más económico encontrado fue en agosto, volando desde BOG, por $70,175 COP. Ese mes no coincide con los meses de mejor clima (enero, julio, septiembre).",
+    "destino": "PEREIRA",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "pereira_hoteles",
+    "texto": "Hoteles en PEREIRA, RISARALDA: Hotel Anvamar, La Cabana, Hotel Comercial, Hotel Marandúa, Eco Hotel Teocalli, La Casa del Campo, Villa Maria, casa, Hotel El Carmen, Hotel Cádiz, Hotel Buenavista, Tangara Hotel, Hotel La Gran Via, La Vitrina, Cataluña, Villa Arrebol Hospedaje Rural, Top Deck Hotel, Faro Azul, Casa Campestre El Edén, Hospedaje y Paradero JJ, Hotel Álamos del Parque, Finca de Palomino, Hotel Invico, Hotel Pereira 421, Casa Brisa de Montaña, Hotel Yellow, Hotel del Café, Hotel Milan, La Traviata, San Diego, El Opita, Merlizz, El Crucero, Estambul, La Cuarenta y Cuatro, Hotel 109, Hostal Kimana, Hotel Santo Bambu, Hotel Santa Juana, Girasol, 2-12 hotel, Mirador del Guacary, Hotel Z3, Gran Hotel Pereira, San Simón Hotel, Ayenda 9/25, Zi One Luxury Hotel, Ayenda, Hotel Golden Suite, Hotel La 6a. Del Lago, Bee Hotel, Hotel Plaza Real, Hotel El Lago, El Viejo, Hotel el Encanto, Hotel Don Pancho, Apartahotel San Juan del Lago, La Mansión, Hotel Tequendama, Suite Lobby, Hotel Eje del Cafe, Hotel La Posada de Don Quijoto, Hotel El Lago 1, Hotel Sueño Del Café, Cafetto Hotel, Hotel Arco Iris, Hotel 7 21, Americano Center, Hotel Imperio Real, Hotel Balcones del Lago, Jimmy's Posada Hotel, Hotel Cesar, Hotel Consota, La Antioqueña, Hotel Olimpa, Hotel California, Hotel Joseph, Diberi, Sueño Real, Hotel la Octava, Hotel Alcones del Lago, Hotel MH, Hotel Santiago Pereira, La 30, Matecaña Hotel, Go Hotel, Hotel Metro, El Cable, Inter del Cafe, Hotel Tucán, Hotel Yadani, Hotel Roma, Pueblito cafetero, Hotel Shadom, San Simón Hotel, Hotel Don Julio, Hotel Arte, Apartasuites 21 A, Olaya Plaza Hotel, Hotel, Finca la Primavera, Finca la Primavera, Hotel Los Tunjos, Movich Pereira, Hotel Restaurante Las Palmas, El Encanto, Aparta Hotel La Cascada, Hotel Arabia, Mi Casita, El Lago No. 2, GHL Hotel Abadía Plaza, Hotel Pinares Plaza, El Lugar Nordico, Soratama, Hotel Cafelia, Bambú Hotel Tematico & Spa, Sonesta, Syvanna Hotel Wellness & Spa.",
+    "destino": "PEREIRA",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "pereira_restaurantes",
+    "texto": "Restaurantes en PEREIRA, RISARALDA: el Parnaso cafe bar y pizzeria, Casa Grajales, Fonda la gran esquina, El nogal Cafetero, El meson Español, Parador Casa Campo, El secreto iberico, Pïura, Vino Tinto, Chan Chuen, Rodizio Real, Leños & Parilla, Vegetariano Manimez, El Gran Café, Pipatón, La Jonda Paisa, VillaFuerte, Maderos, Sabor de Tu Hogar, LaCama, El Maizal, Restaurante Cazuela Paisa, El Paisa, Asadero el Capacho, La ChocoLera, La Postrera, Restaurante La Portada Campestre, Superpostrera La 23, Lucerna, Burger Green, Lola, Sir Pollo, Sacramento, Cocina de campo, Lakota, Bandidos, Sumo, Ferrocarril, La Esquina, Lechona, Restaurante Thalia, Restaurante La Gran Via, Restaurante La Maria, Anana Art Juice, Restaurante Picasso, La Comelona del Toro, Pizzas Piccolo, Restaurante Parador Paisa, Asadero el Faisan, La Mazorca, Asadero de Carnes Belmonte, Restaurante el Parisino, Restaurante Faro de Luna, Restaurante Santacoloma, Restaurante Tío Alberto, Parador JJ, Choridelicias, Sant Chorizo, Paradero Chorizos Santarrosano, Bocaditos, La Ruana Del Camino, El Punto Del Chorizo Santarosano, La trattoria, Restaurante y Cevicheria El Costeño, Pic Nic, ChoriSant, Maria la Mexicana, Año 1950, La Ruana, Byte, Yerbabuena, Trucha al gusto, Frespan, Sesamo, Sky lounge, Estambul internacional, Nativos, Vita Satalata, La braza roja, Semillas, Buñuelos días, señor pollo, La Loma, Perros la 30, Restaurante La Estancia, El rancherito, Paisabor, Kilaba, El Fogón Criollo, China Town, Keizaki Sushi & Wok, Restaurante Anyeluna, Choripaco, El Canasto Campestre, Li Nan, Simón Parrilla, Ranchipollo, El restaurante de la familia, Restaurante y Panadería, El Palacio Del Arroz, Donde Juli Comidas Rápidas, Zaguán de las Villas 1, A Comer Pues, Restaurante Sabor Todo Rico, Champions Wings Alitas Y Algo Mas, Nano'S Pizza, Restaurante Punto Broaster, Ristourante Buona Pizza, Asadero Restaurante Pollo Paisa, Francachela Parrilla Bar, Mexican Mix, Lechona Tolimense La Exquisita, Frisby Casa De La Cultura, Restaurante Chino Li Nan, Restaurante Las Cardonas, Simón Parrilla Restaurante, Restaurante Toy-Fan, Picnic Las Camelias, Sayonara, Comidas Rapidas Las Camelias, Restaurante La Granvia, El Parral Del Fondue, Spaghetti House Pereira, La 5Ta Stación, La Quinta Estación, La Orquidea Colombiana, Sabor Hogareño, Comidas Rápidas Boss, El Palacio Del Pollo, Perros La 30, Chez Gourmet Restaurante, La Hamburguesería, Restaurante La Parrilla Argentina, Delicias El Portal, El Meson Del Arroz Paisa, San Cipriano Restaurante Bar, San Isidro Picnic Gastro, Pique Nique Bbq, Katire Hamburguesas, Lucho'S Pizza, Quin Burguer, Petra Cafe, Wings Shop Alitas, Arepas Santa Isabel, Asadero De Pollos, El Sabrosón, Catira Comida Licor, St Francisco Food, Bambinos Pizza La Pradera Dosquebradas, Big Burguer, Parrillada Y Chuzos Casa Blanca, Carnes Y Cazuelas, Don Patacon, Juanfis Comidas Rápidas, Los Perritos Dosquebradas, Señor Wings Dosquebradas, Martinika Arepas Al Carbon, Cafetería Limones Y Sabores, Comboy Pizza, Unplugged Café Lounge, Origen del Paladar, Delicias Y Cronch, El Viajero, Restaurante El Refugio, Milan Burger, La Tienda Natural, Restaurante Nuevo Gong Xi, Chuzos & Carnes,Al Carbon, Sabropollo, Órale Güey Cocina Mexicana, Restaurante Jardin Chino, Sublime, PaṀRa Comer, Sabores Del Choco. Pipilongo Pescados Y Mas, Restaurante & Pescaderia Fogón Chocoano, Jardín & Parrilla, Mall De Comidas Reservas De Milan, Restaurante Bar Lai - King, Mariscos Y Carnes El Costeño, Frisby Portal De La Pradera, Sazon Chocoano, Restaurante Elsitio Punto Coma, La Era - Carne A La Piedra, Cocinando Restaurante, Tazmania Dosquebradas, Restaurante Chino En Dosquebradas, Restaurante Parrilla, Restaurante Mexicano - Ixcali - Dosquebradas, Mi Pequeño Refugio, Al Carbón & Algo Más, La H Hamburguesería Dosquebradas, Restaurante O'Brasileiro Rodizio, Mirador del Guacary, El Parnaso Pizzeria Cafe Bar, La Granja, La Azotea, Asados al Carbon 1033, Restaurante y Cevicheria Sabrosura del Mar, Restaurante Fríjoles Pa' que coma con gusto..., La Fábula, La Septima, Nilos, Pekin, El Bocachieo, Flora, La Gran Manzana, Marruecos, Torito al Carbón, La Niña, La Antioqueña Parrilla, Pac-Man Pizza, Submarina, Donde Juan, Gohan, G&G Restaurante Autoservicio, Merienda y Café, Asadero Cristipesas, Comer Arroz, Palacio de Las Empanadas, Big Bite, G&G, Casa De Las Empanadas Crocantes, Villz Taiz, Comboy, Dragon de Oro, Happy Hour, Komarepas Quindinas, Arroz Paisa el Original, Restaurante y Piqueteadero La 34, Procomer, Distribuidora Puro Criullo, Bajando Loma, Mac Pollo, Don Pollo, Yeng Sing, De Taco al Pastor, Arroz Paisa, Casa China, Restaurante Familiar, Asadero & Restaurante, Pan Pollo, Don Ramón, Crepes & Waffles, BBC, Red Pizza, Ice Las Crepes, Salam Alchum, Qoano, Tomao LAs Acacias, Decameron, Kapital, Fonda la Cantaleta, Bites, Le Potet, Señor burguer, Villa Italia, El Comedor La Abuela, Fonda las Agacias, La Yonni, Restaurante Luna de Libertad, Restaurante La Gran Mansión, Lido, Gohan Arroz Express, La Jarra, Como en Casa CM, Panera Brasilia, Bucaramanga, Avocado, Cafeteria y Restaurante, Restaurante Borbón, El Punto del Sabor Cafetero, La Cosina de Las Empanadas, Charve, Arepas Chuzo Casa Blanca, Caldos, El Hincha, Altoque, Restaurante Llanero El Rosarino, Quebranta, Mirador La Rioja, Cafetería Restaurante, Eje del sabor, Delicias de Nathy, Piazza Italia, Mexiyoo, Comfamiliar Risaralda Parque Consota, La Costeña #2, Sabor Cubano, Asados de la Negra, Chuzitos y Mas, La Costeña, Tatara, La Casona, Kalta, Ricos Tamales, Platón Patacón, La Arroceria Colombiana, Mr Burro, Mama Carmen, Mind Café & Lounge Pereira, Arreperos, Super Chorizo de La Abuela, Gyros & BBQ Ukumarí, Casa y Mar, La Wayra, Chop Suey, Pizza con Sabor, Club de Nico, Mirador Campestre, Papa's House, Blue, King Pollo, Umomi, El Llanerito, Restaurante Andina, El Palacio de la Costilla, NatySanty, Carnes y Vinos El Restaurante, Las arepas del pueblo, El palacio de la chunchurra, El mono, La estacíon Llanera, Monkey, Milagros Café & Restaurante, Budare de gaby, Asadero Pollos Claudio, Māe Asian Cuisine, Crepes & Waffles, Restaurante Golosos, La Zelva, El Carbon, La Guasca, Restaurante Sabor del Mar, Wingz, Rancho Familiar, Restaurante La Casona, Arboloco, Restaurante la Abuela, Antojo Llanero, Choripaco, MaxiEmpanadas, Al Carbon, Arroz Paisa, La Reserva Restaurante, Matecaña Restaurante, Sabor a Parilla, La Tía, Becerra Carne a La Llanera, Kafé del Alma, La Estación Café Bar, El Rey del Guiso, Sonoma, Octavo Restaurante Giratorio, Ebano, Ebano.",
+    "destino": "PEREIRA",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "pereira_atractivos",
+    "texto": "Atractivos turísticos en PEREIRA, RISARALDA: Cascada Chorro Las Brujas, mirador las Camelias , Fulanita, Mirador Tambo del Privilegio, Mirador canceles, Salado de Consotá, Pista XCO HOTEL SANTO BAMBÚ, Casa de la Cultura, Piedras marcadas, Imagen de La Virgen, Mirador El Chaquiro, Aldea masai, Módulo: La Extinción es Para Siempre, Aviario Andino, Obelisco de la Villa Olímpica, Mirador de Byron, Mirador, Vagón del Ferrocarril de Caldas.",
+    "destino": "PEREIRA",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "ibagué_clima",
+    "texto": "Clima en IBAGUÉ, TOLIMA: los meses con mejor clima (temperatura agradable y poca lluvia) son septiembre, enero, julio.",
+    "destino": "IBAGUÉ",
+    "categoria": "clima"
+  },
+  {
+    "id": "ibagué_vuelos",
+    "texto": "Vuelos a IBAGUÉ, TOLIMA: el precio más económico encontrado fue en agosto, volando desde BOG, por $173,058 COP. Ese mes no coincide con los meses de mejor clima (enero, julio, septiembre).",
+    "destino": "IBAGUÉ",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "ibagué_hoteles",
+    "texto": "Hoteles en IBAGUÉ, TOLIMA: Casa Morales, El Viajero, Lusitania, Hotel Ecostar, Conjunto Residencial Guadualito, Varon, Marina, Condominio La Riviera, Conjunto RFP, Hotel Gold Plaza, Mi Finquita, Casa adnris, Acarreos bam bam 317 523 4084, Hotel San remo, F-25 HOTEL, Los pinos, Hospedaje Los Motoristas, La Baronesa, Dann Combeima, Hotel Center, CASA, Hotel Andino, Hotel Estelar Altamira, Hotel Campestre Puente Blanco, EcoStar, Hotel Verano, Esmeralda Entre Montañas, Hotel Ambalá.",
+    "destino": "IBAGUÉ",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "ibagué_restaurantes",
+    "texto": "Restaurantes en IBAGUÉ, TOLIMA: Paso Real, Toy-Wan, La Paloma, Donde Pape, Restaurante Internacional, Frentes & ancas, La Guadua, El caracolí, tamales, Donde Migue, DOÑA TERE, Arroz City, Pizzeria Roma, Filos Arepas, Moonchies, soufflé, El Carnaval Del Pollo, El carnaval del Pollo, Carbón y leños, La Molienda, Restaurante El Peñol, Parador El Portal Paisa, Restaurante Bien Chino, Casa de Los Dedos, IMPERIAL, Restaure Av Ferro, Tios Broaster, Cocina Locale, Pick Broasted, La farriolla, El Establo Niza, DON FLORO \"TAMALES TOLIMENSES\", Kokoriko, Toy-Wan, Chamos Pizza, De Buen Gusto, El Sazón de María E, Imperio Chino, Palacio del Broaster, Asadero Don Broaster, Asadero Del Sur, Cafetería La María, Doritos & Sazon, Chung Wah, Domino`s Pizza, Maria y Mar, restaurante Kayroz, Restaurante, El Calden, Best Burger, American Burguer, Express Jordan, Texas BBQ, Jordan 3 Etapa, Las Marranitas, El Reguero del Perro, El Camaron Killero, El impanadazo D' Leo, Sake House Jordan Ibague, D'c Gusto 6500, La Muralla China, Chicken Fly, Mana, El Rancho de Juancho, Restaurante Don Pedro, Comeplantas, Con-Sentido Vegano, Parador campesino, Pizza España, El Patio de Mi Casa, JoseMiro Bulevar Gastronómico, Matahambre, Encanto del Mar, Doraditos y Sazón, King Broasted, Augurio By La Comarca, El Chispazo del Pollo, Heidi Restaurante, Zona 5, La creperia, Crepes & Waffles, JoseMiro Bulevar Gastronómico, Vegetariano Tulsi, Aldus, PIQUETEADERO Y RESTAURANTE, Maria C, Arepas donde el Gordo Ibague, El Carnaval del Pollo, Restaurante Boquerón, La Parrilla de Marcos, Hotel y Restaurante Camionero, Restaurante Don Andolfo, Asadero y Restaurante Ricuras de Miramar, Puerto Mojarra, Brasas de mi Cali, Ricuras del Ricaurte, La Cabaña, La Cevicheria, Casa Shalom, El CARRITO DEL SABOR, Datalos, PARADOR DEL CAMPO, María Bonita, Asadero las Americas de Igaue, Crepes and Burguer, El Sauru, FoodFlix, Me Sabe a Peru, Restaurante Sabor Tolimense, Arepas Diany, Dolce pecatto, El churrasco, Don Pedro, Restaurante Punto Cero, El Social - Plaza Samaria, Restaurante El Toque del Sabor.",
+    "destino": "IBAGUÉ",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "ibagué_atractivos",
+    "texto": "Atractivos turísticos en IBAGUÉ, TOLIMA: Museo de Arte del Tolima, Casa de Jorge Isaac, Vista a la torta, Villa linda, cascadas, Museo Antropológico, Parque Ecoturístico La Plata, El topacio vista Ibagué caña de miel, Mirador Fiques, Mirador de los Arrayanes, Mirador de Ambala, Zona de Parapente, Museo Panoptico De ibagué, Villa Katherine.",
+    "destino": "IBAGUÉ",
+    "categoria": "atractivos"
+  },
+  {
+    "id": "leticia_clima",
+    "texto": "Clima en LETICIA, AMAZONAS: los meses con mejor clima (temperatura agradable y poca lluvia) son julio, agosto, septiembre.",
+    "destino": "LETICIA",
+    "categoria": "clima"
+  },
+  {
+    "id": "leticia_vuelos",
+    "texto": "Vuelos a LETICIA, AMAZONAS: el precio más económico encontrado fue en noviembre, volando desde MDE, por $239,601 COP. Ese mes no coincide con los meses de mejor clima (agosto, julio, septiembre).",
+    "destino": "LETICIA",
+    "categoria": "vuelos"
+  },
+  {
+    "id": "leticia_hoteles",
+    "texto": "Hoteles en LETICIA, AMAZONAS: Waira Suites Hotel, Hostal Las Brisas, Florida, Doña Martha, hostel Santiago, Reserva Omagua, Hotel Zuruma, Pirañita Hostel, La isla, Gamboa, Hotel Shaday, Parque Natural Tanimboca, Eco Hostal Refugio La Floresta, Hotel Santa Helena, EcoHotel el Sol, Malakamazonas, Juni Inn, Hotel Solimões, Hotel Utuane, Hotel Casa Hospedaje Amazonas, Zugi Inn, Tapir Hotel, Macchu Picchu Selva, Hotel San José, Hotel Decameron Decalodge Ticuna, La Sangada Hospedaje & Estadero, Las Brisas, Hotel Roccas, Maloka Wayruru, Hotel Anaconda, Waira Suites.",
+    "destino": "LETICIA",
+    "categoria": "hoteles"
+  },
+  {
+    "id": "leticia_restaurantes",
+    "texto": "Restaurantes en LETICIA, AMAZONAS: Brisas del Amazonas, La Barra, Restaurante Heladeria el Viejo Tolima, El Santo Ángel, Govindas Vegetarian, Herencias de Mãe, Jugueria el buen sabor, Bamboo, Heladeria & Frutería, Top Sushi, Restaurant Mundo Amazonico, Yacuruna, El Rancho, Cali Pollos, Guetare, Punto Lounge, Cafeteria, Tierras Amazonicas, El Nativo, Perrada y Pizzeria de Paulo, Sabroso comida, Muy rico i barato, La perrada de los gordos, El punto de las empanadas, Rico Maná, Perla Negra, San Jorge, El Delfín, Lucymar, F y M, Brisa del Amazonas, El paisa, Delicias del Perú, Restaurante Caqueteño, Fusión Costeña, Alfra.",
+    "destino": "LETICIA",
+    "categoria": "restaurantes"
+  },
+  {
+    "id": "leticia_atractivos",
+    "texto": "Atractivos turísticos en LETICIA, AMAZONAS: Jardín de la Victoria Regia, Casa En La Selva, Casa de Carlo, Casa de Mario, Casa de Mario familia, panorama, Iglesia congregación presbiteriana vida nueva, Biblioteca y Museo Etnográfico Banco de la República, Parque Ecologico Mundo Amazonico.",
+    "destino": "LETICIA",
+    "categoria": "atractivos"
+  }
+]
