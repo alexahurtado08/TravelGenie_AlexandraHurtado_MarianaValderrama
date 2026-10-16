@@ -8,7 +8,7 @@ Uso (desde la raíz del repo, después de haber corrido paso9 para crear chroma_
     python correr_m3.py rag_avanzado     # búsqueda híbrida + reranking
     python correr_m3.py rag_hibrida      # ablación: solo híbrida
     python correr_m3.py rag_rerank       # ablación: solo reranking
-(más adelante se añadirá 'agente' al diccionario SISTEMAS)
+    python correr_m3.py agente           # sistema final: LLM + herramienta + RAG avanzado
 
 Cada ejecución reemplaza la fila de ese sistema, así que se puede repetir sin
 duplicar. Mismo eval set para TODOS los sistemas de M3 (eval_set_m3.py) y mismo juez que en M2.
@@ -85,12 +85,20 @@ def construir_rag_rerank():
     return _avanzado(hibrida=False, rerank=True)
 
 
+def construir_agente():
+    import agente
+    agente._cargar()                         # carga modelos ANTES de medir tiempos
+    agente.sistema_agente("¿Qué hoteles hay en Medellín?")   # calentamiento
+    return agente.sistema_agente
+
+
 SISTEMAS = {
     "m2_baseline": ("M2 baseline (LoRA sin RAG)", construir_m2_baseline),
     "rag_naive": ("RAG básico (top-3 + válvula de escape)", construir_rag_naive),
     "rag_avanzado": ("RAG avanzado (híbrida + reranking)", construir_rag_avanzado),
     "rag_hibrida": ("RAG + solo búsqueda híbrida (ablación)", construir_rag_hibrida),
     "rag_rerank": ("RAG + solo reranking (ablación)", construir_rag_rerank),
+    "agente": ("Agente (herramienta de cobertura + RAG avanzado)", construir_agente),
 }
 
 
@@ -127,18 +135,23 @@ def main():
         elif clave.startswith("rag_"):
             import rag_avanzado
             extras.append(dict(rag_avanzado.ULTIMO))
+        elif clave == "agente":
+            import agente
+            extras.append(dict(agente.ULTIMO))
         return r
 
     print("Corriendo harness...")
     scorecard, resultados = harness(eval_set, medido, nombre_sistema=nombre)
 
-    sin_info = 0
     for i, r in enumerate(resultados):
         r["latencia_s"] = round(tiempos[i], 3)
-        if extras:
+        if extras and clave == "agente":
+            r["traza_agente"] = extras[i]            # pasos del LLM, llamadas, vía, tope
+        elif extras:
             r["contexto_recuperado"] = extras[i].get("recuperados")
             r["rechazada_por_umbral"] = extras[i].get("rechazada_por_umbral")
-            sin_info += bool(extras[i].get("rechazada_por_umbral"))
+    # mismo criterio para todos los sistemas: la respuesta admite no tener información
+    sin_info = sum("No tengo información sobre eso" in r["respuesta"] for r in resultados)
 
     fila = {
         "sistema": nombre,
