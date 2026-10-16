@@ -69,7 +69,7 @@ En cada turno responde SOLO con un objeto JSON, sin texto adicional:
 - Para terminar: {"accion": "responder"}
 
 Reglas:
-- Llama a verificar_cobertura SOLO si la pregunta menciona una ciudad o municipio concreto de Colombia.
+- Llama a verificar_cobertura SOLO si la pregunta menciona una ciudad o municipio concreto de Colombia (un país, como Japón, NO es una ciudad: responde).
 - Si la pregunta no menciona ninguna ciudad de Colombia (o trata de otro país u otro tema), responde {"accion": "responder"}.
 - NUNCA inventes una ciudad: el destino debe aparecer escrito en la pregunta.
 - Después de recibir una observación, responde {"accion": "responder"}.
@@ -77,7 +77,7 @@ Reglas:
 Ejemplos:
 Pregunta: ¿Qué hoteles hay en Cali?
 {"accion": "llamar", "herramienta": "verificar_cobertura", "argumentos": {"destino": "Cali"}}
-Pregunta: ¿Cuánto es 2 más 2?
+Pregunta: ¿Qué moneda se usa en Japón?
 {"accion": "responder"}
 Pregunta: Quiero un plan de playa económico, ¿qué me sugieres?
 {"accion": "responder"}
