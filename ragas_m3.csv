@@ -1,0 +1,4 @@
+sistema,n_evaluadas,n_rechazadas,faithfulness,answer_relevancy,context_precision,context_recall
+RAG básico,10,2,0.287,0.5,0.567,0.25
+RAG avanzado,6,6,0.353,0.543,0.833,0.75
+Agente (sistema final),5,7,0.357,0.52,1.0,0.9
