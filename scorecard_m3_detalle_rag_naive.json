@@ -1,13 +1,13 @@
 [
   {
     "input": "¿Cuál es el mejor mes para viajar a Cartagena de Indias?",
-    "criterio": "usa los datos reales del destino (mes de clima, mes y precio de vuelo), sin inventar cifras",
+    "criterio": "admite la falta de datos explícitamente; falla si responde con datos de otra ciudad o inventa mes/precio",
     "respuesta": "Una buena opción es Clima en IBAGUÉ, TOLIMA. El meses con mejor clima (temperatura agradable y poca lluvia) son septiembre, enero, julio. Ten en cuenta que el mes más barato no coincide con la precio en que te pierdas, por primera vista. Para hospedarte puedes considerar: Ciara en TUNJA, BOYAC: luego como edificios comer, mayo, marza, abril. Para comesta, algunas oppimientos son: los ms en POPAYN, CAUCA: o más comiento más bajo para viajar a Cartagena de Indias.",
-    "similitud_embeddings": 0.661,
+    "similitud_embeddings": 0.424,
     "puntaje_juez": 4,
     "cumple_criterio_dominio": true,
     "longitud_respuesta_palabras": 78,
-    "latencia_s": 4.425,
+    "latencia_s": 4.547,
     "contexto_recuperado": [
       [
         "IBAGUÉ",
@@ -35,7 +35,7 @@
     "puntaje_juez": 4,
     "cumple_criterio_dominio": true,
     "longitud_respuesta_palabras": 94,
-    "latencia_s": 4.863,
+    "latencia_s": 5.119,
     "contexto_recuperado": [
       [
         "MEDELLÍN",
@@ -63,7 +63,7 @@
     "puntaje_juez": 3,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 81,
-    "latencia_s": 4.912,
+    "latencia_s": 5.411,
     "contexto_recuperado": [
       [
         "POPAYÁN",
@@ -91,7 +91,7 @@
     "puntaje_juez": 3,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 85,
-    "latencia_s": 4.834,
+    "latencia_s": 5.123,
     "contexto_recuperado": [
       [
         "IBAGUÉ",
@@ -119,7 +119,7 @@
     "puntaje_juez": 3,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 76,
-    "latencia_s": 4.511,
+    "latencia_s": 4.66,
     "contexto_recuperado": [
       [
         "SANTA MARTA",
@@ -147,7 +147,7 @@
     "puntaje_juez": 3,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 52,
-    "latencia_s": 4.886,
+    "latencia_s": 5.141,
     "contexto_recuperado": [
       [
         "SANTA MARTA",
@@ -175,7 +175,7 @@
     "puntaje_juez": 3,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 94,
-    "latencia_s": 4.84,
+    "latencia_s": 5.076,
     "contexto_recuperado": [
       [
         "BARRANQUILLA",
@@ -203,7 +203,7 @@
     "puntaje_juez": 1,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 26,
-    "latencia_s": 0.015,
+    "latencia_s": 0.014,
     "contexto_recuperado": [
       [
         "NEIVA",
@@ -231,7 +231,7 @@
     "puntaje_juez": 1,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 26,
-    "latencia_s": 0.015,
+    "latencia_s": 0.014,
     "contexto_recuperado": [
       [
         "BARRANQUILLA",
@@ -259,7 +259,7 @@
     "puntaje_juez": 3,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 88,
-    "latencia_s": 4.935,
+    "latencia_s": 5.104,
     "contexto_recuperado": [
       [
         "IBAGUÉ",
@@ -275,6 +275,62 @@
         "BARRANQUILLA",
         "vuelos",
         0.451
+      ]
+    ],
+    "rechazada_por_umbral": false
+  },
+  {
+    "input": "¿Cuál es el mejor mes para viajar a Santa Marta?",
+    "criterio": "usa los datos reales de Santa Marta (meses de clima, mes, origen y precio de vuelo), sin inventar cifras ni mezclar datos de otras ciudades",
+    "respuesta": "Una buena opción es Clima en SANTA MARTA, MAGDALENA. El meses con mejor clima (temperatura agradable y poca lluvia) son enero, marzo, abril. Ten en cuenta que el mes más barato no coincide con la diciembre, febrero. Para hospedarte puedes considerar: Ciara en RIOHACHA, LA GUAJIRA: l'iras encontramos lnhosa como clumso, franceso para viajar a Santa Marta.",
+    "similitud_embeddings": 0.776,
+    "puntaje_juez": 4,
+    "cumple_criterio_dominio": true,
+    "longitud_respuesta_palabras": 57,
+    "latencia_s": 5.125,
+    "contexto_recuperado": [
+      [
+        "SANTA MARTA",
+        "clima",
+        0.335
+      ],
+      [
+        "VILLAVICENCIO",
+        "clima",
+        0.389
+      ],
+      [
+        "RIOHACHA",
+        "clima",
+        0.413
+      ]
+    ],
+    "rechazada_por_umbral": false
+  },
+  {
+    "input": "¿Cuándo es más barato volar a Pereira y desde dónde?",
+    "criterio": "mes, origen y precio coinciden con los datos de Pereira; falla si cita cifras de otra ciudad",
+    "respuesta": "Te recomiendo viajar a Pereira, RISARALDA: el precio más económico encontrado fue en agosto, volando desde BOG, por $70,175 COP. El mes no coincide con los meses de mejor clima (enero, julio, septiembre). Ten en cuenta que no es un trade-off entre pierdas andaciones y la mes más barato. Para hospedarte puedes considerar: Vuelos a POPAYN, CAUCA: eles mn más bajo coincide con lmites cliches poca y ciencia. Para comer, algunas opciones son: enviadas a RIOHACHA, LA GUAJIRA:",
+    "similitud_embeddings": 0.741,
+    "puntaje_juez": 4,
+    "cumple_criterio_dominio": true,
+    "longitud_respuesta_palabras": 78,
+    "latencia_s": 5.125,
+    "contexto_recuperado": [
+      [
+        "PEREIRA",
+        "vuelos",
+        0.439
+      ],
+      [
+        "POPAYÁN",
+        "vuelos",
+        0.445
+      ],
+      [
+        "RIOHACHA",
+        "vuelos",
+        0.449
       ]
     ],
     "rechazada_por_umbral": false

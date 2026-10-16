@@ -1,3 +1,6 @@
 sistema,n_ejemplos,dim1_similitud_embeddings_promedio,dim2_puntaje_juez_promedio,dim3_pct_cumple_criterio_dominio,latencia_mediana_s,n_respuestas_sin_info
-M2 baseline (LoRA sin RAG),10,0.396,2.4,20.0,1.372,0
-RAG básico (top-3 + válvula de escape),10,0.51,2.8,20.0,4.837,2
+M2 baseline (LoRA sin RAG),12,0.394,2.83,33.3,1.216,0
+RAG básico (top-3 + válvula de escape),12,0.532,3.0,33.3,5.111,2
+RAG + solo búsqueda híbrida (ablación),12,0.511,2.83,50.0,5.109,2
+RAG + solo reranking (ablación),12,0.497,2.42,41.7,1.126,6
+RAG avanzado (híbrida + reranking),12,0.499,2.5,41.7,1.189,6

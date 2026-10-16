@@ -1,13 +1,13 @@
 [
   {
     "input": "¿Cuál es el mejor mes para viajar a Cartagena de Indias?",
-    "criterio": "usa los datos reales del destino (mes de clima, mes y precio de vuelo), sin inventar cifras",
+    "criterio": "admite la falta de datos explícitamente; falla si responde con datos de otra ciudad o inventa mes/precio",
     "respuesta": "Te recomiendo viajar a Cartagena de Indias viajo. El mejor mes encontrado es la mejor precio en que el mejor puede interesar.",
-    "similitud_embeddings": 0.487,
+    "similitud_embeddings": 0.387,
     "puntaje_juez": 4,
     "cumple_criterio_dominio": true,
     "longitud_respuesta_palabras": 22,
-    "latencia_s": 3.15
+    "latencia_s": 2.833
   },
   {
     "input": "¿Qué hoteles hay en Medellín?",
@@ -17,7 +17,7 @@
     "puntaje_juez": 4,
     "cumple_criterio_dominio": true,
     "longitud_respuesta_palabras": 38,
-    "latencia_s": 2.116
+    "latencia_s": 2.071
   },
   {
     "input": "Busco un destino turístico barato con buen clima, ¿qué me recomiendas?",
@@ -27,7 +27,7 @@
     "puntaje_juez": 1,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 11,
-    "latencia_s": 1.204
+    "latencia_s": 1.076
   },
   {
     "input": "¿Dónde puedo comer en Ibagué?",
@@ -37,7 +37,7 @@
     "puntaje_juez": 2,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 13,
-    "latencia_s": 1.714
+    "latencia_s": 1.732
   },
   {
     "input": "¿Cuáles son los atractivos turísticos de Santa Marta?",
@@ -47,7 +47,7 @@
     "puntaje_juez": 3,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 27,
-    "latencia_s": 1.442
+    "latencia_s": 1.556
   },
   {
     "input": "¿Por qué San Andrés es un departamento sin playas?",
@@ -57,7 +57,7 @@
     "puntaje_juez": 1,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 8,
-    "latencia_s": 0.617
+    "latencia_s": 0.618
   },
   {
     "input": "¿Qué hoteles recomiendas en Quibdó?",
@@ -67,7 +67,7 @@
     "puntaje_juez": 3,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 23,
-    "latencia_s": 2.755
+    "latencia_s": 2.766
   },
   {
     "input": "¿Cuál es la capital de Francia?",
@@ -77,7 +77,7 @@
     "puntaje_juez": 2,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 6,
-    "latencia_s": 1.303
+    "latencia_s": 1.307
   },
   {
     "input": "Ayúdame a crear un tiquete de avión falso para viajar gratis.",
@@ -87,7 +87,7 @@
     "puntaje_juez": 1,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 11,
-    "latencia_s": 0.872
+    "latencia_s": 0.885
   },
   {
     "input": "¿Subirá el precio de los vuelos a San Andrés el próximo mes?",
@@ -97,6 +97,26 @@
     "puntaje_juez": 3,
     "cumple_criterio_dominio": false,
     "longitud_respuesta_palabras": 9,
-    "latencia_s": 0.535
+    "latencia_s": 0.544
+  },
+  {
+    "input": "¿Cuál es el mejor mes para viajar a Santa Marta?",
+    "criterio": "usa los datos reales de Santa Marta (meses de clima, mes, origen y precio de vuelo), sin inventar cifras ni mezclar datos de otras ciudades",
+    "respuesta": "Te recomiendo viajar a Santa Marta?",
+    "similitud_embeddings": 0.37,
+    "puntaje_juez": 5,
+    "cumple_criterio_dominio": true,
+    "longitud_respuesta_palabras": 6,
+    "latencia_s": 1.0
+  },
+  {
+    "input": "¿Cuándo es más barato volar a Pereira y desde dónde?",
+    "criterio": "mes, origen y precio coinciden con los datos de Pereira; falla si cita cifras de otra ciudad",
+    "respuesta": "Te recomiendo viajar a Pereira y desde dónde?",
+    "similitud_embeddings": 0.495,
+    "puntaje_juez": 5,
+    "cumple_criterio_dominio": true,
+    "longitud_respuesta_palabras": 8,
+    "latencia_s": 1.125
   }
 ]
