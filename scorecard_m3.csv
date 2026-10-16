@@ -1,0 +1,3 @@
+sistema,n_ejemplos,dim1_similitud_embeddings_promedio,dim2_puntaje_juez_promedio,dim3_pct_cumple_criterio_dominio,latencia_mediana_s,n_respuestas_sin_info
+M2 baseline (LoRA sin RAG),10,0.396,2.4,20.0,1.372,0
+RAG básico (top-3 + válvula de escape),10,0.51,2.8,20.0,4.837,2

@@ -5,13 +5,16 @@ guarda su fila en scorecard_m3.csv, con la latencia mediana por pregunta.
 Uso (desde la raíz del repo, después de haber corrido paso9 para crear chroma_db/):
     python correr_m3.py m2_baseline
     python correr_m3.py rag_naive
-(más adelante se añadirán 'rag_avanzado' y 'agente' al diccionario SISTEMAS)
+    python correr_m3.py rag_avanzado     # búsqueda híbrida + reranking
+    python correr_m3.py rag_hibrida      # ablación: solo híbrida
+    python correr_m3.py rag_rerank       # ablación: solo reranking
+(más adelante se añadirá 'agente' al diccionario SISTEMAS)
 
 Cada ejecución reemplaza la fila de ese sistema, así que se puede repetir sin
 duplicar. Mismo eval_set y mismo juez que en M2 -> los números son comparables.
 
 Instalación previa en Colab (y reiniciar la sesión si es la primera vez):
-    !pip install -q -U transformers peft accelerate sentence-transformers torchao chromadb==1.5.9
+    !pip install -q -U transformers peft accelerate sentence-transformers torchao chromadb==1.5.9 rank-bm25==0.2.2
 """
 
 import csv
@@ -63,9 +66,31 @@ def construir_rag_naive():
     return rag_naive.sistema_rag
 
 
+def _avanzado(**opciones):
+    import rag_avanzado
+    rag_avanzado._cargar()                   # carga modelos ANTES de medir tiempos
+    rag_avanzado.sistema_rag_avanzado("¿Qué hoteles hay en Medellín?", **opciones)  # calentamiento
+    return lambda p: rag_avanzado.sistema_rag_avanzado(p, **opciones)
+
+
+def construir_rag_avanzado():
+    return _avanzado(hibrida=True, rerank=True)
+
+
+def construir_rag_hibrida():
+    return _avanzado(hibrida=True, rerank=False)
+
+
+def construir_rag_rerank():
+    return _avanzado(hibrida=False, rerank=True)
+
+
 SISTEMAS = {
     "m2_baseline": ("M2 baseline (LoRA sin RAG)", construir_m2_baseline),
     "rag_naive": ("RAG básico (top-3 + válvula de escape)", construir_rag_naive),
+    "rag_avanzado": ("RAG avanzado (híbrida + reranking)", construir_rag_avanzado),
+    "rag_hibrida": ("RAG + solo búsqueda híbrida (ablación)", construir_rag_hibrida),
+    "rag_rerank": ("RAG + solo reranking (ablación)", construir_rag_rerank),
 }
 
 
@@ -99,6 +124,9 @@ def main():
         if clave == "rag_naive":
             import rag_naive
             extras.append(dict(rag_naive.ULTIMO))
+        elif clave.startswith("rag_"):
+            import rag_avanzado
+            extras.append(dict(rag_avanzado.ULTIMO))
         return r
 
     print("Corriendo harness...")
