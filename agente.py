@@ -71,12 +71,15 @@ En cada turno responde SOLO con un objeto JSON, sin texto adicional:
 Reglas:
 - Llama a verificar_cobertura SOLO si la pregunta menciona una ciudad o municipio concreto de Colombia.
 - Si la pregunta no menciona ninguna ciudad de Colombia (o trata de otro país u otro tema), responde {"accion": "responder"}.
+- NUNCA inventes una ciudad: el destino debe aparecer escrito en la pregunta.
 - Después de recibir una observación, responde {"accion": "responder"}.
 
 Ejemplos:
 Pregunta: ¿Qué hoteles hay en Cali?
 {"accion": "llamar", "herramienta": "verificar_cobertura", "argumentos": {"destino": "Cali"}}
 Pregunta: ¿Cuánto es 2 más 2?
+{"accion": "responder"}
+Pregunta: Quiero un plan de playa económico, ¿qué me sugieres?
 {"accion": "responder"}
 """
 
@@ -111,7 +114,7 @@ def verificar_cobertura(destino):
             "destinos_cubiertos": [d.title() for d in destinos_cubiertos()]}
 
 
-def ejecutar_herramienta(nombre, argumentos):
+def ejecutar_herramienta(nombre, argumentos, pregunta=None):
     """Valida contra el esquema y ejecuta. Los errores se devuelven como
     observación (el agente los ve) en vez de lanzar excepciones."""
     if nombre not in HERRAMIENTAS:
@@ -123,6 +126,12 @@ def ejecutar_herramienta(nombre, argumentos):
         if spec["requerido"] and not argumentos[p].strip():
             return {"error": f"el argumento '{p}' está vacío"}
     if nombre == "verificar_cobertura":
+        # Barrera: el destino debe estar escrito en la pregunta. Evita que el LLM
+        # invente una ciudad (en la prueba real inventó "Bogotá" para una pregunta
+        # abierta y eso la convertía en un falso rechazo).
+        if pregunta is not None and (" " + normalizar(argumentos["destino"]) + " ") not in (" " + normalizar(pregunta) + " "):
+            return {"error": f"'{argumentos['destino']}' no aparece en la pregunta del usuario; "
+                             "no inventes ciudades. Si no hay ciudad, responde."}
         return verificar_cobertura(argumentos["destino"])
 
 
@@ -279,7 +288,7 @@ def sistema_agente(pregunta, max_pasos=MAX_PASOS, llm=None):
             terminado = True
             break
 
-        obs = ejecutar_herramienta(decision["herramienta"], decision["argumentos"])
+        obs = ejecutar_herramienta(decision["herramienta"], decision["argumentos"], pregunta)
         llamadas.append({"herramienta": decision["herramienta"],
                          "argumentos": decision["argumentos"], "observacion": obs})
         if obs.get("en_corpus") is False:
