@@ -20,8 +20,9 @@ Decisiones (justificadas en el README del M3):
     1) en el prompt: instrucción "si no está en los datos, dilo";
     2) en el código: si el chunk más cercano está más lejos que
        UMBRAL_DISTANCIA, NO se llama al generador y se responde que no hay
-       información. La capa 2 es la confiable: un modelo de 77M parámetros
-       puede ignorar la instrucción de la capa 1.
+       información. Atrapa lo fuera de dominio; NO atrapa una ciudad que el
+       corpus no tiene (ver calibración abajo): ese fallo es el que las
+       técnicas avanzadas tienen que atacar.
 """
 
 import os
@@ -38,17 +39,24 @@ INSTRUCCION_ESCAPE = ("Usa solo estos datos. Si la respuesta no está en los dat
                       "di que no tienes esa información. ")
 
 K = 3
-# PROVISIONAL: con 3 consultas de prueba, lo relevante daba distancia coseno
-# 0.24-0.51 y lo irrelevante (Cartagena, que no está en el corpus) 0.63.
-# Se calibra con calibrar_umbral() sobre el eval set antes de dar este valor
-# por bueno.
-UMBRAL_DISTANCIA = 0.58
+# Calibrado con la distancia del mejor chunk en el eval set (corrida en Colab):
+#   preguntas con respuesta en el corpus ........ 0.20 - 0.49
+#   preguntas fuera del corpus (Cartagena, San Andrés, Quibdó) .. 0.32 - 0.52
+#   fuera de dominio (Francia 0.553, tiquete falso 0.732) ........ > 0.55
+# La distancia SOLO separa lo fuera de dominio. NO distingue una ciudad que el
+# corpus no tiene (Quibdó da 0.321, más cerca que muchas preguntas válidas),
+# porque el embedding pesa más la categoría ("hoteles") que el nombre de la ciudad.
+# 0.53 queda en el hueco entre lo relacionado (<= 0.52) y lo fuera de dominio
+# (>= 0.553); el margen es de ~0.02, así que es frágil y fue ajustado con el
+# propio eval set (sus resultados en esa pregunta son optimistas).
+UMBRAL_DISTANCIA = 0.53
 MENSAJE_SIN_INFO = ("No tengo información sobre eso en mi base de datos de destinos "
                     "(solo cubro algunos destinos colombianos con datos de clima, "
                     "vuelos, hoteles, restaurantes y atractivos).")
 
 MAX_INPUT_TOKENS = 512   # M1 truncaba a 220; aquí cortaría la pregunta (va al final)
 _estado = {}             # modelos cargados una sola vez
+ULTIMO = {}              # contexto recuperado en la última llamada (para diagnóstico)
 
 
 def _cargar():
@@ -106,8 +114,12 @@ def generar(prompt):
 def sistema_rag(pregunta, k=K, umbral=UMBRAL_DISTANCIA, con_instruccion=True):
     """Interfaz estándar del harness: str -> str."""
     recuperados = recuperar(pregunta, k)
+    ULTIMO.clear()
+    ULTIMO["recuperados"] = [(m["destino"], m["categoria"], round(d, 3)) for _, d, m in recuperados]
     if umbral is not None and recuperados[0][1] > umbral:
+        ULTIMO["rechazada_por_umbral"] = True
         return MENSAJE_SIN_INFO        # válvula de escape (capa 2): ni se genera
+    ULTIMO["rechazada_por_umbral"] = False
     prompt = construir_prompt(pregunta, [t for t, _, _ in recuperados], con_instruccion)
     return generar(prompt)
 
