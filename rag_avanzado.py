@@ -39,10 +39,19 @@ N_FUSION = 10       # cuántos pasan al reranker tras la fusión RRF
 K = 3               # chunks finales al generador (igual que el RAG básico)
 RRF_K = 60          # constante estándar de RRF (Cormack et al., 2009)
 
-# Umbral de la puntuación del reranker para decir "no tengo información".
-# None = desactivado hasta calibrarlo (python rag_avanzado.py imprime la
-# puntuación del mejor chunk para cada pregunta del eval set).
-UMBRAL_RERANK = None
+# Umbral de la puntuación (logit) del cross-encoder. 0.0 es la frontera natural
+# de un logit (sigmoide = 0.5, "más probable relevante que no"), así que NO se
+# ajustó al eval set. Calibración observada (mejor chunk por pregunta):
+#   con respuesta en el corpus ........ 10.9 (Medellín), 10.9 (Santa Marta), 1.1 (Ibagué)
+#   ciudad que el corpus NO tiene ..... -3.5 (Cartagena), -9.1 (San Andrés), -5.5 (precio SAI)
+#                                       pero +2.3 (Quibdó)  <- el reranker NO la detecta
+#   fuera de dominio .................. -3.6 (Francia), -8.4 (tiquete falso)
+#   pregunta abierta sin ciudad ....... -5.9 (falso rechazo: es una pregunta válida)
+# Se usa para dos cosas: (a) si ni el mejor chunk llega al umbral -> "no tengo
+# información"; (b) PODA: los chunks por debajo del umbral no se pasan al
+# generador (antes un 3.er chunk irrelevante, -3.4, se colaba y contaminaba la
+# respuesta). Poner None desactiva ambas.
+UMBRAL_RERANK = 0.0
 
 _STOP = {"de", "la", "el", "en", "y", "a", "los", "las", "un", "una", "que", "es",
          "por", "para", "con", "del", "al", "hay", "me", "mi", "se", "lo", "como",
@@ -136,19 +145,23 @@ def recuperar_avanzado(pregunta, hibrida=True, rerank=True, k=K):
 def sistema_rag_avanzado(pregunta, hibrida=True, rerank=True, k=K,
                          umbral_dist=rag_naive.UMBRAL_DISTANCIA,
                          umbral_rerank=UMBRAL_RERANK, con_instruccion=True):
+    # Con rerank activo y umbral_rerank definido, los chunks bajo el umbral se
+    # podan del contexto; si no queda ninguno, se responde "sin información".
     """Interfaz estándar del harness: str -> str."""
     final, mejor_dist = recuperar_avanzado(pregunta, hibrida, rerank, k)
     ULTIMO.clear()
-    ULTIMO["recuperados"] = [(c["destino"], c["categoria"],
-                              None if c["rerank"] is None else round(c["rerank"], 3))
-                             for c in final]
     ULTIMO["mejor_dist_densa"] = round(mejor_dist, 3)
+    ULTIMO["recuperados_antes_de_poda"] = [
+        (c["destino"], c["categoria"], None if c["rerank"] is None else round(c["rerank"], 3))
+        for c in final]
 
-    rechazada = False
-    if umbral_dist is not None and mejor_dist > umbral_dist:
-        rechazada = True                      # fuera de dominio (igual que el RAG básico)
-    if rerank and umbral_rerank is not None and final[0]["rerank"] < umbral_rerank:
-        rechazada = True                      # el reranker no ve nada relevante
+    rechazada = umbral_dist is not None and mejor_dist > umbral_dist   # fuera de dominio
+    if rerank and umbral_rerank is not None and not rechazada:
+        final = [c for c in final if c["rerank"] >= umbral_rerank]     # poda
+        rechazada = not final                                          # ninguno relevante
+    ULTIMO["recuperados"] = [
+        (c["destino"], c["categoria"], None if c["rerank"] is None else round(c["rerank"], 3))
+        for c in final]
     ULTIMO["rechazada_por_umbral"] = rechazada
     if rechazada:
         return rag_naive.MENSAJE_SIN_INFO
@@ -169,7 +182,7 @@ def calibrar(preguntas):
 
 
 if __name__ == "__main__":
-    from eval_set import eval_set
+    from eval_set_m3 import eval_set_m3 as eval_set
 
     print("=== Calibración: básico vs avanzado, y puntuación del reranker ===")
     calibrar([ej["input"] for ej in eval_set])

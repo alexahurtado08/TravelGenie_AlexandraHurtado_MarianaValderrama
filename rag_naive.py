@@ -133,7 +133,7 @@ def calibrar_umbral(preguntas):
 
 
 if __name__ == "__main__":
-    from eval_set import eval_set
+    from eval_set_m3 import eval_set_m3 as eval_set
 
     print("=== 1) Calibración del umbral (distancia del mejor chunk) ===")
     calibrar_umbral([ej["input"] for ej in eval_set])

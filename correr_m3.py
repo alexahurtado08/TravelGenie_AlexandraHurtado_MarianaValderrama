@@ -11,7 +11,7 @@ Uso (desde la raíz del repo, después de haber corrido paso9 para crear chroma_
 (más adelante se añadirá 'agente' al diccionario SISTEMAS)
 
 Cada ejecución reemplaza la fila de ese sistema, así que se puede repetir sin
-duplicar. Mismo eval_set y mismo juez que en M2 -> los números son comparables.
+duplicar. Mismo eval set para TODOS los sistemas de M3 (eval_set_m3.py) y mismo juez que en M2.
 
 Instalación previa en Colab (y reiniciar la sesión si es la primera vez):
     !pip install -q -U transformers peft accelerate sentence-transformers torchao chromadb==1.5.9 rank-bm25==0.2.2
@@ -24,7 +24,7 @@ import statistics
 import sys
 import time
 
-from eval_set import eval_set
+from eval_set_m3 import eval_set_m3 as eval_set   # 12 casos; ver eval_set_m3.py
 from harness import harness, device   # carga el juez Qwen y los embeddings (M2)
 
 ARCHIVO_CSV = "scorecard_m3.csv"
