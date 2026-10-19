@@ -111,7 +111,7 @@ The baseline scores low across all three dimensions, **and this is the expected,
 
 ## 8. M3 — RAG + capa agéntica
 
-Informe completo (corpus e índice, diagnóstico del RAG ingenuo, técnicas avanzadas, agente, tablas evolutiva y de RAGAS, lectura honesta): **[`reporte.md`](reporte.md)**. Resultados guardados en `scorecard_m3.csv`, `resumen_m3.csv`, `ragas_m3.csv` y `ragas_m3_detalle.csv`.
+Informe completo (corpus e índice, diagnóstico del RAG ingenuo, técnicas avanzadas, agente, tablas evolutiva y de RAGAS, lectura honesta): **[`reporteM3`](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/reporte.md)**. Resultados guardados en `scorecard_m3.csv`, `resumen_m3.csv`, `ragas_m3.csv` y `ragas_m3_detalle.csv`.
 
 | Componente | Archivo |
 |---|---|
