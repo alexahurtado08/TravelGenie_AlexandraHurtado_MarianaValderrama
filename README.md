@@ -4,6 +4,8 @@
 
 *team members*: Alexandra Hurtado, Mariana Valderrama
 
+> **M3 (RAG + agente) en una frase:** TravelGenie ayuda a quien planea un viaje por Colombia a saber a qué destino ir y en qué mes (clima, vuelos, hoteles, restaurantes y atractivos de 14 destinos); una buena respuesta usa solo los datos de esa base, trae el mes, el precio y el origen correctos, y cuando le preguntan por una ciudad que no tiene lo dice en lugar de inventar. Lo que sigue fallando es la redacción de su modelo pequeño, no la búsqueda de los datos. El informe completo de M3 está en **[`reporte.md`](reporte.md)**.
+
 ---
 
 ## 1. Base model and chosen family
@@ -107,6 +109,43 @@ The baseline scores low across all three dimensions, **and this is the expected,
 1. In a Colab session with this repo cloned, install dependencies: `!pip install -q -U transformers peft sentence-transformers torchao`.
 2. Run `%run correr_harness.py` — loads the M1 model (base + `travelgenie-lora-adapter/`), runs it through `eval_set.py`, and produces `scorecard_baseline.csv` and `scorecard_resultados_detallados.json`.
 
-## 8. Data source attribution
+## 8. M3 — RAG + capa agéntica
+
+Informe completo (corpus e índice, diagnóstico del RAG ingenuo, técnicas avanzadas, agente, tablas evolutiva y de RAGAS, lectura honesta): **[`reporte.md`](reporte.md)**. Resultados guardados en `scorecard_m3.csv`, `resumen_m3.csv`, `ragas_m3.csv` y `ragas_m3_detalle.csv`.
+
+| Componente | Archivo |
+|---|---|
+| Corpus (70 docs) e índice (406 chunks, Chroma) | `data_pipeline/paso8_generar_corpus.py`, `data_pipeline/paso9_indexar_chroma.py` |
+| RAG ingenuo `sistema_rag(pregunta)` | `rag_naive.py` |
+| RAG avanzado `sistema_rag_avanzado(pregunta)` (híbrida BM25 + densa con RRF, reranking) | `rag_avanzado.py` |
+| Agente (herramienta `verificar_cobertura`, JSON tolerante, tope de 3 pasos) | `agente.py` |
+| Evaluación (harness de M2 sin cambios, eval set de 12 casos) | `correr_m3.py`, `eval_set_m3.py` |
+| Métricas objetivas y RAGAS | `resumen_m3.py`, `ragas_m3.py` |
+
+**Cómo ejecutarlo (Colab gratis, GPU T4, sin llaves de pago):**
+```
+!git clone https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama
+%cd TravelGenie_AlexandraHurtado_MarianaValderrama
+!pip install -q -r requirements.txt
+!python data_pipeline/paso9_indexar_chroma.py   # reconstruye chroma_db/ (no se versiona)
+!python correr_m3.py m2_baseline   # y también: rag_naive, rag_hibrida, rag_rerank, rag_avanzado, agente
+!python resumen_m3.py
+!python ragas_m3.py
+```
+Si Colab lo pide tras el `pip install`, reiniciar la sesión. Semilla fija en 42. No hace falta ninguna API externa: el agente, el juez de M2 y el juez de RAGAS son el mismo Qwen2.5-1.5B-Instruct local.
+
+**Reproducibilidad verificada.** Se clonó el repositorio en una sesión nueva de Colab (Python 3.13, GPU T4, versiones de `requirements.txt`), se reconstruyó el índice con `paso9` y se volvieron a correr los 6 sistemas sobre el mismo eval set. Resultado: el índice sale igual (406 chunks, 0 truncados, máximo 111 tokens); el scorecard (similitud, juez, % cumple, respuestas sin información) es **idéntico** en los 6 sistemas; y las 72 respuestas (12 preguntas × 6 sistemas) coinciden, texto completo, con las guardadas en el repo, y el puntaje del juez también. Lo único que cambia entre corridas es la latencia, que depende de la máquina (la mediana varió entre −10 % y +0.5 % respecto a la publicada). Los modelos (`flan-t5-small`, `Qwen2.5-1.5B-Instruct`, `paraphrase-multilingual-MiniLM-L12-v2`, `mmarco-mMiniLMv2-L12-H384-v1`) se descargan de Hugging Face y todos corren en Colab gratis. `chroma_db/` no se versiona: se reconstruye con `paso9`. Los archivos de M3 dependen de `eval_set_m3.py`, que a su vez importa `eval_set.py` de M2 sin modificarlo.
+
+## 9. Uso de IA
+
+**Herramienta:** Claude Code (Anthropic, modelo Claude Sonnet), en una sesión de chat, durante todo el trabajo de M3.
+
+**Para qué se usó:**
+
+
+**Qué hicimos y decidimos nosotras:**
+
+
+## 10. Data source attribution
 
 This project uses third-party data under their respective licenses — see [DATASET](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/DATASET) for full detail. In particular, it includes © OpenStreetMap contributors data, available under the Open Database License (ODbL) — more information at [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright).
