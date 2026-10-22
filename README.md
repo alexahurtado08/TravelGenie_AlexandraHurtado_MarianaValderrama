@@ -168,7 +168,7 @@ Si Colab lo pide tras el `pip install`, reiniciar la sesión. Semilla fija en 42
 
 ## 9. Uso de IA
 
-Usamos **Claude Code** (Anthropic) como única herramienta de IA, en M1, M2 y M3, en las etapas de consulta, revisión, mejora, depuración y corrección, y para redactar borradores que después revisamos y ejecutamos. El equipo es responsable de todo lo presentado. Declaración completa: **[Uso de IA](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/Uso-de-IA)**.
+Usamos **Claude Code** (Anthropic) como única herramienta de IA, en M1, M2 y M3, en las etapas de consulta, revisión, mejora, depuración y corrección, y para redactar borradores que después revisamos y ejecutamos. El equipo es responsable de todo lo presentado. Declaración completa: **[Uso de IA](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/Declaraci%C3%B3n-uso-de-IA)**.
 
 ## 10. Data source attribution
 
