@@ -1,40 +1,23 @@
 """
-RAGAS de M3 — fidelidad, relevancia de la respuesta, precisión y exhaustividad
-del contexto, para RAG básico, RAG avanzado y Agente (el sistema final).
+RAGAS de M3: mide qué tan bien funcionan la búsqueda y la redacción.
 
-IMPLEMENTACIÓN: propia, siguiendo las definiciones del paper de RAGAS
-(Es et al., 2023), NO la librería `ragas`. Motivo: la librería exige que el
-modelo juez devuelva JSON estructurado sin errores; un juez de 1.5B parámetros
-falla ahí con frecuencia y la librería devuelve NaN. Aquí cada pregunta al
-juez es una decisión Sí/No, que un modelo pequeño sí sabe contestar.
-JUEZ: Qwen2.5-1.5B-Instruct local (sin llaves de pago). Es el mismo modelo del
-juez de M2 y del agente: sesgo de auto-preferencia posible y juez débil; las
-cifras son indicativas, no precisas.
+Usamos el modelo Qwen2.5-1.5B (local, sin llaves de pago) como juez, y
+calculamos las cuatro métricas de RAGAS con nuestro propio código en vez de la
+librería `ragas`, que con un juez tan pequeño suele fallar y devolver vacíos.
 
-Definiciones (todas en [0, 1], más alto = mejor):
-  - faithfulness       : fracción de afirmaciones de la respuesta (oraciones)
-                         que el contexto recuperado respalda.  Detecta INVENCIÓN.
-  - answer_relevancy   : similitud coseno media entre la pregunta y 3 preguntas
-                         que el juez deduce de la respuesta (embeddings).
-                         Detecta respuestas fuera de tema.
-  - context_precision  : precisión promedio (AP@k) de los chunks recuperados,
-                         según si el juez los considera útiles para la respuesta
-                         de referencia.  Detecta RUIDO en la recuperación.
-  - context_recall     : fracción de oraciones de la respuesta de referencia
-                         (campo `esperado` del eval set) que el contexto cubre.
-                         Detecta datos que la recuperación NO trajo.
+  - faithfulness: lo que dice la respuesta está en los datos? o esta inventando?
+  - answer_relevancy: la respuesta trata de lo que se preguntó?
+  - context_precision: los fragmentos que trajo la búsqueda si sirven?
+  - context_recall: trajo los datos que nos  hacían falta?
 
-Lectura: faithfulness baja + recall alto = falla de GENERACIÓN (el generador
-inventa aunque tenía los datos). Recall bajo = falla de RECUPERACIÓN.
+Todas van de 0 a 1 (más alto es mejor). Si faithfulness es baja pero recall es
+alto, el fallo está en la redacción; si recall es bajo, está en la búsqueda.
 
-Solo se evalúan las respuestas que pasaron por el generador (con contexto).
-Las rechazadas ("No tengo información…") se cuentan aparte: no tienen
-afirmaciones que verificar.  Los contextos se reconstruyen con la misma
-recuperación determinista que usó cada sistema.
+Solo se evalúan las respuestas que pasaron por el generador; las rechazadas
+"No tengo información" se cuentan aparte
 
-Uso (Colab, después de correr correr_m3.py de los tres sistemas):
-    python ragas_m3.py
-Salida: ragas_m3.csv (por sistema) y ragas_m3_detalle.csv (por pregunta).
+Uso:  python ragas_m3.py después de correr_m3.py
+Salida: ragas_m3.csv por sistema y ragas_m3_detalle.csv 
 """
 
 import csv
@@ -52,9 +35,9 @@ SISTEMAS = [
 METRICAS = ["faithfulness", "answer_relevancy", "context_precision", "context_recall"]
 
 
-# ---------------------------------------------------------------------------
-# Piezas puras (reciben las funciones del juez, así se pueden probar sin modelo)
-# ---------------------------------------------------------------------------
+
+#  reciben las funciones del juez para probar sin modelo
+
 def oraciones(texto, min_palabras=3):
     partes = re.split(r"(?<=[.!?])\s+|\n+", texto.strip())
     return [p.strip() for p in partes if len(p.split()) >= min_palabras]
@@ -112,9 +95,9 @@ def media(valores):
     return round(statistics.mean(v), 3) if v else ""
 
 
-# ---------------------------------------------------------------------------
-# Cableado con modelos reales (solo se usa al ejecutar el script)
-# ---------------------------------------------------------------------------
+
+# lo hacemos con modelos reales y solo se usa al ejecutar el script
+
 def _juez_funciones():
     import torch
     from harness import juez_modelo, juez_tokenizer, device
@@ -129,7 +112,7 @@ def _juez_funciones():
 
     def si_no(prompt):
         r = charlar(prompt, 4).strip().lower()
-        return r.startswith("s")            # "sí", "si"
+        return r.startswith("s")            
 
     def generar_preguntas(respuesta, n):
         r = charlar(f"Respuesta: {respuesta}\n\nEscribe {n} preguntas distintas, una por línea y "
