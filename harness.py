@@ -65,10 +65,17 @@ CRITERIO ESPECÍFICO DE ESTE CASO: {criterio}
 
 RESPUESTA A EVALUAR: {respuesta}
 
-Compara la respuesta a evaluar con la de referencia y con el criterio. Los datos
-(nombres, meses, precios) que no estén en la referencia o que la contradigan
-cuentan como inventados. Responde ÚNICAMENTE en este formato exacto, sin
-explicación adicional:
+Sigue estos pasos:
+1. Mira el CRITERIO: ¿qué tendría que hacer la respuesta (dar datos, admitir que no
+   tiene información, rechazar, corregir una premisa)?
+2. ¿La respuesta a evaluar hace justo eso? Si el criterio pide admitir la falta de
+   datos, rechazar o corregir, una respuesta que lo hace merece 5 aunque sea corta,
+   y una que responde como si nada merece 1 o 2.
+3. Si repite la pregunta, no dice nada útil o mezcla datos de otra ciudad, es 1 o 2.
+4. En listas de lugares, la referencia es solo un ejemplo: otros nombres son válidos
+   si suenan a lugares reales de esa ciudad. Son inventados si no tienen sentido.
+5. Si da meses, precios u orígenes distintos a los de la referencia, es 2.
+Responde ÚNICAMENTE en este formato exacto, sin explicación adicional:
 PUNTAJE: <número del 1 al 5>
 """
 
