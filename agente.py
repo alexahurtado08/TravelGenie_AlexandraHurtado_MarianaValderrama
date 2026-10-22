@@ -38,14 +38,14 @@ MODELO_AGENTE = "Qwen/Qwen2.5-1.5B-Instruct"
 MAX_PASOS = 3
 RUTA_CHUNKS = "data/09_chunks.json"
 
-# La frase inicial es la misma que usa el RAG: así resumen_m3.py y el harness
-# reconocen igual un "admito que no tengo datos" venga del RAG o del agente.
+# La frase inicial es la misma que usa el RAG
+# reconocen igual un admito que no tengo datos venga del RAG o del agente.
 MENSAJE_SIN_COBERTURA = ("No tengo información sobre eso: mi base de datos no incluye "
                          "{destino}. Solo cubro: {lista}.")
 
-# ---------------------------------------------------------------------------
+
 # Esquema de herramientas
-# ---------------------------------------------------------------------------
+
 HERRAMIENTAS = {
     "verificar_cobertura": {
         "descripcion": ("Indica si un destino colombiano tiene datos (clima, vuelos, hoteles, "
@@ -84,12 +84,12 @@ Pregunta: Quiero un plan de playa económico, ¿qué me sugieres?
 """
 
 _estado = {}
-ULTIMO = {}   # traza de la última llamada (para diagnóstico y para el reporte)
+ULTIMO = {}   # traz de la última llamada para diagnóstico y para el reporte
 
 
-# ---------------------------------------------------------------------------
+
 # Herramienta
-# ---------------------------------------------------------------------------
+
 def normalizar(texto):
     t = unicodedata.normalize("NFD", str(texto).lower())
     t = "".join(c for c in t if unicodedata.category(c) != "Mn")
@@ -127,17 +127,16 @@ def ejecutar_herramienta(nombre, argumentos, pregunta=None):
             return {"error": f"el argumento '{p}' está vacío"}
     if nombre == "verificar_cobertura":
         # Barrera: el destino debe estar escrito en la pregunta. Evita que el LLM
-        # invente una ciudad (en la prueba real inventó "Bogotá" para una pregunta
-        # abierta y eso la convertía en un falso rechazo).
+        # invente una ciudad en la prueba real inventó Bogotá para una pregunta
+        # abierta
         if pregunta is not None and (" " + normalizar(argumentos["destino"]) + " ") not in (" " + normalizar(pregunta) + " "):
             return {"error": f"'{argumentos['destino']}' no aparece en la pregunta del usuario; "
                              "no inventes ciudades. Si no hay ciudad, responde."}
         return verificar_cobertura(argumentos["destino"])
 
 
-# ---------------------------------------------------------------------------
-# Lectura tolerante de JSON
-# ---------------------------------------------------------------------------
+
+# Lectura de JSON
 _ALIAS_ACCION = ("accion", "acción", "action")
 _ALIAS_HERRAMIENTA = ("herramienta", "tool", "name", "nombre", "function", "funcion")
 _ALIAS_ARGS = ("argumentos", "args", "arguments", "parametros", "parameters", "params")
@@ -230,14 +229,14 @@ def parsear_decision(texto):
     return None
 
 
-# ---------------------------------------------------------------------------
+
 # LLM del agente
-# ---------------------------------------------------------------------------
+
 def _cargar():
     if "llm" in _estado:
         return _estado
     import torch
-    H = sys.modules.get("harness")   # si el harness ya cargó a Qwen como juez, se reutiliza
+    H = sys.modules.get("harness")   # si el harness ya cargó a Qwen como juez lo reutiliza
     if H is not None and getattr(H, "JUEZ_MODEL_NAME", None) == MODELO_AGENTE:
         _estado.update(tok=H.juez_tokenizer, llm=H.juez_modelo, device=H.device)
     else:
@@ -260,9 +259,8 @@ def _generar_llm(mensajes):
     return e["tok"].decode(salida[0][ids["input_ids"].shape[1]:], skip_special_tokens=True).strip()
 
 
-# ---------------------------------------------------------------------------
+
 # Ciclo del agente
-# ---------------------------------------------------------------------------
 def sistema_agente(pregunta, max_pasos=MAX_PASOS, llm=None):
     """Interfaz estándar del harness: str -> str.  `llm` permite inyectar un
     sustituto (mensajes -> str) para pruebas sin modelo."""
@@ -280,7 +278,7 @@ def sistema_agente(pregunta, max_pasos=MAX_PASOS, llm=None):
         decision = parsear_decision(salida)
         traza.append({"paso": paso, "salida_llm": salida[:300], "decision": decision})
 
-        if decision is None:                       # JSON ilegible: se le pide corregir
+        if decision is None:                       # JSON ilegible se le pide corregir
             mensajes += [{"role": "assistant", "content": salida},
                          {"role": "user", "content": "No pude leer tu salida. Responde SOLO con un objeto JSON válido."}]
             continue
