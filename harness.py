@@ -1,14 +1,16 @@
 """
-Harness de evaluación — TravelGenie (M2)
+Harness de evaluación — TravelGenie (M2, v2 tras la retroalimentación)
 
 Junta 3 dimensiones sobre el mismo eval_set:
-  1. Métrica automática: similitud por embeddings (ya construida en S05/M1)
-  2. LLM-as-a-judge: Qwen2.5 pequeño, rúbrica anclada 1-5 (ver rubrica_juez.md)
-  3. Medida de dominio: % de ejemplos que cumplen el criterio (juez >= 4)
+  1. Similitud por embeddings entre la respuesta y la respuesta de referencia (`esperado`).
+  2. LLM-as-a-judge: Qwen2.5 pequeño, rúbrica anclada 1-5 (ver rubrica_juez.md).
+     v2: el juez recibe la pregunta, la respuesta de referencia y el criterio del
+     caso, además de la respuesta (antes solo veía pregunta y respuesta).
+  3. Criterio de dominio: % de casos que cumplen la regla propia de su `criterio`
+     (ver verificacion.py). v2: ya no depende del juez.
 
 harness(eval_set, sistema) es genérica: 'sistema' es cualquier función
-input(str) -> output(str). Así se puede re-usar tal cual en M3 sobre el
-sistema con RAG, sin tocar el harness.
+input(str) -> output(str). Así se reutiliza tal cual en M3 sobre el sistema con RAG.
 """
 
 import re
@@ -17,6 +19,8 @@ import numpy as np
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModelForSeq2SeqLM
 from sentence_transformers import SentenceTransformer
+
+from verificacion import verificar_criterio
 
 SEED = 42
 torch.manual_seed(SEED)
@@ -55,17 +59,28 @@ PROMPT_JUEZ = """Eres un evaluador estricto. Usa esta rúbrica para calificar un
 ---
 PREGUNTA DEL USUARIO: {pregunta}
 
+RESPUESTA DE REFERENCIA (lo que diría un buen sistema, con los datos reales): {esperado}
+
+CRITERIO ESPECÍFICO DE ESTE CASO: {criterio}
+
 RESPUESTA A EVALUAR: {respuesta}
 
-Califica la respuesta según la rúbrica. Responde ÚNICAMENTE en este formato exacto,
-sin explicación adicional:
+Compara la respuesta a evaluar con la de referencia y con el criterio. Los datos
+(nombres, meses, precios) que no estén en la referencia o que la contradigan
+cuentan como inventados. Responde ÚNICAMENTE en este formato exacto, sin
+explicación adicional:
 PUNTAJE: <número del 1 al 5>
 """
 
 
-def juez_puntuar(pregunta: str, respuesta: str) -> int:
+def _prompt_juez(rubrica: str, pregunta: str, respuesta: str, esperado: str, criterio: str) -> str:
+    return PROMPT_JUEZ.format(rubrica=rubrica, pregunta=pregunta, respuesta=respuesta,
+                              esperado=esperado, criterio=criterio)
+
+
+def juez_puntuar(pregunta: str, respuesta: str, esperado: str, criterio: str) -> int:
     """Llama al juez y parsea el puntaje de forma robusta (regex, no parsing frágil)."""
-    prompt = PROMPT_JUEZ.format(rubrica=RUBRICA_TEXTO, pregunta=pregunta, respuesta=respuesta)
+    prompt = _prompt_juez(RUBRICA_TEXTO, pregunta, respuesta, esperado, criterio)
     mensajes = [{"role": "user", "content": prompt}]
     texto_entrada = juez_tokenizer.apply_chat_template(
         mensajes, tokenize=False, add_generation_prompt=True
@@ -94,15 +109,16 @@ def juez_puntuar(pregunta: str, respuesta: str) -> int:
 
 
 # -----------------------------------------------------------------------
-# Dimensión 3 — medida de cumplimiento del criterio de dominio
+# Dimensión 3 — cumplimiento del criterio de dominio (verificación propia)
 # -----------------------------------------------------------------------
-UMBRAL_CUMPLE = 4  # puntaje del juez >= este umbral cuenta como "cumple el criterio"
+# Cada caso trae en `verificar` una regla comprobable sacada de su `criterio`
+# (datos exactos presentes, nombres reales, admite falta de datos...). Ver
+# verificacion.py. El puntaje del juez >= 4 se guarda solo como dato de apoyo.
+UMBRAL_JUEZ = 4
 
 
-def cumple_criterio_dominio(puntaje_juez):
-    if puntaje_juez is None:
-        return False
-    return puntaje_juez >= UMBRAL_CUMPLE
+def juez_ge_umbral(puntaje_juez):
+    return puntaje_juez is not None and puntaje_juez >= UMBRAL_JUEZ
 
 
 # -----------------------------------------------------------------------
@@ -110,7 +126,7 @@ def cumple_criterio_dominio(puntaje_juez):
 # -----------------------------------------------------------------------
 def harness(eval_set: list, sistema, nombre_sistema: str = "sistema") -> dict:
     """
-    eval_set: lista de dicts con 'input', 'esperado', 'criterio' (ver eval_set.py)
+    eval_set: lista de dicts con 'input', 'esperado', 'criterio', 'verificar' (ver eval_set.py)
     sistema: función str -> str (recibe el input, devuelve la respuesta generada)
     """
     resultados = []
@@ -118,8 +134,8 @@ def harness(eval_set: list, sistema, nombre_sistema: str = "sistema") -> dict:
     for ej in eval_set:
         respuesta = sistema(ej["input"])
         similitud = sim_embeddings(respuesta, ej["esperado"])
-        puntaje = juez_puntuar(ej["input"], respuesta)
-        cumple = cumple_criterio_dominio(puntaje)
+        puntaje = juez_puntuar(ej["input"], respuesta, ej["esperado"], ej["criterio"])
+        cumple, motivo = verificar_criterio(respuesta, ej)
 
         resultados.append({
             "input": ej["input"],
@@ -128,6 +144,8 @@ def harness(eval_set: list, sistema, nombre_sistema: str = "sistema") -> dict:
             "similitud_embeddings": round(similitud, 3),
             "puntaje_juez": puntaje,
             "cumple_criterio_dominio": cumple,
+            "motivo_verificacion": motivo,
+            "juez_ge_4": juez_ge_umbral(puntaje),
             "longitud_respuesta_palabras": len(respuesta.split()),
         })
 
@@ -169,8 +187,9 @@ RUBRICA_SIN_MITIGACION = re.sub(
 )
 
 
-def juez_puntuar_con_rubrica(pregunta: str, respuesta: str, texto_rubrica: str) -> int:
-    prompt = PROMPT_JUEZ.format(rubrica=texto_rubrica, pregunta=pregunta, respuesta=respuesta)
+def juez_puntuar_con_rubrica(pregunta: str, respuesta: str, texto_rubrica: str,
+                             esperado: str, criterio: str) -> int:
+    prompt = _prompt_juez(texto_rubrica, pregunta, respuesta, esperado, criterio)
     mensajes = [{"role": "user", "content": prompt}]
     texto_entrada = juez_tokenizer.apply_chat_template(
         mensajes, tokenize=False, add_generation_prompt=True
@@ -199,13 +218,13 @@ def comparar_mitigacion_longitud(eval_set: list, sistema, resultados_ya_calculad
         con_mitigacion = []
         for i, (ej, respuesta) in enumerate(pares_entrada, 1):
             print(f"  [con mitigación] {i}/{len(pares_entrada)}...")
-            p = juez_puntuar_con_rubrica(ej["input"], respuesta, RUBRICA_TEXTO)
+            p = juez_puntuar_con_rubrica(ej["input"], respuesta, RUBRICA_TEXTO, ej["esperado"], ej["criterio"])
             con_mitigacion.append((len(respuesta.split()), p))
 
     sin_mitigacion = []
     for i, (ej, respuesta) in enumerate(pares_entrada, 1):
         print(f"  [sin mitigación] {i}/{len(pares_entrada)}...")
-        p_sin = juez_puntuar_con_rubrica(ej["input"], respuesta, RUBRICA_SIN_MITIGACION)
+        p_sin = juez_puntuar_con_rubrica(ej["input"], respuesta, RUBRICA_SIN_MITIGACION, ej["esperado"], ej["criterio"])
         sin_mitigacion.append((len(respuesta.split()), p_sin))
 
     def correlacion(pares):

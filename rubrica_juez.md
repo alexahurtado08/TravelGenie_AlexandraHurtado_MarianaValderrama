@@ -1,10 +1,12 @@
-# Judge Rubric — TravelGenie (v1, 2026-08-26)
+# Judge Rubric — TravelGenie (v2)
 
 ## What it evaluates
 
-The judge receives: the user's **question**, the **facts given** in the input (climate,
-flight, hotels/restaurants/attractions already looked up), and the system's **generated
-response**. It must rate how good the response is **given those facts**, from 1 to 5.
+The judge receives: the user's **question**, a **reference answer** written with the real
+data from the dataset (the `esperado` field of the eval set), the **criterion** specific to
+that case (the `criterio` field), and the system's **generated response**. It must rate how
+good the response is **compared with the reference and the criterion**, from 1 to 5. Any
+name, month or price that is not in the reference, or that contradicts it, counts as invented.
 
 A good response in TravelGenie's domain: (1) correctly uses the data already given without
 inventing more, (2) specifically answers what was asked, and (3) for questions with a false
@@ -38,3 +40,9 @@ answering as if nothing were wrong**.
 - **v1 (2026-08-26):** initial version, aligned with the 10 examples in `eval_set.py`
   (including the 5 adversarial cases: false premise, hallucination from missing data,
   out of domain, safety, unimplemented prediction).
+- **v2:** the judge now receives the reference answer and the case criterion (v1 only saw the
+  question and the response, even though this file said it received the facts, so it rated
+  wrong answers too high: Cartagena 4, Quibdó 3, the price-prediction case 3). The reference
+  answers were rewritten as real answers with dataset data, and dimension 3 of the harness no
+  longer uses the judge: it is a per-case rule check (`verificacion.py`). The judge is
+  validated with one good and one poor answer per case (`validar_juez.py`).
