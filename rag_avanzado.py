@@ -1,28 +1,19 @@
 """
-RAG avanzado — TravelGenie M3.  Dos técnicas sobre el RAG básico (rag_naive.py):
+RAG avanzado: el RAG con dos mejoras en la búsqueda.
 
-  1) BÚSQUEDA HÍBRIDA (BM25 + embeddings, fusionadas con RRF).
-     Diagnóstico: en el RAG básico el nombre de la ciudad pesa poco en el
-     embedding, y entraban chunks de otras ciudades (Santa Marta -> Barranquilla;
-     "mejor mes en Santa Marta" -> clima de Villavicencio y Riohacha). El nombre
-     de una ciudad es una palabra rara y exacta: justo lo que BM25 premia.
-  2) RERANKING con un cross-encoder multilingüe.
-     Diagnóstico: la distancia coseno no distingue "ciudad que el corpus no
-     tiene" (Quibdó daba 0.321, más cerca que preguntas válidas). El
-     cross-encoder lee pregunta + chunk JUNTOS y da una puntuación de relevancia
-     que, se espera, discrimina mejor; se usa también como umbral para decir
-     "no tengo información". (Hipótesis: se valida con la ablación.)
+    from rag_avanzado import sistema_rag_avanzado
+    sistema_rag_avanzado ¿Qué restaurantes hay en Medellín? esta como texto -> texto
 
-Misma firma que los demás sistemas (str -> str):
-    sistema_rag_avanzado("¿Qué restaurantes hay en Medellín?")
+  1. Búsqueda híbrida: busca por significado y por palabras exactas y
+     mezcla los resultados.
+  2. Reranking: un segundo modelo lee la pregunta junto a cada fragmento y le
+     pone una nota. Se queda con los 3 mejores y descarta los de nota baja si
+     ninguno sirve, responde "no tengo información".
 
-Pipeline:  pregunta -> [denso top-20] + [BM25 top-20] -> RRF -> top-10
-           -> cross-encoder -> top-3 -> mismo prompt y generador que rag_naive.
+Cada mejora se puede apagar (`hibrida=False`, `rerank=False`) para medir cuánto
+aporta por separado. Resultados en reporte.md.
 
-Los interruptores `hibrida` y `rerank` permiten medir cada técnica por separado
-(ablación) con correr_m3.py.
-
-Requisito: haber corrido data_pipeline/paso9_indexar_chroma.py (chroma_db/).
+Antes de usarlo hay que crear la base con data_pipeline/paso9_indexar_chroma.py.
 """
 
 import json
@@ -34,23 +25,12 @@ import rag_naive
 RUTA_CHUNKS = "data/09_chunks.json"
 MODELO_RERANK = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"  # multilingüe, ~118M params
 
-N_CANDIDATOS = 20   # candidatos por buscador (denso y BM25)
-N_FUSION = 10       # cuántos pasan al reranker tras la fusión RRF
-K = 3               # chunks finales al generador (igual que el RAG básico)
-RRF_K = 60          # constante estándar de RRF (Cormack et al., 2009)
+N_CANDIDATOS = 20   # candidatos por buscador dense y BM25
+N_FUSION = 10       # cuantos pasan al reranker tras la fusión RRF
+K = 3               # chunks finales al generador 
+RRF_K = 60          # constante estándar de RRF 
 
-# Umbral de la puntuación (logit) del cross-encoder. 0.0 es la frontera natural
-# de un logit (sigmoide = 0.5, "más probable relevante que no"), así que NO se
-# ajustó al eval set. Calibración observada (mejor chunk por pregunta):
-#   con respuesta en el corpus ........ 10.9 (Medellín), 10.9 (Santa Marta), 1.1 (Ibagué)
-#   ciudad que el corpus NO tiene ..... -3.5 (Cartagena), -9.1 (San Andrés), -5.5 (precio SAI)
-#                                       pero +2.3 (Quibdó)  <- el reranker NO la detecta
-#   fuera de dominio .................. -3.6 (Francia), -8.4 (tiquete falso)
-#   pregunta abierta sin ciudad ....... -5.9 (falso rechazo: es una pregunta válida)
-# Se usa para dos cosas: (a) si ni el mejor chunk llega al umbral -> "no tengo
-# información"; (b) PODA: los chunks por debajo del umbral no se pasan al
-# generador (antes un 3.er chunk irrelevante, -3.4, se colaba y contaminaba la
-# respuesta). Poner None desactiva ambas.
+
 UMBRAL_RERANK = 0.0
 
 _STOP = {"de", "la", "el", "en", "y", "a", "los", "las", "un", "una", "que", "es",
@@ -58,7 +38,7 @@ _STOP = {"de", "la", "el", "en", "y", "a", "los", "las", "un", "una", "que", "es
          "cual", "cuales", "donde", "puedo", "qu", "cu"}
 
 _estado = {}
-ULTIMO = {}   # contexto recuperado en la última llamada (para diagnóstico)
+ULTIMO = {}   # contexto recuperado en la última llamada
 
 
 def tokenizar(texto):
@@ -145,8 +125,7 @@ def recuperar_avanzado(pregunta, hibrida=True, rerank=True, k=K):
 def sistema_rag_avanzado(pregunta, hibrida=True, rerank=True, k=K,
                          umbral_dist=rag_naive.UMBRAL_DISTANCIA,
                          umbral_rerank=UMBRAL_RERANK, con_instruccion=True):
-    # Con rerank activo y umbral_rerank definido, los chunks bajo el umbral se
-    # podan del contexto; si no queda ninguno, se responde "sin información".
+    # Con rerank activo y umbral_rerank definido, los chunks bajo el umbral se podan del contexto si no queda ninguno se responde "sin información".
     """Interfaz estándar del harness: str -> str."""
     final, mejor_dist = recuperar_avanzado(pregunta, hibrida, rerank, k)
     ULTIMO.clear()
@@ -158,7 +137,7 @@ def sistema_rag_avanzado(pregunta, hibrida=True, rerank=True, k=K,
     rechazada = umbral_dist is not None and mejor_dist > umbral_dist   # fuera de dominio
     if rerank and umbral_rerank is not None and not rechazada:
         final = [c for c in final if c["rerank"] >= umbral_rerank]     # poda
-        rechazada = not final                                          # ninguno relevante
+        rechazada = not final                                          # ninguno es relevante
     ULTIMO["recuperados"] = [
         (c["destino"], c["categoria"], None if c["rerank"] is None else round(c["rerank"], 3))
         for c in final]
