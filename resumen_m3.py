@@ -30,7 +30,7 @@ FUERA_DEL_CORPUS = [
     "¿Por qué San Andrés es un departamento sin playas?",
     "¿Subirá el precio de los vuelos a San Andrés el próximo mes?",
 ]
-# Datos exactos que el corpus tiene (data/08_corpus.json) para las 2 preguntas verificables
+# Datos exactos que el corpus tiene data/08_corpus.json para las 2 preguntas verificables
 HECHOS = {
     "¿Cuál es el mejor mes para viajar a Santa Marta?":
         ["enero", "marzo", "abril", "noviembre", "MDE", "41,704"],
