@@ -1,24 +1,11 @@
 """
-Resumen objetivo de M3 — métricas que NO dependen del juez.
+Resumen de M3 sin depender del juez.
 
-Lee los scorecard_m3_detalle_<sistema>.json que genera correr_m3.py y calcula,
-con reglas fijas y verificables sobre las respuestas completas:
+El juez automático se equivoca: castiga un no tengo
+información correcto y premia respuestas mal escritas entonces aquí revisamos
+las respuestas con reglas simples que se pueden comprobar a mano
 
-  - fuera_corpus_admite  : de las 4 preguntas de dominio SIN datos en el corpus
-                           (Cartagena, Quibdó, San Andrés x2), en cuántas el
-                           sistema dice que no tiene información.
-  - santa_marta_completo : la respuesta contiene TODOS los datos del corpus para
-                           Santa Marta (clima y vuelo más barato).
-  - pereira_completo     : idem para Pereira.
-  - falsos_rechazos      : la pregunta abierta válida fue rechazada.
-  - latencia_generadas_s : mediana SOLO de las respuestas que pasaron por el
-                           generador (la mediana global se confunde porque los
-                           rechazos tardan ~0 s).
-  - juez_premia_error    : preguntas fuera del corpus donde el sistema NO admitió
-                           falta de datos y aun así el juez dio >= 4.
-
-Sirve para contrastar con las dimensiones 1-3 del harness: ver "Lectura honesta"
-en el README. No necesita GPU ni modelos:  python resumen_m3.py
+Lee los scorecard_m3_detalle_*.json que deja correr_m3.py. No necesita GPU.
 """
 
 import csv
