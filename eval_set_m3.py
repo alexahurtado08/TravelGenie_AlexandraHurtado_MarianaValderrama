@@ -1,10 +1,8 @@
 """
-Eval set de M3 — TravelGenie.
+Eval set de M3 
 
-Parte del eval set de M2 (eval_set.py, que NO se modifica para que el README y
-scorecard_baseline.csv de M2 sigan coherentes) con dos cambios, ambos
-justificados por el corpus real de 14 destinos (Cartagena, Cali, Cúcuta, San
-Andrés y Bogotá no entraron al dataset final, ver README):
+Parte del eval set de M2 solo con dos cambios, ambos
+justificados por el corpus real de 14 destinos 
 
   1) La pregunta de Cartagena esperaba el mejor mes (enero) y un precio de
      vuelo, datos que el corpus NO tiene: ningún sistema con RAG puede
@@ -12,9 +10,8 @@ Andrés y Bogotá no entraron al dataset final, ver README):
      admitir que no hay datos.
   2) Se añaden 2 preguntas con respuesta verificable en el corpus (Santa Marta
      y Pereira), porque el set original tenía muy pocos casos respondibles
-     con exactitud (n pequeño = números ruidosos).
 
-Casos fuera del corpus: Cartagena, Quibdó, San Andrés (x2). Fuera de dominio:
+Casos fuera del corpus: Cartagena, Quibdó, San André y  Fuera de dominio:
 Francia y tiquete falso.
 """
 
