@@ -1,19 +1,19 @@
 """
-Evaluación M3 — corre el harness de M2 (SIN modificarlo) sobre un sistema y
+Evaluación M3  corre el harness de M2 sin modificarlo sobre un sistema y
 guarda su fila en scorecard_m3.csv, con la latencia mediana por pregunta.
 
-Uso (desde la raíz del repo, después de haber corrido paso9 para crear chroma_db/):
+Uso desde la raíz del repo, después de haber corrido paso9 para crear chroma_db/:
     python correr_m3.py m2_baseline
     python correr_m3.py rag_naive
-    python correr_m3.py rag_avanzado     # búsqueda híbrida + reranking
-    python correr_m3.py rag_hibrida      # ablación: solo híbrida
-    python correr_m3.py rag_rerank       # ablación: solo reranking
-    python correr_m3.py agente           # sistema final: LLM + herramienta + RAG avanzado
+    python correr_m3.py rag_avanzado      búsqueda híbrida + reranking
+    python correr_m3.py rag_hibrida       ablación: solo híbrida
+    python correr_m3.py rag_rerank        ablación: solo reranking
+    python correr_m3.py agente            sistema final: LLM+ herramienta+ RAG avanzado
 
 Cada ejecución reemplaza la fila de ese sistema, así que se puede repetir sin
-duplicar. Mismo eval set para TODOS los sistemas de M3 (eval_set_m3.py) y mismo juez que en M2.
+duplicar. Mismo eval set para todos los sistemas de M3 (eval_set_m3.py) y mismo juez que en m2.
 
-Instalación previa en Colab (y reiniciar la sesión si es la primera vez):
+Instalación previa en Colab y reiniciar la sesión si es la primera vez:
     !pip install -q -U transformers peft accelerate sentence-transformers torchao chromadb==1.5.9 rank-bm25==0.2.2
 """
 
@@ -25,7 +25,7 @@ import sys
 import time
 
 from eval_set_m3 import eval_set_m3 as eval_set   # 12 casos; ver eval_set_m3.py
-from harness import harness, device   # carga el juez Qwen y los embeddings (M2)
+from harness import harness, device   # carga el juez Qwen y los embeddings 
 
 ARCHIVO_CSV = "scorecard_m3.csv"
 COLUMNAS = ["sistema", "n_ejemplos", "dim1_similitud_embeddings_promedio",
@@ -33,9 +33,7 @@ COLUMNAS = ["sistema", "n_ejemplos", "dim1_similitud_embeddings_promedio",
             "latencia_mediana_s", "n_respuestas_sin_info"]
 
 
-# -----------------------------------------------------------------------
-# Sistemas (todos: str -> str)
-# -----------------------------------------------------------------------
+
 def construir_m2_baseline():
     """Sistema de M1/M2: flan-t5-small + LoRA, pregunta cruda, sin RAG.
     Copia de sistema_m1 de correr_harness.py (ese archivo ejecuta todo el
@@ -61,15 +59,15 @@ def construir_m2_baseline():
 
 def construir_rag_naive():
     import rag_naive
-    rag_naive._cargar()                      # carga modelos ANTES de medir tiempos
-    rag_naive.sistema_rag("¿Qué hoteles hay en Medellín?")   # calentamiento
+    rag_naive._cargar()                      # carga modelos antes de medir tiempos
+    rag_naive.sistema_rag("¿Qué hoteles hay en Medellín?")   
     return rag_naive.sistema_rag
 
 
 def _avanzado(**opciones):
     import rag_avanzado
-    rag_avanzado._cargar()                   # carga modelos ANTES de medir tiempos
-    rag_avanzado.sistema_rag_avanzado("¿Qué hoteles hay en Medellín?", **opciones)  # calentamiento
+    rag_avanzado._cargar()                  
+    rag_avanzado.sistema_rag_avanzado("¿Qué hoteles hay en Medellín?", **opciones) 
     return lambda p: rag_avanzado.sistema_rag_avanzado(p, **opciones)
 
 
@@ -87,8 +85,8 @@ def construir_rag_rerank():
 
 def construir_agente():
     import agente
-    agente._cargar()                         # carga modelos ANTES de medir tiempos
-    agente.sistema_agente("¿Qué hoteles hay en Medellín?")   # calentamiento
+    agente._cargar()
+    agente.sistema_agente("¿Qué hoteles hay en Medellín?")   
     return agente.sistema_agente
 
 
@@ -102,7 +100,7 @@ SISTEMAS = {
 }
 
 
-# -----------------------------------------------------------------------
+
 def guardar_fila(fila):
     filas = []
     if os.path.exists(ARCHIVO_CSV):
@@ -146,11 +144,11 @@ def main():
     for i, r in enumerate(resultados):
         r["latencia_s"] = round(tiempos[i], 3)
         if extras and clave == "agente":
-            r["traza_agente"] = extras[i]            # pasos del LLM, llamadas, vía, tope
+            r["traza_agente"] = extras[i]            #pasos del LLM, llamadas, vía, tope
         elif extras:
             r["contexto_recuperado"] = extras[i].get("recuperados")
             r["rechazada_por_umbral"] = extras[i].get("rechazada_por_umbral")
-    # mismo criterio para todos los sistemas: la respuesta admite no tener información
+    # mismo criterio para todos los sistemas y la respuesta admite no tener información
     sin_info = sum("No tengo información sobre eso" in r["respuesta"] for r in resultados)
 
     fila = {
