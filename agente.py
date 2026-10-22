@@ -1,30 +1,22 @@
 """
-Capa agéntica — TravelGenie M3.
+Agente: antes de responder, revisa si tenemos datos de la
+ciudad que preguntan.
 
     from agente import sistema_agente
-    sistema_agente("¿Qué hoteles recomiendas en Quibdó?")   # str -> str
+    sistema_agente¿Qué hoteles recomiendas en Quibdó? texto -> texto
 
-Un LLM pequeño (Qwen2.5-1.5B-Instruct) decide, paso a paso, si necesita la
-herramienta `verificar_cobertura(destino)` antes de responder:
+  1. Un modelo pequeño (Qwen2.5-1.5B) decide si la pregunta nombra una ciudad.
+     Si sí, llama a la herramienta verificar_cobertura(destino).
+  2. Si la ciudad no está en nuestra base (14 destinos), responde que no tiene
+     datos. Si está, o no se nombró ninguna, pasa al RAG avanzado.
 
-    pregunta -> [LLM decide] -> llamar herramienta -> observación -> [LLM decide]
-                             -> responder -> RAG avanzado (rag_avanzado.py)
+Por qué: para una ciudad que no tenemos (Quibdó), la búsqueda trae hoteles de
+otra y el modelo los presenta como si fueran de la pedida. Consultar la lista de
+destinos lo evita.
 
-Por qué esta herramienta: es el fallo que quedó vivo tras las dos técnicas
-avanzadas. Para una ciudad que el corpus no tiene (Quibdó) la recuperación
-devuelve hoteles de otra ciudad con puntuación alta, y el generador los
-presenta como si fueran de la ciudad pedida. Una consulta exacta de cobertura
-lo resuelve donde el retrieval no puede.
-
-Piezas que pide la rúbrica:
-  - HERRAMIENTAS: esquema (nombre, descripción, parámetros).
-  - parsear_decision(): lectura TOLERANTE de JSON (los modelos pequeños
-    devuelven JSON con comillas simples, comas sobrantes, texto alrededor...).
-  - MAX_PASOS: tope de pasos del ciclo.
-
-Sin API keys ni servicios de pago. El LLM del agente es el mismo modelo que
-hace de juez en el harness (se reutiliza la copia cargada); se declara en el
-README por el posible sesgo de auto-preferencia.
+Seguridad: lee el JSON del modelo aunque venga sucio (parsear_decision), tiene
+un máximo de pasos (MAX_PASOS) y rechaza ciudades que no aparecen escritas en la
+pregunta. Más detalles en reporte.md.
 """
 
 import json
