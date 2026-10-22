@@ -1,28 +1,30 @@
 """
-RAG básico (naive) — TravelGenie M3.
+RAG básico: primero busca datos y luego redacta la respuesta.
 
     from rag_naive import sistema_rag
-    sistema_rag("¿Qué restaurantes hay en Medellín?")   # str -> str
+    sistema_rag Qué restaurantes hay en Medellín? entoncess recibe texto, devuelve texto
 
-Misma interfaz que el sistema de M1 (str -> str), así que el harness de M2 se
-reutiliza SIN modificarlo:  harness(eval_set, sistema_rag, "RAG básico").
+Funciona igual que el sistema de M1  así que  usamos el harness de M2
 
-Pipeline:  pregunta -> embedding -> top-k chunks en Chroma -> prompt aumentado
-           -> generador (flan-t5-small + adaptador LoRA de M1) -> respuesta.
+Cómo funciona:
+  1. Busca en la base los 3 fragmentos (chunks) más parecidos a la pregunta.
+  2. Se los pasa al modelo de M1 (flan-t5-small + LoRA) junto con la pregunta.
+  3. El modelo redacta la respuesta con esos datos.
 
-Requisito: haber corrido antes data_pipeline/paso9_indexar_chroma.py (crea
-chroma_db/). Los modelos se cargan la primera vez que se llama al sistema.
+Antes de usarlo hay que crear la base con data_pipeline/paso9_indexar_chroma.py.
+Los modelos se cargan la primera vez que se llama.
 
-Decisiones (justificadas en el README del M3):
-- K: cuántos chunks se pasan al generador. El generador de M1 se entrenó con
-  UN bloque de datos de un solo destino; más chunks = más texto desconocido.
-- Válvula de escape en DOS capas:
-    1) en el prompt: instrucción "si no está en los datos, dilo";
-    2) en el código: si el chunk más cercano está más lejos que
-       UMBRAL_DISTANCIA, NO se llama al generador y se responde que no hay
-       información. Atrapa lo fuera de dominio; NO atrapa una ciudad que el
-       corpus no tiene (ver calibración abajo): ese fallo es el que las
-       técnicas avanzadas tienen que atacar.
+Por qué 3 fragmentos: el modelo de M1 aprendió con los datos de un solo destino;
+más fragmentos le meten texto que no conoce.
+
+tiene dos frenos:
+  - En el prompt: se le pide decir "no tengo esa información" si los datos no
+    alcanzan.
+  - En el código: si el fragmento más cercano está demasiado lejos
+    ni siquiera se llama al modelo y se responde que no hay
+    información. Esto frena lo que no tiene que ver con viajes, pero NO frena una
+    ciudad que nuestra base no tiene (por ejemplo, Quibdó): ese es justo el
+    fallo que en técnicas avanzadas debemos manejar.
 """
 
 import os
@@ -33,30 +35,20 @@ MODELO_EMBEDDINGS = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
 RUTA_CHROMA = "chroma_db"
 NOMBRE_COLECCION = "travelgenie"
 
-# Mismo prefijo con el que se entrenó el LoRA en M1.
+# usamos prefijo con el que se entrenó el Lora en M1.
 PREFIJO_TAREA = "redacta una recomendación de viaje con estos datos: "
 INSTRUCCION_ESCAPE = ("Usa solo estos datos. Si la respuesta no está en los datos, "
                       "di que no tienes esa información. ")
 
 K = 3
-# Calibrado con la distancia del mejor chunk en el eval set (corrida en Colab):
-#   preguntas con respuesta en el corpus ........ 0.20 - 0.49
-#   preguntas fuera del corpus (Cartagena, San Andrés, Quibdó) .. 0.32 - 0.52
-#   fuera de dominio (Francia 0.553, tiquete falso 0.732) ........ > 0.55
-# La distancia SOLO separa lo fuera de dominio. NO distingue una ciudad que el
-# corpus no tiene (Quibdó da 0.321, más cerca que muchas preguntas válidas),
-# porque el embedding pesa más la categoría ("hoteles") que el nombre de la ciudad.
-# 0.53 queda en el hueco entre lo relacionado (<= 0.52) y lo fuera de dominio
-# (>= 0.553); el margen es de ~0.02, así que es frágil y fue ajustado con el
-# propio eval set (sus resultados en esa pregunta son optimistas).
 UMBRAL_DISTANCIA = 0.53
 MENSAJE_SIN_INFO = ("No tengo información sobre eso en mi base de datos de destinos "
                     "(solo cubro algunos destinos colombianos con datos de clima, "
                     "vuelos, hoteles, restaurantes y atractivos).")
 
-MAX_INPUT_TOKENS = 512   # M1 truncaba a 220; aquí cortaría la pregunta (va al final)
+MAX_INPUT_TOKENS = 512   # en m1 truncaba a 220; aquí cortaría la pregunta 
 _estado = {}             # modelos cargados una sola vez
-ULTIMO = {}              # contexto recuperado en la última llamada (para diagnóstico)
+ULTIMO = {}              # contexto recuperado en la última llamada 
 
 
 def _cargar():
@@ -118,7 +110,7 @@ def sistema_rag(pregunta, k=K, umbral=UMBRAL_DISTANCIA, con_instruccion=True):
     ULTIMO["recuperados"] = [(m["destino"], m["categoria"], round(d, 3)) for _, d, m in recuperados]
     if umbral is not None and recuperados[0][1] > umbral:
         ULTIMO["rechazada_por_umbral"] = True
-        return MENSAJE_SIN_INFO        # válvula de escape (capa 2): ni se genera
+        return MENSAJE_SIN_INFO        # válvula de escape
     ULTIMO["rechazada_por_umbral"] = False
     prompt = construir_prompt(pregunta, [t for t, _, _ in recuperados], con_instruccion)
     return generar(prompt)
