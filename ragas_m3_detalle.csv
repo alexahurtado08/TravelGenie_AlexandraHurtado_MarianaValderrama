@@ -1,0 +1,22 @@
+sistema,pregunta,faithfulness,answer_relevancy,context_precision,context_recall
+RAG básico,¿Qué hoteles hay en Medellín?,0.25,0.6734949151674906,1.0,1.0
+RAG básico,"Busco un destino turístico barato con buen clima, ¿qué me recomiendas?",0.0,0.3601661076148351,1.0,0.5
+RAG básico,¿Dónde puedo comer en Ibagué?,0.0,0.5799519817034403,0.5,0.0
+RAG básico,¿Cuáles son los atractivos turísticos de Santa Marta?,0.0,0.7091503739356995,1.0,0.0
+RAG básico,¿Cuál es el mejor mes para viajar a Cartagena de Indias?,0.4,0.43193256855010986,0.0,0.0
+RAG básico,¿Qué hoteles recomiendas en Quibdó?,0.6666666666666666,0.41660300890604657,0.0,0.0
+RAG básico,¿Por qué San Andrés es un departamento sin playas?,0.0,0.4964071611563365,0.0,0.5
+RAG básico,¿Subirá el precio de los vuelos a San Andrés el próximo mes?,0.4,0.3005644381046295,0.0,0.0
+RAG básico,¿Cuál es el mejor mes para viajar a Santa Marta?,0.75,0.6534199714660645,1.0,0.5
+RAG básico,¿Cuándo es más barato volar a Pereira y desde dónde?,0.4,0.3746262863278389,1.0,1.0
+RAG avanzado,¿Qué hoteles hay en Medellín?,0.3333333333333333,0.507342517375946,1.0,1.0
+RAG avanzado,¿Dónde puedo comer en Ibagué?,0.0,0.5309008459250132,1.0,0.0
+RAG avanzado,¿Cuáles son los atractivos turísticos de Santa Marta?,1.0,0.6823032895723978,1.0,1.0
+RAG avanzado,¿Qué hoteles recomiendas en Quibdó?,0.3333333333333333,0.6631627877553304,0.0,0.0
+RAG avanzado,¿Cuál es el mejor mes para viajar a Santa Marta?,0.2,0.4736472467581431,1.0,1.0
+RAG avanzado,¿Cuándo es más barato volar a Pereira y desde dónde?,0.25,0.40342971682548523,1.0,1.0
+Agente (sistema final),¿Qué hoteles hay en Medellín?,0.3333333333333333,0.507342517375946,1.0,1.0
+Agente (sistema final),¿Dónde puedo comer en Ibagué?,0.0,0.5309008459250132,1.0,0.0
+Agente (sistema final),¿Cuáles son los atractivos turísticos de Santa Marta?,1.0,0.6823032895723978,1.0,1.0
+Agente (sistema final),¿Cuál es el mejor mes para viajar a Santa Marta?,0.2,0.4736472467581431,1.0,1.0
+Agente (sistema final),¿Cuándo es más barato volar a Pereira y desde dónde?,0.25,0.40342971682548523,1.0,1.0

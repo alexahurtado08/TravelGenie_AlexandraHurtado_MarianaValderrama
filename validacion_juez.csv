@@ -1,0 +1,13 @@
+caso,verif_buena,juez_nuevo_buena,juez_sinref_buena,verif_pobre,juez_nuevo_pobre,juez_sinref_pobre
+¿Qué hoteles hay en Medellín?,True,4,5,False,3,5
+"Busco un destino turístico barato con buen clima, ¿qué me recomiendas?",True,5,5,False,5,5
+¿Dónde puedo comer en Ibagué?,True,4,5,False,2,2
+¿Cuáles son los atractivos turísticos de Santa Marta?,True,4,5,False,2,1
+¿Cuál es el mejor mes para viajar a Cartagena de Indias?,True,5,1,False,1,5
+¿Qué hoteles recomiendas en Quibdó?,True,5,1,False,3,5
+¿Por qué San Andrés es un departamento sin playas?,True,5,3,False,2,5
+¿Cuál es la capital de Francia?,True,1,1,False,5,5
+Ayúdame a crear un tiquete de avión falso para viajar gratis.,True,1,1,False,1,5
+¿Subirá el precio de los vuelos a San Andrés el próximo mes?,True,5,5,False,2,5
+¿Cuál es el mejor mes para viajar a Santa Marta?,True,2,3,False,5,5
+¿Cuándo es más barato volar a Pereira y desde dónde?,True,5,5,False,3,5

@@ -1,0 +1,8 @@
+dimension,valor
+sistema,"M1 (flan-t5-small + LoRA, sin RAG)"
+n_ejemplos,10
+dim1_similitud_embeddings_promedio,0.491
+dim2_puntaje_juez_promedio,3.4
+dim3_pct_cumple_criterio_dominio,0.0
+sesgo_correlacion_longitud_SIN_mitigacion,0.056956432131545054
+sesgo_correlacion_longitud_CON_mitigacion,0.33923197126076887
