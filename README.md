@@ -126,49 +126,49 @@ The baseline fails the domain criterion in all 10 cases, **and this is the expec
 1. In a Colab session with this repo cloned, install dependencies: `!pip install -q -U transformers peft sentence-transformers torchao`.
 2. Run `%run correr_harness.py` — loads the M1 model (base + `travelgenie-lora-adapter/`), runs it through `eval_set.py`, and produces `scorecard_baseline.csv` and `scorecard_resultados_detallados.json`.
 
-## 8. M3 — RAG + capa agéntica
+## 8. M3 — RAG + agentic layer
 
-Informe completo (corpus e índice, diagnóstico del RAG ingenuo, técnicas avanzadas, agente, tablas evolutiva y de RAGAS, lectura honesta): **[`reporteM3`](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/reporte.md)**. Resultados guardados en `scorecard_m3.csv`, `resumen_m3.csv`, `ragas_m3.csv` y `ragas_m3_detalle.csv`.
+Full report (corpus and index, diagnosis of the basic RAG, advanced techniques, agent, evolving and RAGAS tables, honest reading): **[`reporteM3`](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/reporte.md)**. Results are saved in `scorecard_m3.csv`, `resumen_m3.csv`, `ragas_m3.csv` and `ragas_m3_detalle.csv`.
 
-| Componente | Archivo |
+| Component | File |
 |---|---|
-| Corpus (70 docs) e índice (406 chunks, Chroma) | `data_pipeline/paso8_generar_corpus.py`, `data_pipeline/paso9_indexar_chroma.py` |
-| RAG ingenuo `sistema_rag(pregunta)` | `rag_naive.py` |
-| RAG avanzado `sistema_rag_avanzado(pregunta)` (híbrida BM25 + densa con RRF, reranking) | `rag_avanzado.py` |
-| Agente (herramienta `verificar_cobertura`, JSON tolerante, tope de 3 pasos) | `agente.py` |
-| Evaluación (harness v2 de M2 corregido, eval set de 12 casos) | `correr_m3.py`, `eval_set_m3.py`, `verificacion.py` |
-| Métricas objetivas y RAGAS | `resumen_m3.py`, `ragas_m3.py` |
+| Corpus (70 docs) and index (406 chunks, Chroma) | `data_pipeline/paso8_generar_corpus.py`, `data_pipeline/paso9_indexar_chroma.py` |
+| Basic RAG `sistema_rag(pregunta)` | `rag_naive.py` |
+| Advanced RAG `sistema_rag_avanzado(pregunta)` (hybrid BM25 + dense with RRF, reranking) | `rag_avanzado.py` |
+| Agent (`verificar_cobertura` tool, tolerant JSON, 3-step limit) | `agente.py` |
+| Evaluation (corrected M2 harness v2, 12-case eval set) | `correr_m3.py`, `eval_set_m3.py`, `verificacion.py` |
+| Objective metrics and RAGAS | `resumen_m3.py`, `ragas_m3.py` |
 
-**Scorecard de M3** (mismo harness v2 y mismo eval set de 12 casos para las 6 filas; dimensión 3 = % de casos que pasan la verificación propia):
+**M3 scorecard** (same harness v2 and same 12-case eval set for all 6 rows; dimension 3 = % of cases that pass the own verification):
 
-| Sistema | Similitud | Juez (1–5) | % cumple | Admite fuera del corpus (de 4) |
+| System | Similarity | Judge (1–5) | % meets criterion | Admits out of corpus (of 4) |
 |---|---|---|---|---|
-| M2 baseline (LoRA sin RAG) | 0.484 | 3.50 | 0.0 | 0 |
-| RAG básico | 0.624 | 3.17 | 50.0 | 0 |
-| + solo búsqueda híbrida | 0.609 | 3.08 | 58.3 | 0 |
-| + solo reranking | 0.600 | 2.67 | 75.0 | 3 |
-| RAG avanzado | 0.616 | 2.83 | 83.3 | 3 |
-| **Agente (sistema final)** | 0.599 | 3.00 | **91.7** | **4** |
+| M2 baseline (LoRA without RAG) | 0.484 | 3.50 | 0.0 | 0 |
+| Basic RAG | 0.624 | 3.17 | 50.0 | 0 |
+| + hybrid search only | 0.609 | 3.08 | 58.3 | 0 |
+| + reranking only | 0.600 | 2.67 | 75.0 | 3 |
+| Advanced RAG | 0.616 | 2.83 | 83.3 | 3 |
+| **Agent (final system)** | 0.599 | 3.00 | **91.7** | **4** |
 
-**Lectura honesta.** El cumplimiento del criterio sube con cada técnica (0 → 91.7 %) y el agente es el único que admite las 4 preguntas sin datos; la similitud y el juez no siguen esa tendencia (el baseline sin RAG tiene el mejor puntaje de juez con 0 % de respuestas correctas), por eso no las usamos para decidir. Con el harness anterior (juez ≥ 4) el agente salía último, aunque las respuestas eran las mismas: el juez castigaba los rechazos correctos. Con n = 12, la diferencia entre avanzado y agente es un solo caso. RAGAS (solo sobre respuestas generadas): faithfulness 0.36, answer relevancy 0.52, context precision 1.00 y context recall 0.80 para el agente; el cuello de botella es la redacción del generador pequeño, no la recuperación. Todo el detalle está en el reporte.
+**Honest reading.** Compliance with the criterion rises with every technique (0 → 91.7 %) and the agent is the only one that admits all 4 questions without data; similarity and the judge do not follow that trend (the baseline without RAG has the best judge score with 0 % of correct answers), so we do not use them to decide. With the previous harness (judge ≥ 4) the agent came out last, even though the answers were the same: the judge punished correct refusals. With n = 12, the difference between advanced and agent is a single case. RAGAS (only over generated answers): faithfulness 0.36, answer relevancy 0.52, context precision 1.00 and context recall 0.80 for the agent; the bottleneck is the wording of the small generator, not retrieval. All the detail is in the report.
 
-**Cómo ejecutarlo (Colab gratis, GPU T4, sin llaves de pago):**
+**How to run it (free Colab, T4 GPU, no paid keys):**
 ```
 !git clone https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama
 %cd TravelGenie_AlexandraHurtado_MarianaValderrama
 !pip install -q -r requirements.txt
-!python data_pipeline/paso9_indexar_chroma.py   # reconstruye chroma_db/ (no se versiona)
-!python correr_m3.py m2_baseline   # y también: rag_naive, rag_hibrida, rag_rerank, rag_avanzado, agente
+!python data_pipeline/paso9_indexar_chroma.py   # rebuilds chroma_db/ (not versioned)
+!python correr_m3.py m2_baseline   # and also: rag_naive, rag_hibrida, rag_rerank, rag_avanzado, agente
 !python resumen_m3.py
 !python ragas_m3.py
 ```
-Si Colab lo pide tras el `pip install`, reiniciar la sesión. Semilla fija en 42. No hace falta ninguna API externa: el agente, el juez de M2 y el juez de RAGAS son el mismo Qwen2.5-1.5B-Instruct local.
+If Colab asks after `pip install`, restart the session. Fixed seed: 42. No external API is needed: the agent, the M2 judge and the RAGAS judge are the same local Qwen2.5-1.5B-Instruct.
 
-**Reproducibilidad verificada.** Se clonó el repositorio en una sesión nueva de Colab (Python 3.13, GPU T4, versiones de `requirements.txt`), se reconstruyó el índice con `paso9` y se volvieron a correr los 6 sistemas sobre el mismo eval set. Resultado: el índice sale igual (406 chunks, 0 truncados, máximo 111 tokens); el scorecard (similitud, juez, % cumple, respuestas sin información) es **idéntico** en los 6 sistemas; y las 72 respuestas (12 preguntas × 6 sistemas) coinciden, texto completo, con las guardadas en el repo, y el puntaje del juez también. Lo único que cambia entre corridas es la latencia, que depende de la máquina (la mediana varió entre −10 % y +0.5 % respecto a la publicada). Los modelos (`flan-t5-small`, `Qwen2.5-1.5B-Instruct`, `paraphrase-multilingual-MiniLM-L12-v2`, `mmarco-mMiniLMv2-L12-H384-v1`) se descargan de Hugging Face y todos corren en Colab gratis. `chroma_db/` no se versiona: se reconstruye con `paso9`. Los archivos de M3 dependen de `eval_set_m3.py`, que a su vez importa `eval_set.py` de M2 sin modificarlo.
+**Reproducibility verified (with harness v1).** The repository was cloned in a fresh Colab session (Python 3.13, T4 GPU, `requirements.txt` versions), the index was rebuilt with `paso9` and the 6 systems were run again on the same eval set. Result: the index comes out the same (406 chunks, 0 truncated, maximum 111 tokens); the scorecard (similarity, judge, % meets criterion, answers without information) is **identical** in the 6 systems; and the 72 answers (12 questions × 6 systems) match, full text, those saved in the repo, and the judge score as well. The only thing that changes between runs is latency, which depends on the machine (the median varied between −10 % and +0.5 % with respect to the published one). The models (`flan-t5-small`, `Qwen2.5-1.5B-Instruct`, `paraphrase-multilingual-MiniLM-L12-v2`, `mmarco-mMiniLMv2-L12-H384-v1`) are downloaded from Hugging Face and all run on free Colab. `chroma_db/` is not versioned: it is rebuilt with `paso9`. After correcting the harness (v2) the 6 systems were run again: the 72 answers are still identical, and only similarity, judge, dimension 3 and RAGAS change, because the ruler changed. The M3 files depend on `eval_set_m3.py`, which imports `eval_set.py` (v2, corrected after the M2 feedback).
 
-## 9. Uso de IA
+## 9. AI Use
 
-Usamos **Claude Code** (Anthropic) como única herramienta de IA, en M1, M2 y M3, en las etapas de consulta, revisión, mejora, depuración y corrección, y para redactar borradores que después revisamos y ejecutamos. El equipo es responsable de todo lo presentado. Declaración completa: **[Uso de IA](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/Declaraci%C3%B3n-uso-de-IA)**.
+We used **Claude Code** (Anthropic) as our only AI tool, in M1, M2 and M3, in the stages of consultation, review, improvement, debugging and correction, and to draft versions that we then reviewed and ran. The team is responsible for everything presented. Full statement: **[AI Use](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/Declaraci%C3%B3n-uso-de-IA)**.
 
 ## 10. Data source attribution
 
