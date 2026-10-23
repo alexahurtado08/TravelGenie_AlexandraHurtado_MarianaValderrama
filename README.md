@@ -4,7 +4,7 @@
 
 *team members*: Alexandra Hurtado, Mariana Valderrama
 
-> **M3 (RAG + agente) en una frase:** TravelGenie ayuda a quien planea un viaje por Colombia a saber a qué destino ir y en qué mes (clima, vuelos, hoteles, restaurantes y atractivos de 14 destinos); una buena respuesta usa solo los datos de esa base, trae el mes, el precio y el origen correctos, y cuando le preguntan por una ciudad que no tiene lo dice en lugar de inventar. Lo que sigue fallando es la redacción de su modelo pequeño, no la búsqueda de los datos. El informe completo de M3 está en **[`reporteM3`](https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama/wiki/reporte.md)**.
+> **M3 (RAG + agent) in one sentence:** TravelGenie helps people planning a trip in Colombia decide which destination to visit and in which month (climate, flights, hotels, restaurants and attractions for 14 destinations); a good answer uses only the data in that base, gives the right month, price and origin, and when asked about a city it does not have, it says so instead of making things up. What still fails is the wording produced by its small model, not the retrieval of the data. The full M3 report is in reporteM3.
 
 ---
 
