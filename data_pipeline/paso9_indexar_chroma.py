@@ -1,29 +1,23 @@
 """
-Paso 9 — Chunking, embeddings e indexado en Chroma (M3, RAG).
+Paso 9 — Prepara el corpus para que TravelGenie pueda buscar en él.
 
-Lee data/08_corpus.json y produce:
-  - data/09_chunks.json  : los chunks finales (útil para inspección y BM25 después)
-  - chroma_db/           : base vectorial persistente (se puede reconstruir
-                           corriendo este script; NO hace falta subirla al repo)
+Parte los documentos en chunks, convierte cada trozo en un
+vector con un modelo de embeddings y lo guarda en Chroma. Lee
+data/08_corpus.json y deja data/09_chunks.json y chroma_db/ (esta carpeta no
+se sube al repo: se reconstruye corriendo el script).
 
-Decisiones de diseño (justificadas con los datos de ESTE corpus):
+Tres decisiones, pensadas para este corpus:
+1) Trozos de 35 palabras con solape de 7. Clima y vuelos son textos cortos y
+   quedan enteros; las listas de hoteles y restaurantes llegan a más de 2.000
+   palabras y sí se parten.
+2) Cada trozo repite el encabezado ("Restaurantes en MEDELLÍN…"). Sin él, la
+   segunda parte de una lista no diría de qué ciudad es.
+3) Embeddings con paraphrase-multilingual-MiniLM-L12-v2: entiende español, es
+   liviano y corre en Colab gratis. Solo lee los primeros 128 tokens de cada
+   trozo, por eso el script revisa que ninguno se pase.
 
-1) Chunking por palabras con ventana deslizante (CHUNK_PALABRAS / SOLAPE).
-   Clima y vuelos miden 18-32 palabras: caben enteros, no se parten.
-   Hoteles/restaurantes/atractivos de ciudades grandes llegan a 2127 palabras
-   (listas de nombres separados por comas): esos sí se parten.
-
-2) El ENCABEZADO ("Restaurantes en MEDELLÍN, ANTIOQUIA:") se repite al inicio
-   de cada chunk. Sin eso, el 2.º trozo de una lista larga no diría de qué
-   ciudad es y el retriever no podría asociarlo a la pregunta.
-
-3) Modelo de embeddings: paraphrase-multilingual-MiniLM-L12-v2, el mismo de
-   la dimensión 1 del harness M2 (multilingüe, pequeño, corre en Colab gratis).
-   Lee como máximo `max_seq_length` tokens (128 por defecto); el resto se
-   descarta en silencio. Por eso el script mide cuántos chunks lo exceden.
-
-Uso (desde la raíz del repo):
-    pip install -q sentence-transformers==6.1.0 chromadb==1.5.9
+Uso, desde la raíz del repo:
+    pip install -q -r requirements.txt
     python data_pipeline/paso9_indexar_chroma.py
 """
 
