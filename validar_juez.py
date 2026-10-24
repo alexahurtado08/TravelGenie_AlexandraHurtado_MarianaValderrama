@@ -1,5 +1,5 @@
 """
-¿La vara mide bien? Prueba el juez y la verificación con una respuesta BUENA y
+Verificamos si la vara mide bien probando el juez y la verificación con una respuesta BUENA y
 una POBRE por caso (casos_validacion.py), antes de usarlos para evaluar sistemas.
 
 Para cada caso se espera:
