@@ -1,11 +1,11 @@
 """
-Pares de validación: para cada caso del eval set, UNA respuesta buena y UNA pobre
-escritas a mano. Sirven para comprobar que la vara mide bien antes de usarla:
+Estos son los pares de validación, para cada caso del eval set, UNA respuesta buena y UNA pobre
+escritas a mano. Se usan para comprobar que la vara mide bien antes de usarla,
   - la verificación propia (verificacion.py) debe aprobar la buena y reprobar la pobre;
   - el juez (validar_juez.py) debe darle >= 4 a la buena y <= 2 a la pobre.
 
-Las buenas NO copian el campo `esperado` (usan otras palabras o nombres), y las
-pobres cubren los fallos reales que vimos: eco de la pregunta, datos de otra
+Las buenas NO copian el campo `esperado` , usan otras palabras o nombres, y las
+pobres cubren los fallos reales que teniamos como eco de la pregunta, datos de otra
 ciudad, nombres inventados y premisa falsa aceptada.
 """
 
