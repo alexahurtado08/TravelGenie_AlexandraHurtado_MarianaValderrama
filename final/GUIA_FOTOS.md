@@ -36,3 +36,24 @@ Desde la raíz del repo, con las fotos ya en `final/imagenes/`:
 !python final/eval_vision.py --test   # mide con las fotos test, umbral ya fijo
 ```
 No cambien el umbral a mano después de ver los resultados de test.
+
+## Fotos difíciles (8 más, `dificil_1.jpg` a `dificil_8.jpg`)
+
+Sirven para mostrar **dónde falla** el componente. No se usan para elegir el umbral ni se corrigen
+si el sistema falla: el fallo es el resultado. Mismas reglas de licencia y sin personas identificables.
+
+| Archivo | Qué buscar en Commons | Se espera |
+|---|---|---|
+| `dificil_1` | Playa de otro país (Tailandia, Filipinas...) | CLIP no sabe el país: la tomará por playa |
+| `dificil_2` | Prado alpino verde, sin nieve | La tomará por montaña |
+| `dificil_3` | Retrato pintado de una persona (obra de dominio público, p. ej. un cuadro antiguo) | Debe abstenerse |
+| `dificil_4` | Flor o planta de cerca | Debe abstenerse |
+| `dificil_5` | Mapa de Colombia o de una región | Debe abstenerse |
+| `dificil_6` | Un animal (gato, perro, ave) | Debe abstenerse |
+| `dificil_7` | Playa de noche o con luz muy baja | Es playa, pero difícil |
+| `dificil_8` | Pueblo colonial con montañas al fondo | Vale ciudad_colonial o montaña |
+
+Cómo se corre (después de `--tune` y `--test`, con el umbral ya fijado):
+```
+!python final/eval_vision.py --dificiles
+```
