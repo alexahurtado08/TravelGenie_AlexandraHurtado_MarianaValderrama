@@ -33,9 +33,31 @@ CSV_FOTOS = os.path.join(AQUI, "imagenes_prueba.csv")
 GRID = [round(x, 2) for x in np.arange(0.30, 0.91, 0.05)]
 
 
+def _arreglar(texto):
+    """Repara 'montaÃ±a' (UTF-8 leído como cp1252, típico de Excel) y normaliza tildes."""
+    import unicodedata
+    texto = (texto or "").strip()
+    if "Ã" in texto:
+        try:
+            texto = texto.encode("cp1252").decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            pass
+    return unicodedata.normalize("NFC", texto)
+
+
+def _leer_csv():
+    """Lee el CSV en UTF-8 (con o sin BOM); si Excel lo guardó en cp1252, lo lee así."""
+    for cod in ("utf-8-sig", "cp1252"):
+        try:
+            with open(CSV_FOTOS, encoding=cod, newline="") as f:
+                return [{k: _arreglar(v) for k, v in r.items()} for r in csv.DictReader(f)]
+        except UnicodeDecodeError:
+            continue
+    raise RuntimeError(f"No pude leer {CSV_FOTOS}: guárdalo como CSV UTF-8.")
+
+
 def leer_filas(split):
-    with open(CSV_FOTOS, encoding="utf-8") as f:
-        filas = [r for r in csv.DictReader(f) if r["split"] == split and r["archivo"].strip()]
+    filas = [r for r in _leer_csv() if r["split"] == split and r["archivo"].strip()]
     for r in filas:
         r["ruta"] = os.path.join(AQUI, "imagenes", r["archivo"])
     return filas
