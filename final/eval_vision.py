@@ -13,6 +13,14 @@ paisaje, falsos rechazos, la ablación sin válvula, la prueba de invarianza
 (voltear, reducir, comprimir, cambiar brillo, recortar: la decisión no debería
 cambiar) y la latencia p50 y p95 del clasificador.
 
+  python final/eval_vision.py --dificiles   fotos 'dificil': casos límite (otro país, persona, planta,
+                                       mapa, animal, atardecer, paisaje mixto). NO se usan para ajustar
+                                       nada: sirven para el análisis de errores y para mostrar los
+                                       límites del componente.
+
+Nota: "sin válvula siempre responde" es por construcción (por eso falsas_aceptaciones = 1.0
+en la ablación: sin válvula, cualquier imagen recibe una respuesta de paisaje).
+
 Correr desde la raíz del repo, en Colab con las fotos en final/imagenes/.
 """
 
@@ -81,10 +89,11 @@ def transformaciones(img):
 
 
 def es_correcta(esperada, dec):
-    """Paisaje: debe decidir 'ok' con el tipo correcto. No-paisaje: debe abstenerse."""
+    """Paisaje: debe decidir 'ok' con el tipo correcto (si hay varios válidos, separados por |).
+    No-paisaje ('ninguna'): debe abstenerse."""
     if esperada == "ninguna":
         return dec["decision"] == "abstiene"
-    return dec["decision"] == "ok" and dec["tipo"] == esperada
+    return dec["decision"] == "ok" and dec["tipo"] in esperada.split("|")
 
 
 def tune(clf, filas):
@@ -189,6 +198,29 @@ def main():
         for d in det:
             if not d["correcta"]:
                 print(f"  {d['archivo']}: esperada={d['esperada']} -> {d['decision']}/{d['tipo']} (p={d['prob']}), top3={d['top3']}")
+    elif modo == "--dificiles":
+        clf = ClasificadorPaisaje()
+        filas = leer_filas("dificil")
+        det = []
+        for r in filas:
+            p = clf.puntajes(_abrir(r["ruta"]))
+            dec = decidir(p, clf.umbral)
+            det.append({"archivo": r["archivo"], "subtipo": r["subtipo"], "esperada": r["clase_esperada"],
+                        "decision": dec["decision"], "tipo": dec["tipo"], "prob": round(dec["prob"], 3),
+                        "top3": sorted(p, key=p.get, reverse=True)[:3],
+                        "correcta": es_correcta(r["clase_esperada"], dec)})
+        with open(os.path.join(AQUI, "resultados_vision_dificiles.json"), "w", encoding="utf-8") as f:
+            json.dump(det, f, indent=2, ensure_ascii=False)
+        with open(os.path.join(AQUI, "resultados_vision_dificiles.csv"), "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["archivo", "subtipo", "esperada", "decision", "tipo", "prob", "correcta"])
+            for d in det:
+                w.writerow([d["archivo"], d["subtipo"], d["esperada"], d["decision"], d["tipo"], d["prob"], d["correcta"]])
+        print(f"Casos difíciles (umbral {clf.umbral}, sin ajustar nada): "
+              f"{sum(d['correcta'] for d in det)}/{len(det)} correctos\n")
+        for d in det:
+            print(f"  {'OK ' if d['correcta'] else 'MAL'} {d['archivo']:16} {d['subtipo']:22} "
+                  f"esperada={d['esperada']:22} -> {d['decision']}/{d['tipo']} p={d['prob']} top3={d['top3']}")
     else:
         print(__doc__)
 
