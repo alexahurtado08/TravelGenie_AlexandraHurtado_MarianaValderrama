@@ -1,0 +1,35 @@
+﻿archivo,clase_esperada,subtipo,split,fuente_url,autor,licencia,descripcion
+playa_1.jpg,playa,,dev,https://commons.wikimedia.org/wiki/File:Playa_parque_nacional_Tayrona.jpg,Faby4521,CC0,playa del Parque Tayrona
+playa_2.jpg,playa,,test,https://commons.wikimedia.org/wiki/File:Playas_de_Palomino_15.jpg,Juan Gómez,CC BY 2.0,playa de palomino
+playa_3.jpg,playa,,test,https://commons.wikimedia.org/wiki/File:Playa_de_Riohacha-20240826.jpg,Jdvillalobos,CC BY-SA 4.0,playa de riohacha
+selva_1.jpg,selva,,dev,"https://commons.wikimedia.org/wiki/File:Rio-Amazonas,-Leticia.jpg",Gatocalvo,CC BY-SA 4.0,rio amazonas
+selva_2.jpg,selva,,test,https://commons.wikimedia.org/wiki/File:Amazon_Manaus_forest.jpg,Phil P Harris.,CC BY-SA 2.5,selva amazonica
+selva_3.jpg,selva,,test,https://commons.wikimedia.org/wiki/File:Amazon_river.JPG,Chico75 (asumido por Commons),CC BY-SA 3.0,río Amazonas y selva en la orilla
+montaña_1.jpg,montaña,,dev,https://commons.wikimedia.org/wiki/File:Pico_Everest_en_el_P%C3%A1ramo_del_Meridiano.jpg,Wiheri,Public domain,paramo colombiano
+montaña_2.jpg,montaña,,test,https://commons.wikimedia.org/wiki/File:Laguna_de_la_cocha.jpg,Sebastian David Martinez Canchala,CC BY-SA 4.0,laguna con montañas
+montaña_3.jpg,montaña,,test,https://commons.wikimedia.org/wiki/File:Fog_-_P%C3%A1ramo_de_Ocet%C3%A1.jpg,Álvaro Siabatto & José Próspero Hurtado Caro,CC BY 3.0,montaña alta
+cafetero_1.jpg,cafetero,,dev,"https://commons.wikimedia.org/wiki/File:Cafetales,_en_Colombia.jpg",Triángulo del Café Travel,CC BY 2.0,paisaje cafetero
+cafetero_2.jpg,cafetero,,test,https://commons.wikimedia.org/wiki/File:Cafetales.jpg,Hhaarold402,CC BY-SA 4.0,montaña con lineas de cafetales
+cafetero_3.jpg,cafetero,,test,https://commons.wikimedia.org/wiki/File:CO_El_Ocaso_(finca_cafetera)_(8)_(17062274189).jpg,"Diego Tirira from Quito, Ecuador",CC BY-SA 2.0,finca cafetera
+ciudad_colonial_1.jpg,ciudad_colonial,,dev,https://commons.wikimedia.org/wiki/File:Centro_Historico_Popayan_08.JPG,Nadalu30,CC BY-SA 3.0,iglesia de pueblo colonial
+ciudad_colonial_2.jpg,ciudad_colonial,,test,"https://commons.wikimedia.org/wiki/File:Villa_de_Leyva,_Plaza_Principal,_esquina_sur.jpg","Aztlek, Luis Alejandro Bernal Romero",CC BY-SA 3.0,plaza principal de ciudad colonial
+ciudad_colonial_3.jpg,ciudad_colonial,,test,https://commons.wikimedia.org/wiki/File:Centro_de_Tunja_en_un_d%C3%ADa_lluvioso.jpg,Carlillasa,CC BY-SA 4.0,centro historico
+llanura_1.jpg,llanura,,dev,https://commons.wikimedia.org/wiki/File:Los_llanos_by_Puerto_Gaitan.jpg,Flickr user: ednamortagui Bogotá https://www.flickr.com/people/ednamortegui/,CC BY-SA 2.0,llano desertico con pocos arboles
+llanura_2.jpg,llanura,,test,https://commons.wikimedia.org/wiki/File:Desierto_de_la_Tatacoa_-_Cuzco.jpg,Catalina,CC BY-SA 4.0,zona desertica del desierto de la tatacoa
+llanura_3.jpg,llanura,,test,https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_del_desierto_de_La_Guajira.jpg,Sebaxtian,CC BY 3.0,zona de desertica de la guajira
+documento_1.jpg,ninguna,documento,dev,"https://commons.wikimedia.org/wiki/File:1883_%22Newspapers_and_Periodicals%22_(part_1_of_2)_from_the_book,_%22Hand-book_of_Minneapolis%22_published_in_1883_(page_103_crop).jpg","Beard, Richard Olding, 1856-1936 Winchell, Newton Horace",Public domain,pagina de libro con texto
+documento_2.jpg,ninguna,documento,test,https://commons.wikimedia.org/wiki/File:Wikibibliotecas_screenshot_nube.jpg,Silva Selva,CC BY-SA 4.0,"captura de pantalla de la página de Wikibibliotecas, solo texto"
+comida_1.jpg,ninguna,comida,dev,https://commons.wikimedia.org/wiki/File:Bandeja_Paisa_(32158390698).jpg,Digitalizando el pasado,CC BY-SA 2.0,plato de comida tipico de colombia
+comida_2.jpg,ninguna,comida,test,https://commons.wikimedia.org/wiki/File:Ajiaco.jpg,"Mauricio Giraldo from Bogotá, Colombia",CC BY-SA 2.0,plato de ajiaco colombiano
+interior_1.jpg,ninguna,interior,dev,https://commons.wikimedia.org/wiki/File:Living_Room_-_Day_Trip_to_New_Orleans_April_2024.jpg,abbeyprivate,Public domain,sala comedor de apartamento
+interior_2.jpg,ninguna,interior,test,https://commons.wikimedia.org/wiki/File:Habitacion_Junior_Suite.jpg,Naheeli2003,CC BY 4.0,habitacion de hotel
+nieve_1.jpg,ninguna,nieve,dev,"https://commons.wikimedia.org/wiki/File:Marmolada,_Italy.jpg",Marco Bonomo,CC0,nevados
+nieve_2.jpg,ninguna,nieve,test,https://commons.wikimedia.org/wiki/File:Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG,Luca Galuzzi,CC BY-SA 2.5,glaciar en patagonia
+dificil_1.jpg,ninguna,playa_otro_pais,dificil,"https://commons.wikimedia.org/wiki/File:2016_Prowincja_Trang,_Ko_Kradan_(07).jpg",Marcin Konsek,CC BY-SA 4.0,playa fuera de Colombia (ej. Tailandia): CLIP no sabe el país
+dificil_2.jpg,ninguna,alpes_sin_nieve,dificil,"https://commons.wikimedia.org/wiki/File:Prado_verde_y_%C3%A1rbol_solitario_en_Vitosha,_Bulgaria,_2011.JPG",Benjamín Núñez González,CC BY-SA 4.0,"prado alpino verde, sin nieve: se espera que lo tome por montaña"
+dificil_3.jpg,ninguna,retrato_pintura,dificil,https://commons.wikimedia.org/wiki/File:John_Jay_(Gilbert_Stuart_portrait).jpg,Gilbert Stuart,Public domain,retrato pintado de una persona (obra de dominio público): debe abstenerse
+dificil_4.jpg,ninguna,planta_de_cerca,dificil,https://commons.wikimedia.org/wiki/File:Flor-leopardo_(Belamcanda_chinesis).jpg,Samuel02609,CC BY-SA 4.0,"flor o planta de cerca, sin paisaje: debe abstenerse"
+dificil_5.jpg,ninguna,mapa,dificil,"https://commons.wikimedia.org/wiki/File:Mapa_pol%C3%ADtico_de_Colombia,_1972.jpg",Instituto Geográfico Agustín Codazzi,CC BY-SA 3.0,mapa de Colombia o de una región: debe abstenerse
+dificil_6.jpg,ninguna,animal,dificil,https://commons.wikimedia.org/wiki/File:Gato_(2)_REFON.jpg,José Reynaldo da Fonseca,CC BY-SA 3.0,"un animal (gato, perro, ave) como protagonista: debe abstenerse"
+dificil_7.jpg,playa,playa_de_noche,dificil,https://commons.wikimedia.org/wiki/File:Playa_Bella_Vista_de_noche_-_panoramio.jpg,Mirko Pollina,CC BY 3.0,playa de noche o con luz muy baja: es playa pero es difícil
+dificil_8.jpg,ciudad_colonial|montaña,pueblo_con_montanas,dificil,https://commons.wikimedia.org/wiki/File:Street_in_Barichara_02.jpg,Bernard Gagnon,CC BY-SA 4.0,pueblo colonial con montañas al fondo: ambos tipos son válidos
