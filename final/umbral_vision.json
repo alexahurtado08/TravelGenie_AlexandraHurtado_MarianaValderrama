@@ -1,0 +1,86 @@
+{
+  "umbral": 0.6,
+  "n_dev": 10,
+  "score_dev": 1.0,
+  "tramo_empatado": [
+    0.3,
+    0.9
+  ],
+  "grid": {
+    "0.3": 1.0,
+    "0.35": 1.0,
+    "0.4": 1.0,
+    "0.45": 1.0,
+    "0.5": 1.0,
+    "0.55": 1.0,
+    "0.6": 1.0,
+    "0.65": 1.0,
+    "0.7": 1.0,
+    "0.75": 1.0,
+    "0.8": 1.0,
+    "0.85": 1.0,
+    "0.9": 1.0
+  },
+  "dev": [
+    {
+      "archivo": "playa_1.jpg",
+      "esperada": "playa",
+      "top": "playa",
+      "prob_top": 0.903
+    },
+    {
+      "archivo": "selva_1.jpg",
+      "esperada": "selva",
+      "top": "selva",
+      "prob_top": 0.998
+    },
+    {
+      "archivo": "montaña_1.jpg",
+      "esperada": "montaña",
+      "top": "montaña",
+      "prob_top": 0.921
+    },
+    {
+      "archivo": "cafetero_1.jpg",
+      "esperada": "cafetero",
+      "top": "cafetero",
+      "prob_top": 0.999
+    },
+    {
+      "archivo": "ciudad_colonial_1.jpg",
+      "esperada": "ciudad_colonial",
+      "top": "ciudad_colonial",
+      "prob_top": 1.0
+    },
+    {
+      "archivo": "llanura_1.jpg",
+      "esperada": "llanura",
+      "top": "llanura",
+      "prob_top": 0.995
+    },
+    {
+      "archivo": "documento_1.jpg",
+      "esperada": "ninguna",
+      "top": "documento",
+      "prob_top": 1.0
+    },
+    {
+      "archivo": "comida_1.jpg",
+      "esperada": "ninguna",
+      "top": "comida",
+      "prob_top": 1.0
+    },
+    {
+      "archivo": "interior_1.jpg",
+      "esperada": "ninguna",
+      "top": "interior",
+      "prob_top": 0.998
+    },
+    {
+      "archivo": "nieve_1.jpg",
+      "esperada": "ninguna",
+      "top": "nieve",
+      "prob_top": 0.658
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "archivo": "dificil_1.jpg",
+    "subtipo": "playa_otro_pais",
+    "esperada": "ninguna",
+    "decision": "ok",
+    "tipo": "playa",
+    "prob": 0.983,
+    "top3": [
+      "playa",
+      "selva",
+      "llanura"
+    ],
+    "correcta": false
+  },
+  {
+    "archivo": "dificil_2.jpg",
+    "subtipo": "alpes_sin_nieve",
+    "esperada": "ninguna",
+    "decision": "ok",
+    "tipo": "montaña",
+    "prob": 0.619,
+    "top3": [
+      "montaña",
+      "cafetero",
+      "llanura"
+    ],
+    "correcta": false
+  },
+  {
+    "archivo": "dificil_3.jpg",
+    "subtipo": "retrato_pintura",
+    "esperada": "ninguna",
+    "decision": "abstiene",
+    "tipo": null,
+    "prob": 0.998,
+    "top3": [
+      "persona",
+      "documento",
+      "interior"
+    ],
+    "correcta": true
+  },
+  {
+    "archivo": "dificil_4.jpg",
+    "subtipo": "planta_de_cerca",
+    "esperada": "ninguna",
+    "decision": "abstiene",
+    "tipo": null,
+    "prob": 0.493,
+    "top3": [
+      "selva",
+      "cafetero",
+      "persona"
+    ],
+    "correcta": true
+  },
+  {
+    "archivo": "dificil_5.jpg",
+    "subtipo": "mapa",
+    "esperada": "ninguna",
+    "decision": "abstiene",
+    "tipo": null,
+    "prob": 0.542,
+    "top3": [
+      "selva",
+      "documento",
+      "llanura"
+    ],
+    "correcta": true
+  },
+  {
+    "archivo": "dificil_6.jpg",
+    "subtipo": "animal",
+    "esperada": "ninguna",
+    "decision": "abstiene",
+    "tipo": null,
+    "prob": 0.981,
+    "top3": [
+      "persona",
+      "documento",
+      "selva"
+    ],
+    "correcta": true
+  },
+  {
+    "archivo": "dificil_7.jpg",
+    "subtipo": "playa_de_noche",
+    "esperada": "playa",
+    "decision": "ok",
+    "tipo": "playa",
+    "prob": 0.793,
+    "top3": [
+      "playa",
+      "selva",
+      "ciudad_colonial"
+    ],
+    "correcta": true
+  },
+  {
+    "archivo": "dificil_8.jpg",
+    "subtipo": "pueblo_con_montanas",
+    "esperada": "ciudad_colonial|montaña",
+    "decision": "ok",
+    "tipo": "ciudad_colonial",
+    "prob": 0.998,
+    "top3": [
+      "ciudad_colonial",
+      "cafetero",
+      "montaña"
+    ],
+    "correcta": true
+  }
+]

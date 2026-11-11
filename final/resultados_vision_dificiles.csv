@@ -1,0 +1,9 @@
+archivo,subtipo,esperada,decision,tipo,prob,correcta
+dificil_1.jpg,playa_otro_pais,ninguna,ok,playa,0.983,False
+dificil_2.jpg,alpes_sin_nieve,ninguna,ok,montaña,0.619,False
+dificil_3.jpg,retrato_pintura,ninguna,abstiene,,0.998,True
+dificil_4.jpg,planta_de_cerca,ninguna,abstiene,,0.493,True
+dificil_5.jpg,mapa,ninguna,abstiene,,0.542,True
+dificil_6.jpg,animal,ninguna,abstiene,,0.981,True
+dificil_7.jpg,playa_de_noche,playa,ok,playa,0.793,True
+dificil_8.jpg,pueblo_con_montanas,ciudad_colonial|montaña,ok,ciudad_colonial,0.998,True

@@ -1,0 +1,370 @@
+[
+  {
+    "archivo": "playa_2.jpg",
+    "esperada": "playa",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "playa",
+    "prob": 0.959,
+    "correcta": true,
+    "top_sin_valvula": "playa",
+    "top3": [
+      "playa",
+      "selva",
+      "ciudad_colonial"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "playa_3.jpg",
+    "esperada": "playa",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "playa",
+    "prob": 0.972,
+    "correcta": true,
+    "top_sin_valvula": "playa",
+    "top3": [
+      "playa",
+      "ciudad_colonial",
+      "llanura"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "selva_2.jpg",
+    "esperada": "selva",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "selva",
+    "prob": 0.835,
+    "correcta": true,
+    "top_sin_valvula": "selva",
+    "top3": [
+      "selva",
+      "cafetero",
+      "llanura"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "selva_3.jpg",
+    "esperada": "selva",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "selva",
+    "prob": 0.999,
+    "correcta": true,
+    "top_sin_valvula": "selva",
+    "top3": [
+      "selva",
+      "cafetero",
+      "llanura"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "montaña_2.jpg",
+    "esperada": "montaña",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "montaña",
+    "prob": 0.805,
+    "correcta": true,
+    "top_sin_valvula": "montaña",
+    "top3": [
+      "montaña",
+      "cafetero",
+      "selva"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "montaña_3.jpg",
+    "esperada": "montaña",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "montaña",
+    "prob": 0.997,
+    "correcta": true,
+    "top_sin_valvula": "montaña",
+    "top3": [
+      "montaña",
+      "cafetero",
+      "llanura"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "cafetero_2.jpg",
+    "esperada": "cafetero",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "cafetero",
+    "prob": 1.0,
+    "correcta": true,
+    "top_sin_valvula": "cafetero",
+    "top3": [
+      "cafetero",
+      "montaña",
+      "selva"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "cafetero_3.jpg",
+    "esperada": "cafetero",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "cafetero",
+    "prob": 1.0,
+    "correcta": true,
+    "top_sin_valvula": "cafetero",
+    "top3": [
+      "cafetero",
+      "montaña",
+      "selva"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "ciudad_colonial_2.jpg",
+    "esperada": "ciudad_colonial",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "ciudad_colonial",
+    "prob": 1.0,
+    "correcta": true,
+    "top_sin_valvula": "ciudad_colonial",
+    "top3": [
+      "ciudad_colonial",
+      "montaña",
+      "llanura"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "ciudad_colonial_3.jpg",
+    "esperada": "ciudad_colonial",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "ciudad_colonial",
+    "prob": 1.0,
+    "correcta": true,
+    "top_sin_valvula": "ciudad_colonial",
+    "top3": [
+      "ciudad_colonial",
+      "montaña",
+      "documento"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "llanura_2.jpg",
+    "esperada": "llanura",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "llanura",
+    "prob": 0.992,
+    "correcta": true,
+    "top_sin_valvula": "llanura",
+    "top3": [
+      "llanura",
+      "selva",
+      "montaña"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "llanura_3.jpg",
+    "esperada": "llanura",
+    "subtipo": "",
+    "decision": "ok",
+    "tipo": "llanura",
+    "prob": 1.0,
+    "correcta": true,
+    "top_sin_valvula": "llanura",
+    "top3": [
+      "llanura",
+      "montaña",
+      "selva"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "documento_2.jpg",
+    "esperada": "ninguna",
+    "subtipo": "documento",
+    "decision": "abstiene",
+    "tipo": null,
+    "prob": 1.0,
+    "correcta": true,
+    "top_sin_valvula": "selva",
+    "top3": [
+      "documento",
+      "selva",
+      "montaña"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "comida_2.jpg",
+    "esperada": "ninguna",
+    "subtipo": "comida",
+    "decision": "abstiene",
+    "tipo": null,
+    "prob": 0.998,
+    "correcta": true,
+    "top_sin_valvula": "selva",
+    "top3": [
+      "comida",
+      "documento",
+      "selva"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "interior_2.jpg",
+    "esperada": "ninguna",
+    "subtipo": "interior",
+    "decision": "abstiene",
+    "tipo": null,
+    "prob": 0.976,
+    "correcta": true,
+    "top_sin_valvula": "selva",
+    "top3": [
+      "interior",
+      "selva",
+      "ciudad_colonial"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  },
+  {
+    "archivo": "nieve_2.jpg",
+    "esperada": "ninguna",
+    "subtipo": "nieve",
+    "decision": "abstiene",
+    "tipo": null,
+    "prob": 0.974,
+    "correcta": true,
+    "top_sin_valvula": "montaña",
+    "top3": [
+      "nieve",
+      "montaña",
+      "selva"
+    ],
+    "invarianza": {
+      "voltear": true,
+      "reducir_50": true,
+      "jpeg_q30": true,
+      "brillo_0.8": true,
+      "brillo_1.2": true,
+      "recorte_90": true
+    }
+  }
+]

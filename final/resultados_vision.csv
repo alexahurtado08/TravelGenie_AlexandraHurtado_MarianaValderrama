@@ -1,0 +1,13 @@
+metrica,valor
+n_test,16
+n_paisajes,12
+n_adversariales,4
+umbral,0.6
+acierto_tipo,1.0
+falsos_rechazos,0.0
+abstencion_correcta_adversariales,1.0
+ablacion_sin_valvula_acierto_tipo,1.0
+ablacion_sin_valvula_falsas_aceptaciones,1.0
+invarianza_decision_igual,1.0
+latencia_p50_s,0.1728
+latencia_p95_s,0.2251
