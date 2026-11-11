@@ -81,13 +81,22 @@ class ClasificadorPaisaje:
         self._torch = torch
         self._procesador = CLIPProcessor.from_pretrained(MODELO_CLIP)
         self._modelo = CLIPModel.from_pretrained(MODELO_CLIP).eval()
-        # embeddings de texto: promedio de las descripciones de cada clase
+        self._preparar_texto()
+
+    @staticmethod
+    def _tensor(salida):
+        """transformers 4.x devuelve un tensor; 5.x un objeto con los vectores en pooler_output."""
+        return salida if hasattr(salida, "norm") else salida.pooler_output
+
+    def _preparar_texto(self):
+        """Embeddings de texto: promedio de las descripciones de cada clase."""
+        torch = self._torch
         vecs = []
         with torch.no_grad():
             for clase in CLASES:
                 textos = DESCRIPCIONES.get(clase) or NO_PAISAJE[clase]
                 ent = self._procesador(text=textos, return_tensors="pt", padding=True)
-                e = self._modelo.get_text_features(**ent)
+                e = self._tensor(self._modelo.get_text_features(**ent))
                 e = e / e.norm(dim=-1, keepdim=True)
                 m = e.mean(dim=0)
                 vecs.append(m / m.norm())
@@ -98,7 +107,7 @@ class ClasificadorPaisaje:
         torch = self._torch
         with torch.no_grad():
             ent = self._procesador(images=imagen.convert("RGB"), return_tensors="pt")
-            e = self._modelo.get_image_features(**ent)
+            e = self._tensor(self._modelo.get_image_features(**ent))
             e = e / e.norm(dim=-1, keepdim=True)
             logits = self._modelo.logit_scale.exp() * (e @ self._texto.T)
             p = logits.softmax(dim=-1)[0]
