@@ -30,7 +30,7 @@ from vision import ClasificadorPaisaje, decidir, RUTA_UMBRAL  # noqa: E402
 from perfil_paisaje import TIPOS  # noqa: E402
 
 CSV_FOTOS = os.path.join(AQUI, "imagenes_prueba.csv")
-GRID = [round(x, 2) for x in np.arange(0.30, 0.91, 0.05)]
+GRID = [round(float(x), 2) for x in np.arange(0.30, 0.91, 0.05)]
 
 
 def _arreglar(texto):
@@ -88,16 +88,27 @@ def es_correcta(esperada, dec):
 
 
 def tune(clf, filas):
-    """Elige el umbral con las fotos dev. Con empate gana el más alto (más prudente)."""
+    """Elige el umbral con las fotos dev.
+
+    Si varios umbrales empatan en el mejor acierto (pasa cuando las fotos dev son fáciles),
+    se toma el del MEDIO de ese tramo: ni el más permisivo ni el más estricto.
+    También devuelve la probabilidad de cada foto dev para poder revisarla.
+    """
     probs = [clf.puntajes(_abrir(r["ruta"])) for r in filas]
-    mejor = None
     tabla = {}
     for u in GRID:
         ok = sum(es_correcta(r["clase_esperada"], decidir(p, u)) for r, p in zip(filas, probs))
         tabla[u] = ok / len(filas)
-        if mejor is None or tabla[u] >= tabla[mejor]:
-            mejor = u
-    return {"umbral": mejor, "n_dev": len(filas), "score_dev": tabla[mejor], "grid": tabla}
+    mejor_score = max(tabla.values())
+    empatados = sorted(u for u, s in tabla.items() if s == mejor_score)
+    elegido = empatados[len(empatados) // 2]
+    detalle = []
+    for r, p in zip(filas, probs):
+        top = max(p, key=p.get)
+        detalle.append({"archivo": r["archivo"], "esperada": r["clase_esperada"],
+                        "top": top, "prob_top": round(p[top], 3)})
+    return {"umbral": elegido, "n_dev": len(filas), "score_dev": mejor_score,
+            "tramo_empatado": [empatados[0], empatados[-1]], "grid": tabla, "dev": detalle}
 
 
 def _abrir(ruta):
@@ -156,8 +167,12 @@ def main():
         with open(RUTA_UMBRAL, "w", encoding="utf-8") as f:
             json.dump(res, f, indent=2, ensure_ascii=False)
         print(f"Umbral elegido con {res['n_dev']} fotos dev: {res['umbral']} (acierto dev {res['score_dev']:.2f})")
+        print(f"Tramo de umbrales empatados: {res['tramo_empatado'][0]} a {res['tramo_empatado'][1]} (se toma el del medio)")
         for u, s in res["grid"].items():
             print(f"  umbral {u}: {s:.2f}")
+        print("\nFotos dev (esperada -> lo más parecido, probabilidad):")
+        for d in res["dev"]:
+            print(f"  {d['archivo']:24} {d['esperada']:16} -> {d['top']:16} {d['prob_top']:.3f}")
     elif modo == "--test":
         clf = ClasificadorPaisaje()
         m, det = evaluar(clf, leer_filas("test"))
