@@ -81,7 +81,7 @@ def cargar_variante(nombre):
         if "dtype" in kw:
             kw["torch_dtype"] = kw.pop("dtype")
         llm = AutoModelForCausalLM.from_pretrained(agente.MODELO_AGENTE, **kw)
-    if nombre in ("fp32", "fp16"):
+    if nombre in ("fp32", "bf16", "fp16"):
         llm = llm.to(device)
     llm.eval()
     agente._estado.update(tok=tok, llm=llm, device=device)
