@@ -1,0 +1,7 @@
+{"evento": "arranque", "estado": "indexando", "ts": "2026-11-12T22:21:17+0000"}
+{"evento": "arranque", "estado": "listo", "latencia_s": 147.716, "ts": "2026-11-12T22:23:07+0000"}
+{"evento": "solicitud", "request_id": "14472f8bf8a4", "entrada": "texto", "via": "rag_avanzado", "n_llamadas_herramienta": 1, "tope_de_pasos": false, "longitud_pregunta": 34, "pregunta_truncada": false, "latencia_s": 17.5486, "ts": "2026-11-12T22:27:39+0000"}
+{"evento": "solicitud", "request_id": "5682a362f163", "entrada": "texto", "via": "rag_avanzado", "n_llamadas_herramienta": 1, "tope_de_pasos": false, "longitud_pregunta": 34, "pregunta_truncada": false, "latencia_s": 8.6829, "ts": "2026-11-12T22:28:06+0000"}
+{"evento": "solicitud", "request_id": "232fc067913f", "entrada": "texto", "via": "sin_cobertura", "n_llamadas_herramienta": 1, "tope_de_pasos": false, "longitud_pregunta": 35, "pregunta_truncada": false, "latencia_s": 2.804, "ts": "2026-11-12T22:28:23+0000"}
+{"evento": "solicitud", "request_id": "1eb39e1c8495", "entrada": "imagen", "valvula": false, "tipo_paisaje": "playa", "prob": 0.9992, "n_destinos": 3, "latencia_s": 1.5064, "ts": "2026-11-12T22:29:17+0000"}
+{"evento": "solicitud", "request_id": "a611c22a13a5", "entrada": "imagen", "valvula": true, "tipo_paisaje": null, "prob": 0.9999, "n_destinos": 0, "latencia_s": 0.218, "ts": "2026-11-12T22:30:02+0000"}
