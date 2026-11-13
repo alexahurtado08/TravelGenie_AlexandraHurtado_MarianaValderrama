@@ -234,8 +234,12 @@ def _cargar():
     else:
         from transformers import AutoModelForCausalLM, AutoTokenizer
         device = "cuda" if torch.cuda.is_available() else "cpu"
+        # fp16 en GPU: variante adoptada en final/eficiencia.py (p95 -28% y memoria -50% frente a
+        # fp32, mismas decisiones). Sin `dtype`, transformers 5.x carga el del checkpoint (bf16).
+        # En CPU fp16 no es rápido: se queda en fp32.
+        dtype = torch.float16 if device == "cuda" else torch.float32
         _estado.update(tok=AutoTokenizer.from_pretrained(MODELO_AGENTE),
-                       llm=AutoModelForCausalLM.from_pretrained(MODELO_AGENTE).to(device),
+                       llm=AutoModelForCausalLM.from_pretrained(MODELO_AGENTE, dtype=dtype).to(device),
                        device=device)
     rag_avanzado._cargar()
     return _estado
