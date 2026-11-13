@@ -110,7 +110,13 @@ def responder_texto(pregunta):
     truncada = len(pregunta) > MAX_CHARS_PREGUNTA
     try:
         texto, meta = _motores["texto"](pregunta[:MAX_CHARS_PREGUNTA])
+        comp = ["agente"] if MODO_TEXTO != "rag" else []
+        if meta["n_llamadas"]:
+            comp.append("herramienta")
+        if meta["via"] in ("rag_avanzado", "stub"):
+            comp.append("rag")
         obs.registrar(evento="solicitud", request_id=rid, entrada="texto", via=meta["via"],
+                      componentes="+".join(comp), valvula=(meta["via"] == "sin_cobertura"),
                       n_llamadas_herramienta=meta["n_llamadas"], tope_de_pasos=meta["tope"],
                       longitud_pregunta=len(pregunta), pregunta_truncada=truncada,
                       latencia_s=time.perf_counter() - t0)
@@ -132,7 +138,7 @@ def responder_imagen(imagen):
         imagen.thumbnail((1024, 1024))        # solo en memoria; la foto no se guarda
         r = _motores["vision"](imagen)
         obs.registrar(evento="solicitud", request_id=rid, entrada="imagen",
-                      valvula=r["valvula"], tipo_paisaje=r["tipo"], prob=r["prob"],
+                      componentes="+".join(r["componentes"]), valvula=r["valvula"], tipo_paisaje=r["tipo"], prob=r["prob"],
                       n_destinos=len(r["destinos"]), latencia_s=time.perf_counter() - t0)
         return r["texto"]
     except Exception as e:   # noqa: BLE001
