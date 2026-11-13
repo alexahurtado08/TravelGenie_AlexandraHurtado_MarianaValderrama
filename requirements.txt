@@ -1,4 +1,4 @@
-# TravelGenie (M1-M3): versiones con las que se verificó, en Google Colab gratuito.
+# TravelGenie (M1-M5): versiones con las que se verificó, en Google Colab gratuito.
 # Entorno: Python 3.13, GPU T4. `torch` ya viene preinstalado en Colab (no se fija aquí).
 # Instalar:  pip install -q -r requirements.txt   (reiniciar la sesión si Colab lo pide)
 #
@@ -13,3 +13,14 @@ scikit-learn==1.6.1
 sentence-transformers==6.1.0
 torchao==0.18.0
 transformers==5.20.1
+
+# --- Proyecto final (carpeta final/): componente visual, app, eficiencia y observabilidad ---
+# gradio 5.49.1 es la versión con la que se probó la app (Colab trae la 6.x por defecto).
+# Los avisos de conflicto de pip con paquetes de Colab que no usamos son inofensivos.
+pillow==11.3.0
+gradio==5.49.1
+fastapi==0.141.1
+uvicorn==0.54.0
+wandb==0.28.1
+# bitsandbytes solo hace falta para final/eficiencia.py (variantes int8 y nf4)
+bitsandbytes==0.50.2
