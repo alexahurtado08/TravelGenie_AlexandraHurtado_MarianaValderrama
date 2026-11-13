@@ -150,7 +150,8 @@ def responder_imagen(imagen):
 # ----------------------------------------------------------------- interfaz
 def construir_interfaz():
     import gradio as gr
-    with gr.Blocks(title="TravelGenie") as demo:
+    # delete_cache: Gradio deja las fotos subidas en una carpeta temporal del servidor; se borran cada minuto
+    with gr.Blocks(title="TravelGenie", delete_cache=(60, 60)) as demo:
         gr.Markdown("# TravelGenie\nRecomendador de viajes por Colombia: pregunta por un destino "
                     "o sube la foto de un paisaje. Cubre 14 destinos con datos de clima, vuelos, "
                     "hoteles, restaurantes y atractivos. Si no tiene datos, te lo dice.")
@@ -167,8 +168,9 @@ def construir_interfaz():
             btn2 = gr.Button("Buscar destinos", variant="primary")
             salida2 = gr.Markdown()
             btn2.click(responder_imagen, img, salida2, api_name="imagen")
-        gr.Markdown("*No se guardan ni tus preguntas ni tus fotos. Los registros solo llevan "
-                    "tipo de solicitud, latencia y resultado.*")
+        gr.Markdown("*Tus preguntas y fotos no se guardan ni se registran: los registros solo llevan tipo de "
+                    "solicitud, latencia y resultado. Las fotos se procesan en memoria y su copia temporal "
+                    "se borra del servidor en pocos minutos.*")
     demo.queue(default_concurrency_limit=1)
     return demo
 
