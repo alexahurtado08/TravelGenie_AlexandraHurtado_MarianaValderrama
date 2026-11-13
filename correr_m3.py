@@ -9,6 +9,8 @@ Uso desde la raíz del repo, después de haber corrido paso9 para crear chroma_d
     python correr_m3.py rag_hibrida       ablación: solo híbrida
     python correr_m3.py rag_rerank        ablación: solo reranking
     python correr_m3.py agente            sistema final: LLM+ herramienta+ RAG avanzado
+    python correr_m3.py agente_fp32       agente con el LLM en fp32 (antes de la técnica de eficiencia)
+    python correr_m3.py agente_fp16       agente con el LLM en fp16 (sistema final eficiente)
 
 Cada ejecución reemplaza la fila de ese sistema, así que se puede repetir sin
 duplicar. Mismo eval set para todos los sistemas de M3 (eval_set_m3.py) y mismo juez que en m2.
@@ -30,7 +32,7 @@ from harness import harness, device   # carga el juez Qwen y los embeddings
 ARCHIVO_CSV = "scorecard_m3.csv"
 COLUMNAS = ["sistema", "n_ejemplos", "dim1_similitud_embeddings_promedio",
             "dim2_puntaje_juez_promedio", "dim3_pct_cumple_criterio_dominio",
-            "latencia_mediana_s", "n_respuestas_sin_info"]
+            "latencia_mediana_s", "latencia_p95_s", "n_respuestas_sin_info"]
 
 
 
@@ -90,6 +92,19 @@ def construir_agente():
     return agente.sistema_agente
 
 
+def _agente_variante(variante):
+    """Agente con el LLM cargado en la precisión pedida (fp32 o fp16), con la misma función de carga
+    que usó final/eficiencia.py. El juez del harness es otro modelo: no se comparte con el agente."""
+    def construir():
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "final"))
+        import eficiencia, agente, rag_avanzado
+        eficiencia.cargar_variante(variante)
+        rag_avanzado._cargar()
+        agente.sistema_agente("¿Qué hoteles hay en Medellín?")   # calentamiento
+        return agente.sistema_agente
+    return construir
+
+
 SISTEMAS = {
     "m2_baseline": ("M2 baseline (LoRA sin RAG)", construir_m2_baseline),
     "rag_naive": ("RAG básico (top-3 + válvula de escape)", construir_rag_naive),
@@ -97,6 +112,9 @@ SISTEMAS = {
     "rag_hibrida": ("RAG + solo búsqueda híbrida (ablación)", construir_rag_hibrida),
     "rag_rerank": ("RAG + solo reranking (ablación)", construir_rag_rerank),
     "agente": ("Agente (herramienta de cobertura + RAG avanzado)", construir_agente),
+    # Técnica de eficiencia (final/eficiencia.py): mismo agente, misma sesión, misma máquina.
+    "agente_fp32": ("Agente (fp32, antes de la técnica)", _agente_variante("fp32")),
+    "agente_fp16": ("Agente final (fp16, después de la técnica)", _agente_variante("fp16")),
 }
 
 
@@ -133,7 +151,7 @@ def main():
         elif clave.startswith("rag_"):
             import rag_avanzado
             extras.append(dict(rag_avanzado.ULTIMO))
-        elif clave == "agente":
+        elif clave.startswith("agente"):
             import agente
             extras.append(dict(agente.ULTIMO))
         return r
@@ -143,7 +161,7 @@ def main():
 
     for i, r in enumerate(resultados):
         r["latencia_s"] = round(tiempos[i], 3)
-        if extras and clave == "agente":
+        if extras and clave.startswith("agente"):
             r["traza_agente"] = extras[i]            #pasos del LLM, llamadas, vía, tope
         elif extras:
             r["contexto_recuperado"] = extras[i].get("recuperados")
@@ -158,6 +176,7 @@ def main():
         "dim2_puntaje_juez_promedio": scorecard["dim2_puntaje_juez_promedio"],
         "dim3_pct_cumple_criterio_dominio": scorecard["dim3_pct_cumple_criterio_dominio"],
         "latencia_mediana_s": round(statistics.median(tiempos), 3),
+        "latencia_p95_s": round(sorted(tiempos)[min(len(tiempos) - 1, int(round(0.95 * (len(tiempos) - 1))))], 3),
         "n_respuestas_sin_info": sin_info,
     }
     guardar_fila(fila)
