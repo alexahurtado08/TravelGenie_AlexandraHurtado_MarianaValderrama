@@ -31,7 +31,7 @@ CAMPOS_PERMITIDOS = {
     "via",                                         # agente: rag_avanzado | sin_cobertura | ...
     "n_llamadas_herramienta", "tope_de_pasos",
     "longitud_pregunta", "pregunta_truncada",
-    "valvula", "tipo_paisaje", "prob", "n_destinos",
+    "componentes", "valvula", "tipo_paisaje", "prob", "n_destinos",
     "latencia_s", "error", "estado", "detalle",
 }
 
