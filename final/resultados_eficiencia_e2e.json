@@ -1,0 +1,23 @@
+[
+  {
+    "variante": "fp32",
+    "n_mediciones": 36,
+    "pct_cumple_verificacion": 91.7,
+    "p50_s": 2.328,
+    "p95_s": 7.94
+  },
+  {
+    "variante": "bf16",
+    "n_mediciones": 36,
+    "pct_cumple_verificacion": 91.7,
+    "p50_s": 2.996,
+    "p95_s": 8.66
+  },
+  {
+    "variante": "fp16",
+    "n_mediciones": 36,
+    "pct_cumple_verificacion": 91.7,
+    "p50_s": 1.758,
+    "p95_s": 7.441
+  }
+]

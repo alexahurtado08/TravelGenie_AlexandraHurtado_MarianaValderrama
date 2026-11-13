@@ -1,0 +1,4 @@
+variante,n_mediciones,pct_cumple_verificacion,p50_s,p95_s
+fp32,36,91.7,2.328,7.94
+bf16,36,91.7,2.996,8.66
+fp16,36,91.7,1.758,7.441
