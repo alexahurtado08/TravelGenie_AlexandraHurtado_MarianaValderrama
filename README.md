@@ -1,5 +1,66 @@
 # TravelGenie
 
+**TravelGenie ayuda a quien planea un viaje por Colombia a decidir a qué destino ir y en qué mes, respondiendo con datos reales de clima, vuelos, hoteles, restaurantes y atractivos de 14 destinos (por texto o con la foto de un paisaje), y avisando que no sabe cuando no tiene datos en vez de inventarlos.**
+
+*Equipo:* Alexandra Hurtado, Mariana Valderrama · Curso SI4006 / STAI, EAFIT
+
+| | |
+|---|---|
+| **Demo en vivo** | `https://<URL-del-túnel>.trycloudflare.com` *(la URL cambia cada vez que se lanza; se pone aquí antes de la sustentación)* |
+| **Estado del servicio** | `<URL de la demo>/health` → `200` listo, `503` cargando |
+| **W&B (latencia por solicitud y uso)** | [wandb.ai/mvalderramacasta12-universidad-eafit/travelgenie-final](https://wandb.ai/mvalderramacasta12-universidad-eafit/travelgenie-final) (capturas en [`final/capturas/`](./final/capturas)) |
+| **Informe final** | [`final/reporte.md`](./final/reporte.md) |
+| **Muestra del registro por solicitud** | [`final/muestra_log.jsonl`](./final/muestra_log.jsonl) |
+
+## Cómo correrlo (Colab gratis, GPU T4, sin llaves de pago)
+
+1. Abre un Colab nuevo y activa la GPU: `Entorno de ejecución → Cambiar tipo → GPU T4`.
+2. Clona e instala (versiones fijadas en `requirements.txt`; los avisos rojos de conflictos de paquetes de Colab no afectan):
+```
+!git clone https://github.com/alexahurtado08/TravelGenie_AlexandraHurtado_MarianaValderrama
+%cd TravelGenie_AlexandraHurtado_MarianaValderrama
+!pip install -q -r requirements.txt
+!python data_pipeline/paso9_indexar_chroma.py      # reconstruye chroma_db/ (no se versiona)
+```
+3. (Opcional) para enviar métricas a W&B, antes de lanzar la app:
+```
+import os, getpass
+os.environ["WANDB_API_KEY"] = getpass.getpass("W&B API key: ").strip()
+```
+Sin la llave la app funciona igual y solo escribe el registro JSON local.
+4. Lanza la app y el túnel público (dos celdas):
+```
+!wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -O cloudflared && chmod +x cloudflared
+import subprocess, time
+subprocess.Popen(["python", "final/app.py"])            # puerto 7860
+time.sleep(5)
+subprocess.Popen("./cloudflared tunnel --url http://localhost:7860 > tunel.log 2>&1", shell=True)
+time.sleep(8)
+!grep -o "https://[a-z0-9-]*\.trycloudflare\.com" tunel.log | head -1   # esta es la URL de la demo
+```
+5. Comprueba `…/health`: devuelve `503` mientras cargan los modelos (1–2 min) y `200` cuando está listo. La app tiene dos pestañas: **Pregunta** y **Foto de un paisaje**.
+
+Reproducibilidad: semilla 42, versiones fijadas en `requirements.txt`, modelos descargados de Hugging Face. Las llaves no están en el repo (solo se leen de variables de entorno).
+
+## Mapa del repositorio
+
+| Módulo | Qué contiene | Dónde |
+|---|---|---|
+| M1 — Ajuste fino | flan-t5-small + LoRA, dataset de 346 pares | [`notebook_finetuning.ipynb`](./notebook_finetuning.ipynb), `data/`, `travelgenie-lora-adapter/` |
+| M2 — Arnés de evaluación | 3 dimensiones, rúbrica y validación del juez | `harness.py`, `eval_set.py`, [`rubrica_juez.md`](./rubrica_juez.md), `verificacion.py` |
+| M3 — RAG + agente | RAG básico/avanzado (BM25 + denso + reranker) y agente con herramienta `verificar_cobertura` | `rag_naive.py`, `rag_avanzado.py`, `agente.py`, `correr_m3.py` |
+| M4 — Componente visual | CLIP zero-shot: foto de paisaje → destinos, con válvula | `final/vision.py`, `final/eval_vision.py`, `final/imagenes_prueba.csv`, `final/resultados_vision*.csv` |
+| M5 — Eficiencia | fp32 vs bf16/fp16/int8/nf4: tabla antes/después | `final/eficiencia.py`, `final/eval_agente_decisiones.py`, `final/resultados_eficiencia*.csv` |
+| M5 — Despliegue y observabilidad | app Gradio, `/health`, registro JSON por solicitud, W&B | `final/app.py`, `final/observabilidad.py`, `final/muestra_log.jsonl` |
+| Informe final | decisiones, tablas, ablaciones, análisis de errores, ética, quién hizo qué, uso de IA | [`final/reporte.md`](./final/reporte.md) |
+
+Para reproducir las tablas del informe: `python correr_m3.py agente_fp32`, `agente_fp16`, `python final/eficiencia.py --decisiones`, `python final/eval_vision.py --test` (comandos completos en la sección de reproducibilidad del informe).
+
+---
+
+# Detalle de los módulos M1–M3 (entregas anteriores)
+
+
 > **TravelGenie recommends where to travel in Colombia and which month works best, combining real climate data, flight prices, and tourist attractions — so anyone can plan a trip without having to research everything on their own.**
 
 *team members*: Alexandra Hurtado, Mariana Valderrama
