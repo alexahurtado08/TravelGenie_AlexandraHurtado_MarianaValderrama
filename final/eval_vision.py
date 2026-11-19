@@ -1,27 +1,6 @@
 """
 Evaluación del componente visual con las fotos de final/imagenes_prueba.csv.
 
-Dos pasos, en este orden (así el umbral no se ajusta con las fotos de prueba):
-  python final/eval_vision.py --tune   usa SOLO las fotos 'dev': elige el umbral de la
-                                       válvula y lo guarda en final/umbral_vision.json
-  python final/eval_vision.py --test   usa SOLO las fotos 'test' con ese umbral ya fijo y
-                                       escribe final/resultados_vision.csv y
-                                       final/resultados_vision_detalle.json
-
-Mide: acierto del tipo de paisaje, abstención correcta con imágenes que no son un
-paisaje, falsos rechazos, la ablación sin válvula, la prueba de invarianza
-(voltear, reducir, comprimir, cambiar brillo, recortar: la decisión no debería
-cambiar) y la latencia p50 y p95 del clasificador.
-
-  python final/eval_vision.py --dificiles   fotos 'dificil': casos límite (otro país, persona, planta,
-                                       mapa, animal, atardecer, paisaje mixto). NO se usan para ajustar
-                                       nada: sirven para el análisis de errores y para mostrar los
-                                       límites del componente.
-
-Nota: "sin válvula siempre responde" es por construcción (por eso falsas_aceptaciones = 1.0
-en la ablación: sin válvula, cualquier imagen recibe una respuesta de paisaje).
-
-Correr desde la raíz del repo, en Colab con las fotos en final/imagenes/.
 """
 
 import csv
@@ -97,12 +76,7 @@ def es_correcta(esperada, dec):
 
 
 def tune(clf, filas):
-    """Elige el umbral con las fotos dev.
 
-    Si varios umbrales empatan en el mejor acierto (pasa cuando las fotos dev son fáciles),
-    se toma el del MEDIO de ese tramo: ni el más permisivo ni el más estricto.
-    También devuelve la probabilidad de cada foto dev para poder revisarla.
-    """
     probs = [clf.puntajes(_abrir(r["ruta"])) for r in filas]
     tabla = {}
     for u in GRID:
