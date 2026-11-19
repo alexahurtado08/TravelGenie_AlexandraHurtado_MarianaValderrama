@@ -1,18 +1,6 @@
 """
-Sube TravelGenie a Hugging Face Spaces (solo los archivos que la app necesita).
+Sube TravelGenie a Hugging Face Spaces.
 
-Uso, desde la raíz del repo (en Colab o en tu computador):
-    pip install -q huggingface_hub
-    export HF_TOKEN=hf_xxx          # token con permiso de ESCRITURA (huggingface.co/settings/tokens)
-    python final/desplegar_space.py USUARIO/travelgenie
-
-En Colab:  import os; os.environ["HF_TOKEN"] = "hf_xxx"
-Qué hace: arma una carpeta temporal con el código, los datos, el adaptador LoRA y el
-README con la configuración del Space; crea el Space si no existe y la sube.
-No sube chroma_db/ (la app lo reconstruye al arrancar), ni las fotos de prueba, ni
-los resultados de evaluación.
-Los secretos (WANDB_API_KEY) se configuran en Settings > Variables and secrets del Space,
-nunca en el código.
 """
 
 import os
