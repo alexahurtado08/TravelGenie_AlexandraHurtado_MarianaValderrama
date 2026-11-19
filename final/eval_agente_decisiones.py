@@ -1,18 +1,7 @@
 """
-Casos para evaluar SOLO el agente (el LLM que decide si llamar a verificar_cobertura),
-sin el RAG ni el juez. Sirven para comparar variantes del modelo (fp32, fp16, int8, nf4)
-con la misma vara. Las etiquetas las puso el equipo: revisarlas antes de reportar.
+Casos para evaluar SOLO el agente, sin el RAG ni el juez. Sirven para comparar 
+variantes del modelo (fp32, fp16, int8, nf4) con la misma vara.
 
-Cada caso: (pregunta, grupo, vía esperada, llamada esperada)
-  vía esperada : "sin_cobertura"  la pregunta nombra una ciudad colombiana que NO tenemos
-                 "rag_avanzado"   cualquier otro caso (ciudad cubierta, sin ciudad, otro país)
-  llamada      : True  debe llamar a verificar_cobertura (nombra una ciudad colombiana)
-                 False debe responder sin llamar
-                 None  ambigua: no se evalúa la llamada, solo la vía
-
-Los destinos cubiertos son 14: Barranquilla, Ibagué, Leticia, Manizales, Medellín, Montería,
-Neiva, Pasto, Pereira, Popayán, Riohacha, Santa Marta, Tunja y Villavicencio.
-Los ejemplos del prompt del agente (Cali, Japón, "plan de playa económico") no se repiten acá.
 """
 
 CASOS = [
