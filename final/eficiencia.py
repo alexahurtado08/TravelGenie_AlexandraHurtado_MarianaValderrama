@@ -1,26 +1,7 @@
 """
 Técnica de eficiencia: reducir la precisión del agente (Qwen2.5-1.5B) y medir qué se gana
-y qué se pierde. Componente: SOLO el agente (la decisión de llamar a verificar_cobertura).
+y qué se pierde.
 
-TOLERANCIA (fijada ANTES de correr; no se cambia después de ver resultados):
-  Calidad (obligatoria, contra fp32, en final/eval_agente_decisiones.py):
-    1. acierto de la vía no baja más de 1 caso (≈2.5 pts) frente a fp32;
-    2. la válvula no pierde nada: acierto en 'sin_cobertura' y en 'fuera_de_tema' >= fp32;
-    3. (informativo) acuerdo con fp32: % de casos con la misma decisión exacta.
-  Ganancia (al menos una):
-    A. p95 de latencia del agente >= 25% menor que fp32, o
-    B. memoria del modelo >= 40% menor con p95 no peor en más de 10%.
-  Se adopta la variante que cumpla calidad y ganancia; si varias, la de menor p95.
-  Si ninguna, se queda fp32 y se reporta como resultado negativo.
-
-Uso (desde la raíz del repo, en Colab con GPU):
-    pip install -q bitsandbytes
-    python final/eficiencia.py --decisiones            # fp32, bf16, fp16, int8, nf4
-    python final/eficiencia.py --decisiones fp32 fp16  # solo algunas variantes
-    python final/eficiencia.py --e2e fp32 fp16 --repeticiones 3
-        # preguntas completas del eval M3 (con RAG real): latencia p50/p95 y % de
-        # cumplimiento de las reglas de verificacion.py (sin juez)
-Escribe final/resultados_eficiencia.csv/json y final/resultados_eficiencia_e2e.csv/json.
 """
 
 import csv
