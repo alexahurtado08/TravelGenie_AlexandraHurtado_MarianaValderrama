@@ -1,21 +1,4 @@
-"""
-TravelGenie: aplicación final (texto o foto) para Hugging Face Spaces.
 
-Una sola entrada con dos pestañas:
-  - Pregunta de viaje (texto): agente (Qwen2.5-1.5B + verificar_cobertura) -> RAG avanzado.
-  - Foto de un paisaje: CLIP zero-shot -> destinos de ese tipo con datos reales.
-Las dos tienen válvula: si no hay datos o la foto no es un paisaje, dicen que no saben.
-
-Además de la interfaz expone GET /health (200 listo, 503 cargando) y escribe un
-registro JSON por solicitud sin datos personales (ver observabilidad.py).
-
-Uso local, desde la raíz del repo:   python final/app.py
-Variables de entorno (todas opcionales):
-  TRAVELGENIE_TEXTO=rag      usa solo el RAG avanzado (sin el agente Qwen) si falta memoria
-  TRAVELGENIE_STUB=1         modelos de mentira, para probar la app sin descargar nada
-  WANDB_API_KEY              activa las métricas en W&B
-  PORT                       puerto (7860 por defecto, el de Spaces)
-"""
 
 import os
 import subprocess
