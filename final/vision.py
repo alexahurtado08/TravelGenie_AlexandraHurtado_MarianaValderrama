@@ -1,20 +1,5 @@
 """
-Componente visual de TravelGenie: una foto de un paisaje -> destinos de ese tipo.
-
-Qué hace, en simple:
-1) Un modelo (CLIP, zero-shot) compara la foto con descripciones de seis tipos
-   de paisaje (playa, selva, montaña, cafetero, ciudad colonial, llanura) y de
-   cosas que NO son un paisaje (documento, comida, interior, nieve).
-2) Válvula visual: si lo más parecido NO es un paisaje, o el modelo no está lo
-   bastante seguro (umbral), el sistema dice que no sabe en vez de adivinar.
-3) Si hay paisaje, se buscan los destinos de ese tipo (perfil_paisaje.py) y se
-   muestran sus datos reales de clima y vuelos tomados del corpus (sin
-   generar texto, así no se inventa nada). Se ordenan del vuelo más barato.
-
-La imagen se procesa en memoria: no se guarda, y los registros solo llevan el
-tipo, la confianza y la latencia.
-
-Uso (desde la raíz del repo):  python final/vision.py ruta/foto.jpg
+Componente visual de TravelGenie, una foto de un paisaje -> destinos de ese tipo.
 """
 
 import json
@@ -32,7 +17,7 @@ MODELO_CLIP = "openai/clip-vit-base-patch32"
 UMBRAL_POR_DEFECTO = 0.50   # se reemplaza por el calculado con el set dev (eval_vision.py --tune)
 MAX_DESTINOS = 3
 
-# Varias descripciones por clase (en inglés: CLIP funciona mejor así); se promedian.
+# Varias descripciones por clase
 DESCRIPCIONES = {
     "playa": ["a photo of a tropical beach with palm trees and sea",
               "a photo of a Caribbean coast with turquoise water and sand"],
@@ -149,7 +134,6 @@ def _hechos():
 
 
 def responder_con_imagen(imagen, clasificador):
-    """Respuesta completa para una foto. Devuelve dict con texto y datos para el registro."""
     t0 = time.perf_counter()
     r = clasificador.clasificar(imagen)
     if r["decision"] == "abstiene":
