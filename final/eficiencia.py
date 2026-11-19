@@ -36,8 +36,7 @@ def cargar_variante(nombre):
     tok = AutoTokenizer.from_pretrained(agente.MODELO_AGENTE)
     device = "cuda" if torch.cuda.is_available() else "cpu"
     kw = {}
-    # OJO: con transformers 5.x, sin `dtype` el modelo carga en la precisión del checkpoint
-    # (bf16 para Qwen2.5), no en fp32. Por eso fp32 y bf16 se piden de forma explícita.
+
     if nombre == "fp32":
         kw["dtype"] = torch.float32
     elif nombre == "bf16":
