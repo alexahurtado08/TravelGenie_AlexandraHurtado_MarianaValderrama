@@ -1,24 +1,17 @@
 """
-Perfil de paisaje de cada destino: qué tipo(s) de lugar es, para poder ligar
+Descripción de paisaje de cada destino, qué tipo de lugar es, para poder emparejar
 una foto con los destinos de la base.
-
-Esta tabla la escribió el equipo con conocimiento general de Colombia (no sale
-de los datos descargados): es una decisión de diseño y puede estar equivocada.
-Se pueden cambiar los tipos de un destino sin tocar nada más.
-
-Tipos: playa, selva, montaña, cafetero, ciudad_colonial, llanura
-(llanura incluye sabana y desierto).
 """
 
 TIPOS = ["playa", "selva", "montaña", "cafetero", "ciudad_colonial", "llanura"]
 
 PERFIL = {
     "SANTA MARTA":   ["playa"],
-    "RIOHACHA":      ["playa", "llanura"],      # costa y desierto de La Guajira
+    "RIOHACHA":      ["playa", "llanura"],      
     "BARRANQUILLA":  ["playa"],
     "MONTERÍA":      ["llanura"],
-    "NEIVA":         ["llanura"],               # desierto de la Tatacoa cerca
-    "VILLAVICENCIO": ["llanura"],               # llanos orientales
+    "NEIVA":         ["llanura"],               
+    "VILLAVICENCIO": ["llanura"],               
     "LETICIA":       ["selva"],
     "TUNJA":         ["montaña", "ciudad_colonial"],
     "PASTO":         ["montaña"],
