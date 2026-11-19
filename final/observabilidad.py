@@ -1,20 +1,4 @@
-"""
-Observabilidad de TravelGenie: registros JSON y métricas en W&B (opcional).
 
-Reglas de privacidad (se cumplen por construcción):
-- Solo se escriben los campos de CAMPOS_PERMITIDOS; cualquier otro se descarta.
-- NUNCA se registra el texto de la pregunta, ni la imagen, ni la respuesta, ni la
-  IP del usuario. De la pregunta solo se guarda su longitud; de la foto, solo el
-  tipo de paisaje y la confianza.
-- De un error solo se guarda el nombre de la excepción (su mensaje podría traer
-  texto del usuario).
-
-Un registro por solicitud, en formato JSON Lines: una línea por evento, a la salida
-estándar (los "Logs" de Hugging Face Spaces) y al archivo logs/travelgenie.jsonl.
-
-W&B se activa solo si existe la variable de entorno WANDB_API_KEY. Si falla,
-la app sigue funcionando: la observabilidad nunca debe tumbar el servicio.
-"""
 
 import json
 import os
