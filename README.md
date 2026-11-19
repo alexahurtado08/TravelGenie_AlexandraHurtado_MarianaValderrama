@@ -6,7 +6,7 @@
 
 | | |
 |---|---|
-| **Demo en vivo** | `https://<URL-del-túnel>.trycloudflare.com` *(la URL cambia cada vez que se lanza; se pone aquí antes de la sustentación)* |
+| **Demo en vivo** | `https://<URL-del-túnel>.trycloudflare.com` *(la URL cambia cada vez que se lanza)* |
 | **Estado del servicio** | `<URL de la demo>/health` → `200` listo, `503` cargando |
 | **W&B (latencia por solicitud y uso)** | [wandb.ai/mvalderramacasta12-universidad-eafit/travelgenie-final](https://wandb.ai/mvalderramacasta12-universidad-eafit/travelgenie-final) (capturas en [`final/capturas/`](./final/capturas)) |
 | **Informe final** | [`final/reporte.md`](./final/reporte.md) |
