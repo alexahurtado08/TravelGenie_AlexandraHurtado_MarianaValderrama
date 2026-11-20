@@ -6,11 +6,11 @@
 
 | | |
 |---|---|
-| **Demo en vivo** | `https://<URL-del-túnel>.trycloudflare.com` *(la URL cambia cada vez que se lanza)* |
-| **Estado del servicio** | `<URL de la demo>/health` → `200` listo, `503` cargando |
-| **W&B (latencia por solicitud y uso)** | [wandb.ai/mvalderramacasta12-universidad-eafit/travelgenie-final](https://wandb.ai/mvalderramacasta12-universidad-eafit/travelgenie-final) (capturas en [`final/capturas/`](./final/capturas)) |
-| **Informe final** | [`final/reporte.md`](./final/reporte.md) |
-| **Muestra del registro por solicitud** | [`final/muestra_log.jsonl`](./final/muestra_log.jsonl) |
+| **Demo en vivo** | *No hay un enlace fijo.* La app corre en Google Colab con un túnel público, y ese túnel genera una dirección nueva cada vez que se lanza, así que cualquier enlace que dejáramos aquí dejaría de funcionar. La dirección se muestra y se abre en vivo durante la sustentación, con la app corriendo.|
+| **Estado del servicio** | Se comprueba en `<dirección de la demo>/health`: responde `200` si la app está lista y `503` si todavía carga. Usa la misma dirección dinámica de la demo, así que solo se puede abrir mientras la app esté corriendo; lo verificamos antes y durante la sustentación. |
+| **W&B (latencia por solicitud y uso)** | [wandb.ai/mvalderramacasta12-universidad-eafit/travelgenie-final](https://wandb.ai/mvalderramacasta12-universidad-eafit/travelgenie-final). El proyecto está en una cuenta universitaria, que no permite hacerlo público, así que el enlace puede pedir acceso. La evidencia queda en las capturas de `final/capturas/`, y también se puede mostrar el panel en vivo. |
+| **Informe final** | [`final/reporte.md`](final/reporte.md) |
+| **Muestra del registro por solicitud** | [`final/muestra_log.jsonl`](final/muestra_log.jsonl) |
 
 ## Cómo correrlo (Colab gratis, GPU T4, sin llaves de pago)
 
